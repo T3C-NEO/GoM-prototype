@@ -1,0 +1,7 @@
+Button
+TextEdit
+AnimatedSprite2D
+Sprite2D
+Camera2D
+CharacterBody2D
+RigidBody2D

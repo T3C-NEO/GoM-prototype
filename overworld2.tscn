@@ -1,0 +1,84 @@
+[gd_scene load_steps=8 format=3 uid="uid://ff7o5wfe1nac"]
+
+[ext_resource type="Script" path="res://overworld_2.gd" id="1_f3ylw"]
+[ext_resource type="Texture2D" uid="uid://bkwtlbf4q1cic" path="res://assets/corporate-office-flat-illustration-vector.jpg" id="2_fnysw"]
+[ext_resource type="Texture2D" uid="uid://bbtr8ai31fia4" path="res://assets/elevator.png" id="3_3j26o"]
+[ext_resource type="Texture2D" uid="uid://duriqk7iktit3" path="res://assets/guy.png" id="4_rkvty"]
+[ext_resource type="PackedScene" uid="uid://dxn7a40jr2idf" path="res://character_body_2d.tscn" id="5_hrp3w"]
+[ext_resource type="Texture2D" uid="uid://bchoy1ifddmg0" path="res://assets/Next floor.png" id="7_nlowl"]
+[ext_resource type="Texture2D" uid="uid://dccu84csmbkm7" path="res://assets/girl.png" id="7_x6x8y"]
+
+[node name="Overworld" type="Node2D"]
+script = ExtResource("1_f3ylw")
+
+[node name="Corporate-office-flat-illustration-vector" type="Sprite2D" parent="."]
+position = Vector2(753.225, 326)
+scale = Vector2(1.89306, 1.89306)
+texture = ExtResource("2_fnysw")
+
+[node name="Corporate-office-flat-illustration-vector2" type="Sprite2D" parent="."]
+position = Vector2(2941, 326)
+scale = Vector2(1.89306, 1.89306)
+texture = ExtResource("2_fnysw")
+
+[node name="Elevator" type="Sprite2D" parent="."]
+position = Vector2(1848, 331)
+scale = Vector2(2.52985, 2.52985)
+texture = ExtResource("3_3j26o")
+
+[node name="Guy3" type="Sprite2D" parent="."]
+position = Vector2(3503, 489)
+scale = Vector2(0.532587, 0.532587)
+texture = ExtResource("4_rkvty")
+
+[node name="Guy2" type="Sprite2D" parent="."]
+position = Vector2(912, 307)
+scale = Vector2(-0.533, 0.533)
+texture = ExtResource("4_rkvty")
+
+[node name="Guy" type="Sprite2D" parent="."]
+position = Vector2(243, 295)
+scale = Vector2(0.532587, 0.532587)
+texture = ExtResource("4_rkvty")
+
+[node name="Girl" type="Sprite2D" parent="."]
+position = Vector2(2480, 286)
+scale = Vector2(0.540733, 0.540733)
+texture = ExtResource("7_x6x8y")
+
+[node name="Girl2" type="Sprite2D" parent="."]
+position = Vector2(1282, 446)
+scale = Vector2(0.54888, 0.54888)
+texture = ExtResource("7_x6x8y")
+
+[node name="Button2" type="Button" parent="."]
+auto_translate_mode = 1
+offset_left = 1697.0
+offset_top = 127.0
+offset_right = 2002.0
+offset_bottom = 634.0
+
+[node name="NextFloor" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1556, 469)
+texture = ExtResource("7_nlowl")
+
+[node name="Button3" type="Button" parent="NextFloor"]
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+offset_left = -86.0
+offset_top = -86.0
+offset_right = 86.0
+offset_bottom = 89.0
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("5_hrp3w")]
+position = Vector2(2270, 362)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+limit_left = 0
+limit_top = 0
+limit_right = 3695
+limit_bottom = 650
+
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="NextFloor/Button3" to="." method="_on_button_3_pressed"]

@@ -1,0 +1,92 @@
+[gd_scene load_steps=4 format=3 uid="uid://bu6q7wiqucnws"]
+
+[ext_resource type="PackedScene" uid="uid://dqvtmoyotaj6a" path="res://debt.tscn" id="1_nsp0t"]
+[ext_resource type="Script" path="res://minigame.gd" id="1_x6bvj"]
+[ext_resource type="PackedScene" uid="uid://d3wkdga5ngikt" path="res://work.tscn" id="2_6nybf"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_x6bvj")
+
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("1_nsp0t")]
+position = Vector2(400, 353)
+
+[node name="Button2" type="Button" parent="AnimatedSprite2D"]
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+offset_left = -71.0
+offset_top = -80.0
+offset_right = 71.0
+offset_bottom = 96.0
+
+[node name="AnimatedSprite2D2" parent="." instance=ExtResource("1_nsp0t")]
+position = Vector2(736, 182)
+
+[node name="Button2" type="Button" parent="AnimatedSprite2D2"]
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+offset_left = -71.0
+offset_top = -80.0
+offset_right = 71.0
+offset_bottom = 96.0
+
+[node name="AnimatedSprite2D5" parent="." instance=ExtResource("1_nsp0t")]
+position = Vector2(577, 449)
+
+[node name="Button2" type="Button" parent="AnimatedSprite2D5"]
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+offset_left = -71.0
+offset_top = -80.0
+offset_right = 71.0
+offset_bottom = 96.0
+
+[node name="AnimatedSprite2D3" parent="." instance=ExtResource("1_nsp0t")]
+position = Vector2(138, 166)
+
+[node name="Button2" type="Button" parent="AnimatedSprite2D3"]
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+offset_left = -71.0
+offset_top = -80.0
+offset_right = 71.0
+offset_bottom = 96.0
+
+[node name="AnimatedSprite2D4" parent="." instance=ExtResource("1_nsp0t")]
+position = Vector2(972, 337)
+
+[node name="Button2" type="Button" parent="AnimatedSprite2D4"]
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+offset_left = -71.0
+offset_top = -80.0
+offset_right = 71.0
+offset_bottom = 96.0
+
+[node name="AnimatedSprite2D6" parent="." instance=ExtResource("2_6nybf")]
+position = Vector2(173, 364)
+
+[node name="AnimatedSprite2D7" parent="." instance=ExtResource("2_6nybf")]
+position = Vector2(297, 177)
+
+[node name="AnimatedSprite2D8" parent="." instance=ExtResource("2_6nybf")]
+position = Vector2(261, 536)
+
+[node name="AnimatedSprite2D9" parent="." instance=ExtResource("2_6nybf")]
+position = Vector2(663, 266)
+
+[node name="AnimatedSprite2D10" parent="." instance=ExtResource("2_6nybf")]
+position = Vector2(817, 481)
+
+[node name="AnimatedSprite2D11" parent="." instance=ExtResource("2_6nybf")]
+position = Vector2(522, 142)
+
+[connection signal="pressed" from="AnimatedSprite2D/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="AnimatedSprite2D/Button2" to="AnimatedSprite2D" method="_on_button_2_pressed"]
+[connection signal="pressed" from="AnimatedSprite2D2/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="AnimatedSprite2D2/Button2" to="AnimatedSprite2D2" method="_on_button_2_pressed"]
+[connection signal="pressed" from="AnimatedSprite2D5/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="AnimatedSprite2D5/Button2" to="AnimatedSprite2D5" method="_on_button_2_pressed"]
+[connection signal="pressed" from="AnimatedSprite2D3/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="AnimatedSprite2D3/Button2" to="AnimatedSprite2D3" method="_on_button_2_pressed"]
+[connection signal="pressed" from="AnimatedSprite2D4/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="AnimatedSprite2D4/Button2" to="AnimatedSprite2D4" method="_on_button_2_pressed"]

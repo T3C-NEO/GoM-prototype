@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqvtmoyotaj6a"]
+
+[ext_resource type="Script" path="res://debt.gd" id="1_clrtf"]
+[ext_resource type="Texture2D" uid="uid://cy0vhbouoq3gi" path="res://assets/debt.png" id="1_r445e"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+script = ExtResource("1_clrtf")
+
+[node name="Debt" type="Sprite2D" parent="."]
+scale = Vector2(0.367188, 0.367188)
+texture = ExtResource("1_r445e")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = -71.0
+offset_top = -80.0
+offset_right = 71.0
+offset_bottom = 96.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

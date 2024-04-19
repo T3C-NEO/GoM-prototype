@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dowdhns2ymce6"]
+
+[ext_resource type="Script" path="res://loading_2.gd" id="1_p533g"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_p533g")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 1155.0
+offset_bottom = 655.0
+text = "that's it lol
+
+click to restart ig"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
