@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://hn45jtoacue8"]
+
+[ext_resource type="Script" path="res://main_sccene.gd" id="1_bg2rm"]
+[ext_resource type="Script" path="res://left.gd" id="2_fadb5"]
+[ext_resource type="PackedScene" uid="uid://bk2ljowoyy8cq" path="res://Baby Changing Station.tscn" id="2_tspuk"]
+[ext_resource type="PackedScene" uid="uid://babexr8x87f52" path="res://work.tscn" id="3_bqcye"]
+[ext_resource type="PackedScene" uid="uid://dc2o6nh3knabd" path="res://chores.tscn" id="5_sgyeq"]
+[ext_resource type="PackedScene" uid="uid://dw26e0g4fo774" path="res://shopping.tscn" id="6_oso0r"]
+
+[node name="main scene" type="Node2D"]
+script = ExtResource("1_bg2rm")
+
+[node name="work" parent="." instance=ExtResource("3_bqcye")]
+
+[node name="left" type="Node2D" parent="."]
+visible = false
+script = ExtResource("2_fadb5")
+
+[node name="baby changing station" parent="left" instance=ExtResource("2_tspuk")]
+visible = false
+
+[node name="chores" parent="left" instance=ExtResource("5_sgyeq")]
+visible = false
+
+[node name="shopping" parent="left" instance=ExtResource("6_oso0r")]
+visible = false
+position = Vector2(-576, 0)
+
+[node name="right" type="Node2D" parent="."]
+position = Vector2(576, 0)
+script = ExtResource("2_fadb5")
+
+[node name="baby changing station" parent="right" instance=ExtResource("2_tspuk")]
+visible = false
+
+[node name="chores" parent="right" instance=ExtResource("5_sgyeq")]
+visible = false
+
+[node name="shopping" parent="right" instance=ExtResource("6_oso0r")]
+visible = false
+position = Vector2(-576, 0)
