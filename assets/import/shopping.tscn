@@ -1,0 +1,68 @@
+[gd_scene load_steps=6 format=3 uid="uid://dw26e0g4fo774"]
+
+[ext_resource type="Script" path="res://shopping.gd" id="1_8mh7u"]
+[ext_resource type="Texture2D" uid="uid://dj5jvj83pvo7x" path="res://shelves2.jpg" id="1_reg4j"]
+[ext_resource type="PackedScene" uid="uid://b25qla4y3nm6m" path="res://groceries.tscn" id="4_0v7ua"]
+[ext_resource type="Texture2D" uid="uid://dutp8vkhsarkj" path="res://basket.png" id="4_urvpa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mgdc0"]
+size = Vector2(389.498, 259.665)
+
+[node name="shopping" type="Node2D"]
+script = ExtResource("1_8mh7u")
+
+[node name="shelf" type="Sprite2D" parent="."]
+position = Vector2(861.5, 325.075)
+scale = Vector2(0.692121, 0.814439)
+texture = ExtResource("1_reg4j")
+
+[node name="basket" type="Sprite2D" parent="."]
+position = Vector2(988, 587)
+scale = Vector2(0.48524, 0.48524)
+texture = ExtResource("4_urvpa")
+
+[node name="basket_detection" type="Area2D" parent="basket"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="basket/basket_detection"]
+position = Vector2(3.09094, -2.06079)
+shape = SubResource("RectangleShape2D_mgdc0")
+
+[node name="groceries" parent="." instance=ExtResource("4_0v7ua")]
+position = Vector2(674, 101)
+
+[node name="groceries2" parent="." instance=ExtResource("4_0v7ua")]
+position = Vector2(843, 101)
+
+[node name="groceries3" parent="." instance=ExtResource("4_0v7ua")]
+position = Vector2(938, 403)
+
+[node name="groceries4" parent="." instance=ExtResource("4_0v7ua")]
+position = Vector2(775, 271.5)
+scale = Vector2(0.789063, 0.695313)
+
+[node name="groceries5" parent="." instance=ExtResource("4_0v7ua")]
+position = Vector2(1024.75, 279.5)
+scale = Vector2(0.457031, 0.648438)
+
+[node name="groceries6" parent="." instance=ExtResource("4_0v7ua")]
+position = Vector2(674, 437)
+scale = Vector2(0.832031, 0.523438)
+
+[node name="groceries7" parent="." instance=ExtResource("4_0v7ua")]
+position = Vector2(713, 570)
+scale = Vector2(0.789063, 0.78125)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 981.0
+offset_top = 44.0
+offset_right = 1123.0
+offset_bottom = 87.0
+theme_override_font_sizes/font_size = 25
+text = "CHECKOUT"
+
+[node name="middle" type="Marker2D" parent="."]
+position = Vector2(860, 0)
+
+[connection signal="area_entered" from="basket/basket_detection" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="basket/basket_detection" to="." method="_on_area_2d_area_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

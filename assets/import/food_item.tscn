@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://cu5m68d7s7ig"]
+
+[ext_resource type="Texture2D" uid="uid://d366604qp13hw" path="res://icon.svg" id="1_mudky"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t2y4p"]
+size = Vector2(105, 124)
+
+[node name="food_item" type="Node2D"]
+
+[node name="box" type="Sprite2D" parent="."]
+scale = Vector2(0.773438, 1)
+texture = ExtResource("1_mudky")
+
+[node name="food_detection" type="Area2D" parent="box"]
+scale = Vector2(1.20755, 1)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box/food_detection"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_t2y4p")
+metadata/_edit_lock_ = true
+
+[connection signal="mouse_entered" from="box/food_detection" to="box" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="box/food_detection" to="box" method="_on_area_2d_mouse_exited"]

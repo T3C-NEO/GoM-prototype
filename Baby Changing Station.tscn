@@ -1,0 +1,74 @@
+[gd_scene load_steps=5 format=3 uid="uid://bk2ljowoyy8cq"]
+
+[ext_resource type="Texture2D" uid="uid://d366604qp13hw" path="res://icon.svg" id="1_6tx5j"]
+[ext_resource type="Script" path="res://baby_changing_station.gd" id="1_jrn51"]
+[ext_resource type="Texture2D" uid="uid://bnne8twsilnp" path="res://baby.png" id="3_lky3y"]
+[ext_resource type="Texture2D" uid="uid://d1o432e4el444" path="res://background 2.jpg" id="3_uix4k"]
+
+[node name="baby changing station" type="Node2D"]
+script = ExtResource("1_jrn51")
+
+[node name="Background2" type="Sprite2D" parent="."]
+position = Vector2(288, 324)
+scale = Vector2(0.533333, 0.9)
+texture = ExtResource("3_uix4k")
+
+[node name="Baby" type="Sprite2D" parent="."]
+position = Vector2(233, 293)
+rotation = -1.8134
+scale = Vector2(1.12918, 1.12918)
+texture = ExtResource("3_lky3y")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(205, 370)
+scale = Vector2(0.578125, 0.578125)
+texture = ExtResource("1_6tx5j")
+
+[node name="Button" type="Button" parent="Icon"]
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 66.0
+offset_bottom = 64.0
+
+[node name="Icon2" type="Sprite2D" parent="."]
+position = Vector2(393, 412)
+scale = Vector2(0.578125, 0.578125)
+texture = ExtResource("1_6tx5j")
+
+[node name="Button2" type="Button" parent="Icon2"]
+auto_translate_mode = 1
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 66.0
+offset_bottom = 64.0
+
+[node name="Icon3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(283, 470)
+scale = Vector2(0.578125, 0.578125)
+texture = ExtResource("1_6tx5j")
+
+[node name="Button3" type="Button" parent="Icon3"]
+auto_translate_mode = 1
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 66.0
+offset_bottom = 64.0
+
+[node name="Icon4" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(302, 379)
+scale = Vector2(0.578125, 0.578125)
+texture = ExtResource("1_6tx5j")
+
+[node name="Button4" type="Button" parent="Icon4"]
+auto_translate_mode = 1
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 66.0
+offset_bottom = 64.0
+
+[connection signal="pressed" from="Icon/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Icon2/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Icon3/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Icon4/Button4" to="." method="_on_button_4_pressed"]

@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://b25qla4y3nm6m"]
+
+[ext_resource type="Texture2D" uid="uid://d366604qp13hw" path="res://icon.svg" id="1_6khvf"]
+[ext_resource type="Script" path="res://drag_food_items.gd" id="2_rtjnq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_11tve"]
+size = Vector2(105, 124)
+
+[node name="groceries" type="Sprite2D"]
+scale = Vector2(0.789063, 1)
+texture = ExtResource("1_6khvf")
+script = ExtResource("2_rtjnq")
+
+[node name="food_detection" type="Area2D" parent="."]
+scale = Vector2(1.20755, 1)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="food_detection"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_11tve")
+metadata/_edit_lock_ = true
+
+[connection signal="area_entered" from="food_detection" to="." method="_on_food_detection_area_entered"]
+[connection signal="area_exited" from="food_detection" to="." method="_on_food_detection_area_exited"]
+[connection signal="mouse_entered" from="food_detection" to="." method="_on_food_detection_mouse_entered"]
+[connection signal="mouse_exited" from="food_detection" to="." method="_on_food_detection_mouse_exited"]

@@ -1,0 +1,114 @@
+[gd_scene load_steps=10 format=3 uid="uid://babexr8x87f52"]
+
+[ext_resource type="Script" path="res://work.gd" id="1_jfvpf"]
+[ext_resource type="Texture2D" uid="uid://d1o432e4el444" path="res://background 2.jpg" id="2_ckkia"]
+[ext_resource type="Texture2D" uid="uid://dowatmgemgd8v" path="res://brown.webp" id="3_lt8am"]
+[ext_resource type="Texture2D" uid="uid://bxjmvtvpse0bb" path="res://coffee.webp" id="3_ngfv2"]
+[ext_resource type="Texture2D" uid="uid://rvxjiuh1qucw" path="res://coffee machine.png" id="4_06bt6"]
+[ext_resource type="Texture2D" uid="uid://b4q5gd7l370f8" path="res://lid.jpg" id="6_cds06"]
+[ext_resource type="Texture2D" uid="uid://dwxm6skqsuymt" path="res://lose.jpg" id="7_lqnpi"]
+[ext_resource type="Texture2D" uid="uid://d366604qp13hw" path="res://icon.svg" id="8_o34mc"]
+[ext_resource type="Texture2D" uid="uid://bnxmukb574wnu" path="res://line.png" id="9_5agyt"]
+
+[node name="work" type="Node2D"]
+script = ExtResource("1_jfvpf")
+
+[node name="Background2" type="Sprite2D" parent="."]
+position = Vector2(288, 324)
+scale = Vector2(0.533333, 0.9)
+texture = ExtResource("2_ckkia")
+
+[node name="Coffee" type="Sprite2D" parent="."]
+position = Vector2(285, 487)
+scale = Vector2(0.154011, 0.154011)
+texture = ExtResource("3_ngfv2")
+
+[node name="CoffeeMachine" type="Sprite2D" parent="."]
+position = Vector2(274, 215)
+scale = Vector2(0.271845, 0.271845)
+texture = ExtResource("4_06bt6")
+
+[node name="Button" type="Button" parent="CoffeeMachine"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -294.0
+offset_top = -430.0
+offset_right = 316.0
+offset_bottom = 412.0
+theme_override_font_sizes/font_size = 96
+text = "button"
+
+[node name="Brown" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(432, 592)
+scale = Vector2(0.0606369, 0.0606369)
+texture = ExtResource("3_lt8am")
+
+[node name="Brown2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(432, 528)
+scale = Vector2(0.0606369, 0.0606369)
+texture = ExtResource("3_lt8am")
+
+[node name="Brown3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(432, 464)
+scale = Vector2(0.0606369, 0.0606369)
+texture = ExtResource("3_lt8am")
+
+[node name="Brown4" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(432, 400)
+scale = Vector2(0.0606369, 0.0606369)
+texture = ExtResource("3_lt8am")
+
+[node name="Lid" type="Sprite2D" parent="."]
+position = Vector2(451, 233)
+scale = Vector2(0.146037, 0.146037)
+texture = ExtResource("6_cds06")
+
+[node name="done" type="Button" parent="."]
+self_modulate = Color(0, 1, 1, 1)
+offset_left = 385.0
+offset_top = 186.0
+offset_right = 516.0
+offset_bottom = 280.0
+theme_override_font_sizes/font_size = 41
+text = "done"
+
+[node name="Lose" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(287, 324)
+scale = Vector2(1.07662, 1.72222)
+texture = ExtResource("7_lqnpi")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(48, 226)
+scale = Vector2(0.375, 1)
+texture = ExtResource("8_o34mc")
+
+[node name="Icon2" type="Sprite2D" parent="."]
+position = Vector2(101, 226)
+scale = Vector2(0.375, 1)
+texture = ExtResource("8_o34mc")
+
+[node name="Icon3" type="Sprite2D" parent="."]
+position = Vector2(154, 226)
+scale = Vector2(0.375, 1)
+texture = ExtResource("8_o34mc")
+
+[node name="Line" type="Sprite2D" parent="."]
+position = Vector2(440, 361)
+scale = Vector2(0.0882625, 0.0882625)
+texture = ExtResource("9_5agyt")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+modulate = Color(1, 0, 0, 1)
+offset_left = 484.0
+offset_top = 347.0
+offset_right = 551.0
+offset_bottom = 383.0
+theme_override_font_sizes/font_size = 16
+text = "fill line"
+
+[connection signal="pressed" from="CoffeeMachine/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="done" to="." method="_on_done_pressed"]
