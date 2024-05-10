@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cchnm83tocc5v"]
 
-[ext_resource type="Texture2D" uid="uid://b2l1ygnpiv1p1" path="res://prong.png" id="1_hbaqw"]
+[ext_resource type="Texture2D" path="res://assets/prong.png" id="1_hbaqw"]
 [ext_resource type="Script" path="res://prong.gd" id="1_wan5r"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_mx8fd"]

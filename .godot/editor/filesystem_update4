@@ -21,3 +21,7 @@ res://overworld_3.gd
 res://menu.tscn
 res://menu.gd
 res://overworld0.tscn
+res://game.gd
+res://plinko.tscn
+res://chip.tscn
+res://prong.tscn
