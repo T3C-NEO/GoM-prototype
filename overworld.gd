@@ -1,9 +1,17 @@
 extends Node2D
 
+var playBox;
 
+func _ready() -> void:
+	playBox = 	get_node("play");
 
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://loading.tscn")
+	if playBox.visible == false:
+		playBox.visible = true
+	else:
+		playBox.visible = false
+	
+#	get_tree().change_scene_to_file("res://loading.tscn")
 
 
 func _on_button_2_pressed() -> void:

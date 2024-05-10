@@ -18,3 +18,6 @@ res://chores.tscn
 res://overworld3.tscn
 res://overworld_2.gd
 res://overworld_3.gd
+res://menu.tscn
+res://menu.gd
+res://overworld0.tscn
