@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://cchnm83tocc5v"]
+
+[ext_resource type="Texture2D" uid="uid://b2l1ygnpiv1p1" path="res://prong.png" id="1_hbaqw"]
+[ext_resource type="Script" path="res://prong.gd" id="1_wan5r"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_mx8fd"]
+friction = 0.75
+bounce = 0.7
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4viuc"]
+radius = 15.0
+
+[node name="prong" type="Node2D"]
+script = ExtResource("1_wan5r")
+
+[node name="Prong2" type="Sprite2D" parent="."]
+modulate = Color(1, 0.32, 0.750667, 1)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("1_hbaqw")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+mass = 200.0
+physics_material_override = SubResource("PhysicsMaterial_mx8fd")
+gravity_scale = 0.0
+continuous_cd = 2
+contact_monitor = true
+max_contacts_reported = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("CircleShape2D_4viuc")
+
+[connection signal="body_entered" from="RigidBody2D" to="." method="_on_rigid_body_2d_body_entered"]
