@@ -1,13 +1,13 @@
 [gd_scene load_steps=44 format=3 uid="uid://cdfrv6t5xjef1"]
 
-[ext_resource type="Texture2D" path="res://assets/plinko_bg.png" id="1_64o2h"]
+[ext_resource type="Texture2D" uid="uid://cy0ulhhhioo0i" path="res://assets/plinko_bg.png" id="1_64o2h"]
 [ext_resource type="Script" path="res://plinko.gd" id="1_ge8pn"]
-[ext_resource type="Texture2D" path="res://assets/PLINKO.png" id="2_1nfas"]
-[ext_resource type="Texture2D" path="res://assets/prong.png" id="3_gpv0d"]
-[ext_resource type="Texture2D" path="res://assets/bar.png" id="3_gsyo4"]
+[ext_resource type="Texture2D" uid="uid://kf3sbyywvudp" path="res://assets/PLINKO.png" id="2_1nfas"]
+[ext_resource type="Texture2D" uid="uid://b2l1ygnpiv1p1" path="res://assets/prong.png" id="3_gpv0d"]
+[ext_resource type="Texture2D" uid="uid://dan1knpiv2v6q" path="res://assets/bar.png" id="3_gsyo4"]
 [ext_resource type="PackedScene" uid="uid://dgibpb4jh42t7" path="res://chip.tscn" id="5_jnh2c"]
 [ext_resource type="PackedScene" uid="uid://cchnm83tocc5v" path="res://prong.tscn" id="6_8ielq"]
-[ext_resource type="Texture2D" path="res://assets/plinko_bottom.png" id="7_r2ux3"]
+[ext_resource type="Texture2D" uid="uid://d2kdlub43s8xr" path="res://assets/plinko_bottom.png" id="7_r2ux3"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_koea5"]
 a = Vector2(-504, -541)
@@ -334,4 +334,14 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 45
 text = "DROP"
 
+[node name="Button2" type="Button" parent="."]
+offset_left = 8.0
+offset_top = 1892.0
+offset_right = 1135.0
+offset_bottom = 2086.0
+theme_override_font_sizes/font_size = 41
+text = "You win!
+(click to move on cuz I'm not fucking with collisions rn)"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

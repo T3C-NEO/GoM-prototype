@@ -4,6 +4,10 @@ var playBox;
 
 func _ready() -> void:
 	playBox = 	get_node("play");
+	if Game.CEODone == true:
+		get_node("Bad").visible = false
+		get_node("Button").queue_free()
+		
 
 func _on_button_pressed() -> void:
 	if playBox.visible == false:
@@ -15,11 +19,21 @@ func _on_button_pressed() -> void:
 
 
 func _on_button_2_pressed() -> void:
-	if CEODone == false:
+	if Game.CEODone == false:
 		get_node("CharacterBody2D/textNode").visible = true
 		await get_tree().create_timer(2.0).timeout
 		get_node("CharacterBody2D/textNode").visible = false
 	else:
-
+		if get_node("NextFloor").visible == false:
+			get_node("NextFloor").visible = true
+		else:
+			get_node("NextFloor").visible = false
+		
 
 func _on_play_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://plinko.tscn")
+	
+
+
+func _on_button_3_pressed() -> void:
+	get_tree().change_scene_to_file("res://overworld.tscn")

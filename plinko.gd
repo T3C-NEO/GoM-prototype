@@ -29,3 +29,8 @@ func _process(_delta: float) -> void:
 
 func _on_button_pressed() -> void:
 	chip.drop = true;
+
+
+func _on_button_2_pressed() -> void:
+	Game.CEODone = true
+	get_tree().change_scene_to_file("res://overworld0.tscn")

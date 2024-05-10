@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://boi04ubreq1xg"]
+[gd_scene load_steps=8 format=3 uid="uid://boi04ubreq1xg"]
 
 [ext_resource type="Script" path="res://overworld.gd" id="1_0u7lh"]
 [ext_resource type="Texture2D" uid="uid://bkwtlbf4q1cic" path="res://assets/corporate-office-flat-illustration-vector.jpg" id="2_j1ndj"]
 [ext_resource type="Texture2D" uid="uid://bbtr8ai31fia4" path="res://assets/elevator.png" id="3_dxnhk"]
 [ext_resource type="Texture2D" uid="uid://d3e5hjq3v36rx" path="res://assets/bad.png" id="5_b4vf7"]
 [ext_resource type="Texture2D" uid="uid://bcg75hwn4lksl" path="res://CEO.png" id="5_nynbn"]
+[ext_resource type="Texture2D" uid="uid://bchoy1ifddmg0" path="res://assets/Next floor.png" id="7_hsa3k"]
 [ext_resource type="PackedScene" uid="uid://dxn7a40jr2idf" path="res://character_body_2d.tscn" id="7_iss8g"]
 
 [node name="Overworld" type="Node2D"]
@@ -44,7 +45,7 @@ offset_right = 2002.0
 offset_bottom = 634.0
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("7_iss8g")]
-position = Vector2(586, 388)
+position = Vector2(1091, 345)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 limit_left = 0
@@ -64,6 +65,7 @@ to spread  here >:)"
 
 [node name="play" type="Button" parent="."]
 auto_translate_mode = 1
+visible = false
 offset_left = 482.0
 offset_top = 78.0
 offset_right = 703.0
@@ -90,6 +92,20 @@ offset_bottom = 222.0
 theme_override_font_sizes/font_size = 21
 text = "Enter Mind"
 
+[node name="NextFloor" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1556, 469)
+texture = ExtResource("7_hsa3k")
+
+[node name="Button3" type="Button" parent="NextFloor"]
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+offset_left = -86.0
+offset_top = -86.0
+offset_right = 86.0
+offset_bottom = 89.0
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="play/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="NextFloor/Button3" to="." method="_on_button_3_pressed"]

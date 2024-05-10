@@ -16,9 +16,9 @@ func _process(_delta: float) -> void:
 func set_drop_point() -> void:
 	var mouse : Vector2 = get_global_mouse_position();
 	
-	if(Input.is_action_pressed("ui_left") && mouse.y > 200):
+	if(Input.is_action_pressed("mouse_left") && mouse.y > 200):
 		move = true;
-	elif(Input.is_action_just_released("ui_left")):
+	elif(Input.is_action_just_released("mouse_left")):
 		move = false;
 	
 	if(move):

@@ -9,7 +9,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if (debt == 0):
-		get_tree().change_scene_to_file("res://overworld2.tscn")
+		Game.DebtDone = true
+		get_tree().change_scene_to_file("res://overworld.tscn")
 		
 		
 

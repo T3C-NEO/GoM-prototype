@@ -1,68 +1,47 @@
 [gd_scene load_steps=8 format=3 uid="uid://6c7ydesqu4lo"]
 
 [ext_resource type="Script" path="res://overworld_3.gd" id="1_6xq0q"]
-[ext_resource type="Texture2D" uid="uid://bkwtlbf4q1cic" path="res://assets/corporate-office-flat-illustration-vector.jpg" id="2_4ihyw"]
+[ext_resource type="Texture2D" uid="uid://dmxqn7ipbraw5" path="res://image (1).png" id="2_80s34"]
 [ext_resource type="Texture2D" uid="uid://bbtr8ai31fia4" path="res://assets/elevator.png" id="3_xxxy2"]
-[ext_resource type="Texture2D" uid="uid://duriqk7iktit3" path="res://assets/guy.png" id="4_7p1lg"]
+[ext_resource type="Texture2D" uid="uid://ba60r4hju8jg5" path="res://image (2).png" id="5_0hrhx"]
 [ext_resource type="Texture2D" uid="uid://d3e5hjq3v36rx" path="res://assets/bad.png" id="5_to0le"]
-[ext_resource type="Texture2D" uid="uid://dccu84csmbkm7" path="res://assets/girl.png" id="6_lauls"]
+[ext_resource type="Texture2D" uid="uid://bchoy1ifddmg0" path="res://assets/Next floor.png" id="7_abjex"]
 [ext_resource type="PackedScene" uid="uid://dxn7a40jr2idf" path="res://character_body_2d.tscn" id="7_eyhb2"]
 
-[node name="Overworld" type="Node2D"]
+[node name="Overworld3" type="Node2D"]
 script = ExtResource("1_6xq0q")
 
-[node name="Corporate-office-flat-illustration-vector" type="Sprite2D" parent="."]
-position = Vector2(753.225, 326)
-scale = Vector2(1.89306, 1.89306)
-texture = ExtResource("2_4ihyw")
+[node name="Image(1)" type="Sprite2D" parent="."]
+position = Vector2(862.407, 328.734)
+scale = Vector2(1.24767, 1.24767)
+texture = ExtResource("2_80s34")
 
-[node name="Corporate-office-flat-illustration-vector2" type="Sprite2D" parent="."]
-position = Vector2(2941, 326)
-scale = Vector2(1.89306, 1.89306)
-texture = ExtResource("2_4ihyw")
+[node name="Image(1)2" type="Sprite2D" parent="."]
+position = Vector2(2592, 326)
+scale = Vector2(1.24767, 1.24767)
+texture = ExtResource("2_80s34")
 
 [node name="Elevator" type="Sprite2D" parent="."]
 position = Vector2(1848, 331)
 scale = Vector2(2.52985, 2.52985)
 texture = ExtResource("3_xxxy2")
 
-[node name="Guy3" type="Sprite2D" parent="."]
-position = Vector2(3503, 489)
-scale = Vector2(0.532587, 0.532587)
-texture = ExtResource("4_7p1lg")
-
-[node name="Guy" type="Sprite2D" parent="."]
-position = Vector2(243, 295)
-scale = Vector2(0.532587, 0.532587)
-texture = ExtResource("4_7p1lg")
-
 [node name="Bad" type="Sprite2D" parent="."]
-position = Vector2(931.552, 220.552)
+position = Vector2(310, 102)
 scale = Vector2(0.164117, 0.164117)
 texture = ExtResource("5_to0le")
 
-[node name="Girl" type="Sprite2D" parent="."]
-position = Vector2(2480, 286)
-scale = Vector2(0.540733, 0.540733)
-texture = ExtResource("6_lauls")
-
-[node name="Girl2" type="Sprite2D" parent="."]
-position = Vector2(1282, 446)
-scale = Vector2(0.54888, 0.54888)
-texture = ExtResource("6_lauls")
-
-[node name="Guy2" type="Sprite2D" parent="."]
-position = Vector2(912, 307)
-rotation = 3.14159
-scale = Vector2(0.533, -0.533)
-texture = ExtResource("4_7p1lg")
+[node name="Image(2)" type="Sprite2D" parent="."]
+position = Vector2(862.407, 328.734)
+scale = Vector2(1.248, 1.248)
+texture = ExtResource("5_0hrhx")
 
 [node name="Button" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
-offset_left = 877.552
-offset_top = 174.552
-offset_right = 1063.55
-offset_bottom = 456.552
+offset_left = 232.0
+offset_top = 74.0
+offset_right = 412.0
+offset_bottom = 371.0
 
 [node name="Button2" type="Button" parent="."]
 offset_left = 1697.0
@@ -71,12 +50,12 @@ offset_right = 2002.0
 offset_bottom = 634.0
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("7_eyhb2")]
-position = Vector2(2115, 354)
+position = Vector2(2101, 354)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 limit_left = 0
 limit_top = 0
-limit_right = 3695
+limit_right = 3455
 limit_bottom = 650
 
 [node name="textNode" type="Button" parent="CharacterBody2D"]
@@ -89,5 +68,52 @@ text = "I don't need to use that yet,
 there's more meritocracy
 to spread  here >:)"
 
+[node name="play" type="Button" parent="."]
+auto_translate_mode = 1
+visible = false
+offset_left = 461.0
+offset_top = 41.0
+offset_right = 682.0
+offset_bottom = 314.0
+button_mask = 0
+text = "This is Octomom
+
+She has a kid, chores,
+school, and shopping to do.
+Make her keep working
+to make her forget about
+her dpression
+
+
+
+"
+
+[node name="PlayButton" type="Button" parent="play"]
+auto_translate_mode = 1
+modulate = Color(0.339368, 0.587909, 1, 1)
+self_modulate = Color(0.28814, 0.64651, 1, 1)
+layout_mode = 0
+offset_left = 40.0
+offset_top = 197.0
+offset_right = 172.0
+offset_bottom = 256.0
+theme_override_font_sizes/font_size = 21
+text = "Enter Mind"
+
+[node name="NextFloor" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1556, 469)
+texture = ExtResource("7_abjex")
+
+[node name="Button3" type="Button" parent="NextFloor"]
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+offset_left = -86.0
+offset_top = -86.0
+offset_right = 86.0
+offset_bottom = 89.0
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="play/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="NextFloor/Button3" to="." method="_on_button_3_pressed"]

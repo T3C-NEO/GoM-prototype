@@ -39,3 +39,13 @@ visible = false
 [node name="shopping" parent="right" instance=ExtResource("6_oso0r")]
 visible = false
 position = Vector2(-576, 0)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 481.0
+offset_top = 503.0
+offset_right = 672.0
+offset_bottom = 623.0
+text = "click to move on
+(for testing)"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
