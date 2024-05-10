@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgibpb4jh42t7"]
+
+[ext_resource type="Texture2D" uid="uid://daowmkj8xd7py" path="res://chip.png" id="1_34ca4"]
+[ext_resource type="Script" path="res://chip.gd" id="1_t6bsh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eko5v"]
+radius = 49.0102
+
+[node name="chip" type="RigidBody2D"]
+gravity_scale = 1.5
+script = ExtResource("1_t6bsh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_34ca4")
+
+[node name="player_detection" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_eko5v")
