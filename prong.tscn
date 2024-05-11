@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cchnm83tocc5v"]
+[gd_scene load_steps=5 format=3 uid="uid://bffd5ynosnexh"]
 
-[ext_resource type="Texture2D" path="res://assets/prong.png" id="1_hbaqw"]
-[ext_resource type="Script" path="res://prong.gd" id="1_wan5r"]
+[ext_resource type="Script" path="res://prong.gd" id="1_1twbi"]
+[ext_resource type="Texture2D" uid="uid://b2l1ygnpiv1p1" path="res://assets/prong.png" id="2_orahf"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_mx8fd"]
 friction = 0.75
@@ -11,12 +11,12 @@ bounce = 0.7
 radius = 15.0
 
 [node name="prong" type="Node2D"]
-script = ExtResource("1_wan5r")
+script = ExtResource("1_1twbi")
 
 [node name="Prong2" type="Sprite2D" parent="."]
 modulate = Color(1, 0.32, 0.750667, 1)
 scale = Vector2(0.03, 0.03)
-texture = ExtResource("1_hbaqw")
+texture = ExtResource("2_orahf")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 mass = 200.0

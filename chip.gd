@@ -28,3 +28,4 @@ func set_drop_point() -> void:
 		position.x = 65;
 	elif(position.x > 1085):
 		position.x = 1085;
+

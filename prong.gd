@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var prong = $Prong2;
 @onready var rb = $RigidBody2D;
+@onready var brain = preload("res://brain.tscn");
 #var initial_color : Color;
 
 func _ready() -> void:
@@ -15,4 +16,7 @@ func _process(_delta: float) -> void:
 
 func _on_rigid_body_2d_body_entered(body: Node) -> void:
 	if(body.name == "chip"):
-		prong.modulate.r = 0;
+		if prong.modulate.r != 0:
+			var brains = brain.instantiate();
+			add_child(brains);
+			prong.modulate.r = 0;

@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 Game="*res://game.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [input]
 
 forward={

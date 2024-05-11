@@ -6,7 +6,7 @@ extends Node2D
 var columnsA : int = 6;
 var columnsB : int = 5;
 
-var rows : int = 5;
+var rows : int = 4;
 
 
 func _ready() -> void:
@@ -34,3 +34,10 @@ func _on_button_pressed() -> void:
 func _on_button_2_pressed() -> void:
 	Game.CEODone = true
 	get_tree().change_scene_to_file("res://overworld0.tscn")
+
+
+
+
+func _on_rigid_body_2d_2_body_entered(body: Node) -> void:
+	if(body.name == "chip"):
+		print("Ds")
