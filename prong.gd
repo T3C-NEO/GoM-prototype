@@ -19,4 +19,5 @@ func _on_rigid_body_2d_body_entered(body: Node) -> void:
 		if prong.modulate.r != 0:
 			var brains = brain.instantiate();
 			add_child(brains);
+			Game.PlinkNum += 1;
 			prong.modulate.r = 0;

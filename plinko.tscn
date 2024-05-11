@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://cdfrv6t5xjef1"]
+[gd_scene load_steps=49 format=3 uid="uid://cdfrv6t5xjef1"]
 
 [ext_resource type="Texture2D" uid="uid://cy0ulhhhioo0i" path="res://assets/plinko_bg.png" id="1_64o2h"]
 [ext_resource type="Script" path="res://plinko.gd" id="1_ge8pn"]
@@ -7,8 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://dan1knpiv2v6q" path="res://assets/bar.png" id="3_gsyo4"]
 [ext_resource type="PackedScene" uid="uid://dgibpb4jh42t7" path="res://chip.tscn" id="5_jnh2c"]
 [ext_resource type="PackedScene" uid="uid://cchnm83tocc5v" path="res://brain.tscn" id="6_8ielq"]
+[ext_resource type="Texture2D" uid="uid://ixwputf3bwpy" path="res://brain.png" id="7_ih25j"]
 [ext_resource type="Texture2D" uid="uid://d2kdlub43s8xr" path="res://assets/plinko_bottom.png" id="7_r2ux3"]
 [ext_resource type="Texture2D" uid="uid://c7v45wji36njd" path="res://brown.webp" id="9_bkl6b"]
+[ext_resource type="PackedScene" uid="uid://bk2ixtbqbokxy" path="res://plinkoEndGood.tscn" id="10_y5v5x"]
+[ext_resource type="PackedScene" uid="uid://doka2jf1yop6c" path="res://plinkoEndBad.tscn" id="11_uy7tr"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_koea5"]
 a = Vector2(-504, -541)
@@ -151,13 +154,6 @@ size = Vector2(25, 196)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4spm8"]
 size = Vector2(1023.81, 1028.39)
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_04wk6"]
-friction = 0.75
-bounce = 0.7
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kil7m"]
-size = Vector2(137, 1)
-
 [node name="Plinko" type="Node2D"]
 script = ExtResource("1_ge8pn")
 
@@ -293,7 +289,7 @@ physics_material_override = SubResource("PhysicsMaterial_jyg1f")
 continuous_cd = 2
 
 [node name="cam" type="Camera2D" parent="chip"]
-position = Vector2(70, 169)
+position = Vector2(59, 111)
 limit_left = 0
 limit_top = 0
 limit_right = 1150
@@ -377,31 +373,68 @@ texture = ExtResource("9_bkl6b")
 position = Vector2(-0.129761, -8.19141)
 shape = SubResource("RectangleShape2D_4spm8")
 
-[node name="Label" type="Label" parent="."]
-offset_left = 504.0
-offset_top = 1892.0
-offset_right = 643.0
-offset_bottom = 2084.0
-theme_override_font_sizes/font_size = 30
-text = "Company
-loves it!"
+[node name="Label" parent="." instance=ExtResource("10_y5v5x")]
+
+[node name="Label2" parent="." instance=ExtResource("10_y5v5x")]
+offset_left = 825.0
+offset_right = 964.0
+
+[node name="Label3" parent="." instance=ExtResource("10_y5v5x")]
+offset_left = 184.0
+offset_right = 323.0
+
+[node name="Label4" parent="." instance=ExtResource("11_uy7tr")]
+offset_left = 344.0
+offset_right = 483.0
+
+[node name="Label5" parent="." instance=ExtResource("11_uy7tr")]
+offset_left = 18.0
+offset_right = 157.0
+
+[node name="Label6" parent="." instance=ExtResource("11_uy7tr")]
+offset_left = 664.0
+offset_right = 803.0
+
+[node name="Label7" parent="." instance=ExtResource("11_uy7tr")]
+offset_left = 992.0
+offset_right = 1131.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Brain" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(283, 88)
+scale = Vector2(0.421875, 0.421875)
+texture = ExtResource("7_ih25j")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 22.0
+offset_top = 30.0
+offset_right = 108.0
+offset_bottom = 135.0
+theme_override_font_sizes/font_size = 76
+text = "20/20"
+
+[node name="Label8" type="Label" parent="."]
+offset_left = 202.0
+offset_top = -18.0
+offset_right = 915.0
+offset_bottom = 159.0
+theme_override_font_sizes/font_size = 80
+text = "IDEATE!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="RigidBody2D2" type="RigidBody2D" parent="Label"]
-position = Vector2(69, 182)
-mass = 200.0
-physics_material_override = SubResource("PhysicsMaterial_04wk6")
-gravity_scale = 0.0
-continuous_cd = 2
-contact_monitor = true
-max_contacts_reported = 5
+[node name="Big" type="Timer" parent="Label8"]
+wait_time = 0.2
+one_shot = true
+autostart = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Label/RigidBody2D2"]
-position = Vector2(0.5, 8.5)
-shape = SubResource("RectangleShape2D_kil7m")
+[node name="small" type="Timer" parent="Label8"]
+wait_time = 0.2
+one_shot = true
 
 [connection signal="body_entered" from="chip" to="." method="_on_chip_body_entered"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
-[connection signal="body_entered" from="Label/RigidBody2D2" to="." method="_on_rigid_body_2d_2_body_entered"]
+[connection signal="timeout" from="Label8/Big" to="." method="_on_big_timeout"]
+[connection signal="timeout" from="Label8/small" to="." method="_on_small_timeout"]

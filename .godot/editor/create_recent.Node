@@ -1,8 +1,9 @@
+Timer
+Label
+CanvasLayer
 RigidBody2D
 CollisionShape2D
 StaticBody2D
-Label
-Timer
 Sprite2D
 Button
 TextEdit

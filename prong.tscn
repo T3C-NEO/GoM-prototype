@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bffd5ynosnexh"]
 
 [ext_resource type="Script" path="res://prong.gd" id="1_1twbi"]
-[ext_resource type="Texture2D" uid="uid://b2l1ygnpiv1p1" path="res://assets/prong.png" id="2_orahf"]
+[ext_resource type="Texture2D" uid="uid://ixwputf3bwpy" path="res://brain.png" id="2_hdqpp"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_mx8fd"]
 friction = 0.75
@@ -15,8 +15,8 @@ script = ExtResource("1_1twbi")
 
 [node name="Prong2" type="Sprite2D" parent="."]
 modulate = Color(1, 0.32, 0.750667, 1)
-scale = Vector2(0.03, 0.03)
-texture = ExtResource("2_orahf")
+scale = Vector2(0.117187, 0.117188)
+texture = ExtResource("2_hdqpp")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 mass = 200.0

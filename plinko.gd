@@ -2,11 +2,19 @@ extends Node2D
 
 @onready var prong = preload("res://prong.tscn");
 @onready var chip = $chip;
+@onready var brains = $CanvasLayer/Label;
+@onready var goal = $Label8;
+
+@onready var big = $Label8/Big;
+@onready var small = $Label8/small;
 
 var columnsA : int = 6;
 var columnsB : int = 5;
 
 var rows : int = 4;
+
+var biging = false;
+var fontSize = 80;
 
 
 func _ready() -> void:
@@ -24,7 +32,15 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	pass
+	if Game.PlinkNum < 10:
+		brains.text = "0"+str(Game.PlinkNum)+"/20";
+	else:
+		brains.text = str(Game.PlinkNum)+"/20";
+	goal.add_theme_font_size_override("font_size",fontSize)
+	if biging == false:
+		fontSize -= 5;
+	else:
+		fontSize += 5;
 
 
 func _on_button_pressed() -> void:
@@ -36,8 +52,10 @@ func _on_button_2_pressed() -> void:
 	get_tree().change_scene_to_file("res://overworld0.tscn")
 
 
+func _on_big_timeout() -> void:
+	biging = true;
+	small.start()
 
-
-func _on_rigid_body_2d_2_body_entered(body: Node) -> void:
-	if(body.name == "chip"):
-		print("Ds")
+func _on_small_timeout() -> void:
+	biging = false;
+	big.start()

@@ -1,5 +1,9 @@
-res://overworld.tscn
+res://plinkoEndGood.tscn
 res://overworld.gd
+res://plinko_end_good.gd
+res://plinko.tscn
+res://plinko.gd
+res://overworld.tscn
 res://overworld3.tscn
 res://menu.tscn
 res://overworld0.tscn
@@ -8,12 +12,8 @@ res://overworld2.tscn
 res://loading3.tscn
 res://Main sccene.tscn
 res://character_body_2d.tscn
-res://plinko.tscn
-res://prong.tscn
-res://Plink_Brain.tscn
-res://brain.tscn
 res://Prong.tscn
-res://prong.gd
-res://chip.gd
 res://chip.tscn
-res://plinko.gd
+res://plinkoEndBad.tscn
+res://game.gd
+res://prong.gd
