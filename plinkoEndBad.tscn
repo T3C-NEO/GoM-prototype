@@ -9,7 +9,7 @@ bounce = 0.7
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kil7m"]
 size = Vector2(137, 1)
 
-[node name="Label" type="Label"]
+[node name="plinkoEndBad" type="Label"]
 auto_translate_mode = 1
 offset_left = 504.0
 offset_top = 1892.0

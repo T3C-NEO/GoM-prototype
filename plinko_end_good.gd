@@ -12,7 +12,7 @@ func _process(_delta: float) -> void:
 	if(reached_bottom):
 		var timer = get_tree().create_timer(2);
 		await timer.timeout;
-		if(Game.PlinkNum >= 20):
+		if(Game.PlinkNum >= 50):
 			Game.CEODone = true
 			get_tree().change_scene_to_file("res://overworld0.tscn")
 		else:

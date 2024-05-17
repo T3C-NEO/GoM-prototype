@@ -5,13 +5,13 @@
 [ext_resource type="Texture2D" uid="uid://kf3sbyywvudp" path="res://assets/PLINKO.png" id="2_1nfas"]
 [ext_resource type="Texture2D" uid="uid://b2l1ygnpiv1p1" path="res://assets/prong.png" id="3_gpv0d"]
 [ext_resource type="Texture2D" uid="uid://dan1knpiv2v6q" path="res://assets/bar.png" id="3_gsyo4"]
+[ext_resource type="Texture2D" uid="uid://cq53u6u73xym4" path="res://assets/PLINKO2.png" id="5_13qn6"]
 [ext_resource type="PackedScene" uid="uid://dgibpb4jh42t7" path="res://chip.tscn" id="5_jnh2c"]
 [ext_resource type="PackedScene" uid="uid://cchnm83tocc5v" path="res://brain.tscn" id="6_8ielq"]
 [ext_resource type="Texture2D" uid="uid://ixwputf3bwpy" path="res://brain.png" id="7_ih25j"]
 [ext_resource type="Texture2D" uid="uid://d2kdlub43s8xr" path="res://assets/plinko_bottom.png" id="7_r2ux3"]
 [ext_resource type="Texture2D" uid="uid://c7v45wji36njd" path="res://brown.webp" id="9_bkl6b"]
 [ext_resource type="PackedScene" uid="uid://bk2ixtbqbokxy" path="res://plinkoEndGood.tscn" id="10_y5v5x"]
-[ext_resource type="PackedScene" uid="uid://doka2jf1yop6c" path="res://plinkoEndBad.tscn" id="11_uy7tr"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_koea5"]
 a = Vector2(-504, -541)
@@ -161,8 +161,8 @@ size = Vector2(136, 189)
 script = ExtResource("1_ge8pn")
 
 [node name="PlinkoBg" type="Sprite2D" parent="."]
-position = Vector2(575.5, 1059.5)
-scale = Vector2(0.900781, 0.981944)
+position = Vector2(575.5, 1834.5)
+scale = Vector2(0.900781, 1.69954)
 texture = ExtResource("1_64o2h")
 
 [node name="Bar" type="Sprite2D" parent="."]
@@ -171,7 +171,7 @@ scale = Vector2(0.894531, 0.49)
 texture = ExtResource("3_gsyo4")
 
 [node name="Plinko" type="Sprite2D" parent="."]
-position = Vector2(576.5, 1062)
+position = Vector2(576, 2633)
 scale = Vector2(0.930469, 0.983333)
 texture = ExtResource("2_1nfas")
 
@@ -279,6 +279,112 @@ shape = SubResource("SegmentShape2D_5n1j8")
 [node name="CollisionShape2D33" type="CollisionShape2D" parent="Plinko/StaticBody2D"]
 shape = SubResource("SegmentShape2D_eq4fr")
 
+[node name="Plinko2" type="Sprite2D" parent="."]
+position = Vector2(576, 1054)
+scale = Vector2(0.930469, 0.983333)
+texture = ExtResource("5_13qn6")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Plinko2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plinko2/StaticBody2D"]
+shape = SubResource("SegmentShape2D_koea5")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Plinko2/StaticBody2D"]
+shape = SubResource("SegmentShape2D_jgcab")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Plinko2/StaticBody2D"]
+shape = SubResource("SegmentShape2D_hglhg")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Plinko2/StaticBody2D"]
+shape = SubResource("SegmentShape2D_phv55")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Plinko2/StaticBody2D"]
+shape = SubResource("SegmentShape2D_jwhqv")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Plinko2/StaticBody2D"]
+shape = SubResource("SegmentShape2D_t4ifr")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Plinko2/StaticBody2D"]
+position = Vector2(-2, 0)
+shape = SubResource("SegmentShape2D_tlgle")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Plinko2/StaticBody2D"]
+shape = SubResource("SegmentShape2D_c2ol8")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Plinko2/StaticBody2D"]
+shape = SubResource("SegmentShape2D_2kni5")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Plinko2/StaticBody2D"]
+shape = SubResource("SegmentShape2D_n52iv")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Plinko2/StaticBody2D"]
+shape = SubResource("SegmentShape2D_yjrxl")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Plinko2/StaticBody2D"]
+shape = SubResource("SegmentShape2D_5s801")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Plinko2/StaticBody2D"]
+position = Vector2(2, -6)
+shape = SubResource("SegmentShape2D_dcvbq")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Plinko2/StaticBody2D"]
+shape = SubResource("SegmentShape2D_lrf7a")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Plinko2/StaticBody2D"]
+shape = SubResource("SegmentShape2D_wry0n")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="Plinko2/StaticBody2D"]
+shape = SubResource("SegmentShape2D_62xw2")
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="Plinko2/StaticBody2D"]
+position = Vector2(0, 6)
+shape = SubResource("SegmentShape2D_gl52y")
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="Plinko2/StaticBody2D"]
+shape = SubResource("SegmentShape2D_o3uqm")
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="Plinko2/StaticBody2D"]
+shape = SubResource("SegmentShape2D_jrhos")
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="Plinko2/StaticBody2D"]
+shape = SubResource("SegmentShape2D_w6bnt")
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="Plinko2/StaticBody2D"]
+shape = SubResource("SegmentShape2D_uaavt")
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="Plinko2/StaticBody2D"]
+shape = SubResource("SegmentShape2D_qearb")
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="Plinko2/StaticBody2D"]
+shape = SubResource("SegmentShape2D_2xcu6")
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="Plinko2/StaticBody2D"]
+shape = SubResource("SegmentShape2D_5wx7x")
+
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="Plinko2/StaticBody2D"]
+shape = SubResource("SegmentShape2D_6jyax")
+
+[node name="CollisionShape2D27" type="CollisionShape2D" parent="Plinko2/StaticBody2D"]
+shape = SubResource("SegmentShape2D_r02ob")
+
+[node name="CollisionShape2D28" type="CollisionShape2D" parent="Plinko2/StaticBody2D"]
+shape = SubResource("SegmentShape2D_3jtot")
+
+[node name="CollisionShape2D29" type="CollisionShape2D" parent="Plinko2/StaticBody2D"]
+shape = SubResource("SegmentShape2D_d1tpy")
+
+[node name="CollisionShape2D30" type="CollisionShape2D" parent="Plinko2/StaticBody2D"]
+shape = SubResource("SegmentShape2D_3r3qf")
+
+[node name="CollisionShape2D31" type="CollisionShape2D" parent="Plinko2/StaticBody2D"]
+shape = SubResource("SegmentShape2D_w8e15")
+
+[node name="CollisionShape2D32" type="CollisionShape2D" parent="Plinko2/StaticBody2D"]
+shape = SubResource("SegmentShape2D_5n1j8")
+
+[node name="CollisionShape2D33" type="CollisionShape2D" parent="Plinko2/StaticBody2D"]
+shape = SubResource("SegmentShape2D_eq4fr")
+
 [node name="Prong" type="Sprite2D" parent="."]
 visible = false
 modulate = Color(1, 0.141176, 0.682353, 1)
@@ -287,7 +393,7 @@ scale = Vector2(0.04, 0.04)
 texture = ExtResource("3_gpv0d")
 
 [node name="chip" parent="." instance=ExtResource("5_jnh2c")]
-position = Vector2(128, 237)
+position = Vector2(-416, 3471)
 physics_material_override = SubResource("PhysicsMaterial_jyg1f")
 continuous_cd = 2
 
@@ -296,16 +402,21 @@ position = Vector2(59, 111)
 limit_left = 0
 limit_top = 0
 limit_right = 1150
-limit_bottom = 2100
+limit_bottom = 3685
 position_smoothing_enabled = true
-position_smoothing_speed = 2.0
+position_smoothing_speed = 0.01
+
+[node name="Timer" type="Timer" parent="chip"]
+wait_time = 2.0
+one_shot = true
+autostart = true
 
 [node name="prong" parent="." instance=ExtResource("6_8ielq")]
 visible = false
 position = Vector2(260, 435)
 
 [node name="bottom" type="Sprite2D" parent="."]
-position = Vector2(576, 1063.5)
+position = Vector2(577, 2635.5)
 scale = Vector2(0.93125, 0.980093)
 texture = ExtResource("7_r2ux3")
 
@@ -354,60 +465,166 @@ theme_override_font_sizes/font_size = 41
 text = "You win!
 (click to move on cuz I'm not fucking with collisions rn)"
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(887.365, 1739.67)
+[node name="Slides" type="Node2D" parent="."]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Slides"]
+position = Vector2(888.365, 3311.67)
 rotation = -0.47822
 scale = Vector2(0.519206, 0.0259909)
 texture = ExtResource("9_bkl6b")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Slides/Sprite2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slides/Sprite2D/StaticBody2D"]
 shape = SubResource("RectangleShape2D_4spm8")
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(267.08, 1739.67)
+[node name="Sprite2D2" type="Sprite2D" parent="Slides"]
+position = Vector2(268.08, 3311.67)
 rotation = 0.47822
 scale = Vector2(0.519206, 0.0259909)
 texture = ExtResource("9_bkl6b")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D2"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Slides/Sprite2D2"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D2/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slides/Sprite2D2/StaticBody2D"]
 position = Vector2(-0.129761, -8.19141)
 shape = SubResource("RectangleShape2D_4spm8")
 
-[node name="Label" parent="." instance=ExtResource("10_y5v5x")]
+[node name="Slide Timer" type="Timer" parent="Slides"]
+wait_time = 4.0
+one_shot = true
+autostart = true
 
-[node name="Help" type="Area2D" parent="Label"]
+[node name="plinkoEndGood" parent="." instance=ExtResource("10_y5v5x")]
+position = Vector2(574, 3645)
+freeze = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Label/Help"]
+[node name="Help25" type="Area2D" parent="plinkoEndGood"]
+position = Vector2(-70, -183)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plinkoEndGood/Help25"]
 position = Vector2(70, 94.5)
 shape = SubResource("RectangleShape2D_deil1")
 
-[node name="Label2" parent="." instance=ExtResource("10_y5v5x")]
-offset_left = 825.0
-offset_right = 964.0
+[node name="Label" type="Label" parent="plinkoEndGood/Help25"]
+offset_right = 138.0
+offset_bottom = 141.0
+theme_override_font_sizes/font_size = 50
+text = "
++25"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Label3" parent="." instance=ExtResource("10_y5v5x")]
-offset_left = 184.0
-offset_right = 323.0
+[node name="plinkoEndGood2" parent="." instance=ExtResource("10_y5v5x")]
+position = Vector2(414, 3645)
 
-[node name="Label4" parent="." instance=ExtResource("11_uy7tr")]
-offset_left = 344.0
-offset_right = 483.0
+[node name="Help15" type="Area2D" parent="plinkoEndGood2"]
+position = Vector2(-70, -183)
 
-[node name="Label5" parent="." instance=ExtResource("11_uy7tr")]
-offset_left = 18.0
-offset_right = 157.0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plinkoEndGood2/Help15"]
+position = Vector2(70, 94.5)
+shape = SubResource("RectangleShape2D_deil1")
 
-[node name="Label6" parent="." instance=ExtResource("11_uy7tr")]
-offset_left = 664.0
-offset_right = 803.0
+[node name="Label" type="Label" parent="plinkoEndGood2/Help15"]
+auto_translate_mode = 1
+offset_right = 138.0
+offset_bottom = 141.0
+theme_override_font_sizes/font_size = 50
+text = "
++15"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Label7" parent="." instance=ExtResource("11_uy7tr")]
-offset_left = 992.0
-offset_right = 1131.0
+[node name="plinkoEndGood3" parent="." instance=ExtResource("10_y5v5x")]
+position = Vector2(734, 3645)
+
+[node name="Help15" type="Area2D" parent="plinkoEndGood3"]
+position = Vector2(-70, -183)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plinkoEndGood3/Help15"]
+position = Vector2(70, 94.5)
+shape = SubResource("RectangleShape2D_deil1")
+
+[node name="Label" type="Label" parent="plinkoEndGood3/Help15"]
+auto_translate_mode = 1
+offset_right = 138.0
+offset_bottom = 141.0
+theme_override_font_sizes/font_size = 50
+text = "
++15"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="plinkoEndGood4" parent="." instance=ExtResource("10_y5v5x")]
+position = Vector2(254, 3645)
+
+[node name="Help5" type="Area2D" parent="plinkoEndGood4"]
+position = Vector2(-70, -183)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plinkoEndGood4/Help5"]
+position = Vector2(70, 94.5)
+shape = SubResource("RectangleShape2D_deil1")
+
+[node name="Label" type="Label" parent="plinkoEndGood4/Help5"]
+auto_translate_mode = 1
+offset_right = 138.0
+offset_bottom = 141.0
+theme_override_font_sizes/font_size = 50
+text = "
++5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="plinkoEndGood5" parent="." instance=ExtResource("10_y5v5x")]
+position = Vector2(895, 3645)
+
+[node name="Help5" type="Area2D" parent="plinkoEndGood5"]
+position = Vector2(-70, -183)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plinkoEndGood5/Help5"]
+position = Vector2(70, 94.5)
+shape = SubResource("RectangleShape2D_deil1")
+
+[node name="Label" type="Label" parent="plinkoEndGood5/Help5"]
+auto_translate_mode = 1
+offset_right = 138.0
+offset_bottom = 141.0
+theme_override_font_sizes/font_size = 50
+text = "
++5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="plinkoEndGood6" parent="." instance=ExtResource("10_y5v5x")]
+position = Vector2(89, 3645)
+
+[node name="Label2" type="Label" parent="plinkoEndGood6"]
+auto_translate_mode = 1
+offset_left = -70.0
+offset_top = -183.0
+offset_right = 68.0
+offset_bottom = -42.0
+theme_override_font_sizes/font_size = 50
+text = "
++0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="plinkoEndGood7" parent="." instance=ExtResource("10_y5v5x")]
+position = Vector2(1059, 3645)
+
+[node name="Label2" type="Label" parent="plinkoEndGood7"]
+auto_translate_mode = 1
+offset_left = -70.0
+offset_top = -183.0
+offset_right = 68.0
+offset_bottom = -42.0
+theme_override_font_sizes/font_size = 50
+text = "
++0"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -444,8 +661,14 @@ wait_time = 0.2
 one_shot = true
 
 [connection signal="body_entered" from="chip" to="." method="_on_chip_body_entered"]
+[connection signal="timeout" from="chip/Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
-[connection signal="body_entered" from="Label/Help" to="." method="_on_help_body_entered"]
+[connection signal="timeout" from="Slides/Slide Timer" to="." method="_on_slide_timer_timeout"]
+[connection signal="body_entered" from="plinkoEndGood/Help25" to="." method="_on_help_25_body_entered"]
+[connection signal="body_entered" from="plinkoEndGood2/Help15" to="." method="_on_help_15_body_entered"]
+[connection signal="body_entered" from="plinkoEndGood3/Help15" to="." method="_on_help_15_body_entered"]
+[connection signal="body_entered" from="plinkoEndGood4/Help5" to="." method="_on_help_5_body_entered"]
+[connection signal="body_entered" from="plinkoEndGood5/Help5" to="." method="_on_help_5_body_entered"]
 [connection signal="timeout" from="Label8/Big" to="." method="_on_big_timeout"]
 [connection signal="timeout" from="Label8/small" to="." method="_on_small_timeout"]
