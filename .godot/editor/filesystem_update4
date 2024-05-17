@@ -12,3 +12,8 @@ res://overworld.tscn
 res://plinko_end_good.gd
 res://plinkoEndBad.tscn
 res://plinkoEndGood.tscn
+res://debt_popup.tscn
+res://debt_popup.gd
+res://left.gd
+res://main_sccene.gd
+res://minigame.gd
