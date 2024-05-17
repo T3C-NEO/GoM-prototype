@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dwb0aojqnf1sk" path="res://coffee machine.png" id="4_06bt6"]
 [ext_resource type="Texture2D" uid="uid://mcrfrwiwwsgc" path="res://lid.jpg" id="6_cds06"]
 [ext_resource type="Texture2D" uid="uid://b10hlks3nfgk8" path="res://lose.jpg" id="7_lqnpi"]
-[ext_resource type="Texture2D" uid="uid://dw3v7igquv1sl" path="res://icon.svg" id="8_o34mc"]
+[ext_resource type="Texture2D" uid="uid://btyemlhblegh8" path="res://assets/order_incomplete.png" id="8_xi55f"]
 [ext_resource type="Texture2D" uid="uid://cp1sl0ot4722j" path="res://line.png" id="9_5agyt"]
 
 [node name="work" type="Node2D"]
@@ -82,19 +82,19 @@ scale = Vector2(1.07662, 1.72222)
 texture = ExtResource("7_lqnpi")
 
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(48, 226)
-scale = Vector2(0.375, 1)
-texture = ExtResource("8_o34mc")
+position = Vector2(88, 150)
+scale = Vector2(0.2225, 0.245921)
+texture = ExtResource("8_xi55f")
 
 [node name="Icon2" type="Sprite2D" parent="."]
-position = Vector2(101, 226)
-scale = Vector2(0.375, 1)
-texture = ExtResource("8_o34mc")
+position = Vector2(88, 275)
+scale = Vector2(0.2225, 0.245921)
+texture = ExtResource("8_xi55f")
 
 [node name="Icon3" type="Sprite2D" parent="."]
-position = Vector2(154, 226)
-scale = Vector2(0.375, 1)
-texture = ExtResource("8_o34mc")
+position = Vector2(88, 400)
+scale = Vector2(0.2225, 0.245921)
+texture = ExtResource("8_xi55f")
 
 [node name="Line" type="Sprite2D" parent="."]
 position = Vector2(440, 361)

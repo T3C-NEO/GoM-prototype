@@ -107,29 +107,27 @@ auto_translate_mode = 1
 visible = false
 offset_left = 2629.0
 offset_top = 94.0
-offset_right = 2850.0
+offset_right = 2855.0
 offset_bottom = 337.0
 button_mask = 0
-text = "This is The debt guy
+text = "Lauren - Graphic Designer
 
-They think their debt
-is holding them back and
-stuff, prove them wrong
-or something
+Oof. All that debt from their partner's medical bills is driving them crazy. Let's pluck those thoughts out so they can work in peace. 
 
 
 
 "
+autowrap_mode = 2
 
 [node name="PlayButton" type="Button" parent="play"]
 auto_translate_mode = 1
 modulate = Color(0.339368, 0.587909, 1, 1)
 self_modulate = Color(0.28814, 0.64651, 1, 1)
 layout_mode = 0
-offset_left = 42.0
-offset_top = 163.0
-offset_right = 174.0
-offset_bottom = 222.0
+offset_left = 1.0
+offset_top = 184.0
+offset_right = 226.0
+offset_bottom = 243.0
 theme_override_font_sizes/font_size = 21
 text = "Enter Mind"
 

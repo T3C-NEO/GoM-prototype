@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://main_sccene.gd" id="1_bg2rm"]
 [ext_resource type="Script" path="res://left.gd" id="2_fadb5"]
-[ext_resource type="PackedScene" path="res://Baby Changing Station.tscn" id="2_tspuk"]
+[ext_resource type="PackedScene" uid="uid://bk2ljowoyy8cq" path="res://Baby Changing Station.tscn" id="2_tspuk"]
 [ext_resource type="PackedScene" uid="uid://bwy8qxanv076u" path="res://work (2).tscn" id="3_bqcye"]
 [ext_resource type="PackedScene" uid="uid://lfnd5jmbp4xe" path="res://chores.tscn" id="5_sgyeq"]
 [ext_resource type="PackedScene" uid="uid://ssv6ed6c5h2e" path="res://shopping.tscn" id="6_oso0r"]

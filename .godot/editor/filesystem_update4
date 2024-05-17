@@ -1,9 +1,5 @@
-res://plinkoEndGood.tscn
-res://overworld.gd
-res://plinko_end_good.gd
-res://plinko.tscn
-res://plinko.gd
 res://overworld.tscn
+res://overworld.gd
 res://overworld3.tscn
 res://menu.tscn
 res://overworld0.tscn
@@ -12,8 +8,21 @@ res://overworld2.tscn
 res://loading3.tscn
 res://Main sccene.tscn
 res://character_body_2d.tscn
+res://plinko.tscn
+res://plinkoEndGood.tscn
 res://Prong.tscn
+res://plinko.gd
+res://Plink_Brain.gd
 res://chip.tscn
-res://plinkoEndBad.tscn
-res://game.gd
-res://prong.gd
+res://plinko_end_good.gd
+res://chip.gd
+res://shopping.tscn
+res://groceries.tscn
+res://chores.tscn
+res://sprite_2d.tscn
+res://work (2).tscn
+res://work.tscn
+res://Baby Changing Station.tscn
+res://baby_changing_station.gd
+res://character_body_2d.gd
+res://overworld_2.gd

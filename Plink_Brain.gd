@@ -12,7 +12,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	prong.modulate.a = time.time_left
-	position.y -= 2;
+	position.y -= 200 * delta;
 
 
 func _on_timer_timeout() -> void:

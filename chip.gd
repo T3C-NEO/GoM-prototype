@@ -3,15 +3,17 @@ extends RigidBody2D
 var move : bool;
 var drop : bool;
 
+var speed : float = 1500.0;
+
 func _ready() -> void:
 	self.gravity_scale = 0;
 
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	if(drop):
 		self.gravity_scale = 1.5;
 	else:
-		set_drop_point();
+		new_drop_point(delta);
 		
 func set_drop_point() -> void:
 	var mouse : Vector2 = get_global_mouse_position();
@@ -29,3 +31,8 @@ func set_drop_point() -> void:
 	elif(position.x > 1085):
 		position.x = 1085;
 
+func new_drop_point(delta : float) -> void:
+	position.x += speed * delta;
+	
+	if(position.x < 65 || position.x > 1085):
+		speed *= -1;

@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://cdfrv6t5xjef1"]
+[gd_scene load_steps=50 format=3 uid="uid://cdfrv6t5xjef1"]
 
 [ext_resource type="Texture2D" uid="uid://cy0ulhhhioo0i" path="res://assets/plinko_bg.png" id="1_64o2h"]
 [ext_resource type="Script" path="res://plinko.gd" id="1_ge8pn"]
@@ -153,6 +153,9 @@ size = Vector2(25, 196)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4spm8"]
 size = Vector2(1023.81, 1028.39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_deil1"]
+size = Vector2(136, 189)
 
 [node name="Plinko" type="Node2D"]
 script = ExtResource("1_ge8pn")
@@ -342,6 +345,7 @@ theme_override_font_sizes/font_size = 45
 text = "DROP"
 
 [node name="Button2" type="Button" parent="."]
+visible = false
 offset_left = 8.0
 offset_top = 1696.0
 offset_right = 1135.0
@@ -374,6 +378,12 @@ position = Vector2(-0.129761, -8.19141)
 shape = SubResource("RectangleShape2D_4spm8")
 
 [node name="Label" parent="." instance=ExtResource("10_y5v5x")]
+
+[node name="Help" type="Area2D" parent="Label"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Label/Help"]
+position = Vector2(70, 94.5)
+shape = SubResource("RectangleShape2D_deil1")
 
 [node name="Label2" parent="." instance=ExtResource("10_y5v5x")]
 offset_left = 825.0
@@ -436,5 +446,6 @@ one_shot = true
 [connection signal="body_entered" from="chip" to="." method="_on_chip_body_entered"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="body_entered" from="Label/Help" to="." method="_on_help_body_entered"]
 [connection signal="timeout" from="Label8/Big" to="." method="_on_big_timeout"]
 [connection signal="timeout" from="Label8/small" to="." method="_on_small_timeout"]

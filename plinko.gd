@@ -42,7 +42,6 @@ func _process(_delta: float) -> void:
 	else:
 		fontSize += 5;
 
-
 func _on_button_pressed() -> void:
 	chip.drop = true;
 
@@ -59,3 +58,8 @@ func _on_big_timeout() -> void:
 func _on_small_timeout() -> void:
 	biging = false;
 	big.start()
+
+
+func _on_help_body_entered(body: Node2D) -> void:
+	if(body.name == "chip"):
+		Game.PlinkNum += 3; 

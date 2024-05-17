@@ -3,7 +3,7 @@ extends CharacterBody2D
 var speed = 600
 var mouse_position = null
  
-func _physics_process(delta):
+func _physics_process(_delta):
 	
 	# Reset the player's velocity
 	velocity = Vector2(0, 0)

@@ -67,28 +67,25 @@ to spread  here >:)"
 auto_translate_mode = 1
 visible = false
 offset_left = 482.0
-offset_top = 78.0
-offset_right = 703.0
-offset_bottom = 321.0
+offset_top = 94.0
+offset_right = 718.0
+offset_bottom = 314.0
 button_mask = 0
-text = "This is the CEO
+text = "Clive Sterling - CEO
 
-He's close but he could
-definitely believe
-harder
-
+Inherited the company from his father. Practically eating out of my hands already, but it's time for a tune-up.
 
 
 "
+autowrap_mode = 2
 
 [node name="PlayButton" type="Button" parent="play"]
 modulate = Color(0.339368, 0.587909, 1, 1)
 self_modulate = Color(0.28814, 0.64651, 1, 1)
 layout_mode = 0
-offset_left = 42.0
-offset_top = 163.0
-offset_right = 174.0
-offset_bottom = 222.0
+offset_top = 172.0
+offset_right = 236.0
+offset_bottom = 220.0
 theme_override_font_sizes/font_size = 21
 text = "Enter Mind"
 

@@ -1,12 +1,23 @@
-[gd_scene load_steps=6 format=3 uid="uid://ssv6ed6c5h2e"]
+[gd_scene load_steps=15 format=3 uid="uid://ssv6ed6c5h2e"]
 
 [ext_resource type="Script" path="res://shopping.gd" id="1_8mh7u"]
 [ext_resource type="Texture2D" uid="uid://bnl8lmcx5c6qm" path="res://shelves2.jpg" id="1_reg4j"]
-[ext_resource type="PackedScene" uid="uid://c2bsv7cygkvxh" path="res://groceries.tscn" id="4_0v7ua"]
+[ext_resource type="Texture2D" uid="uid://dw3v7igquv1sl" path="res://icon.svg" id="4_5o323"]
 [ext_resource type="Texture2D" uid="uid://4qdl4evwita1" path="res://basket.png" id="4_urvpa"]
+[ext_resource type="Script" path="res://drag_food_items.gd" id="5_n3sru"]
+[ext_resource type="Texture2D" uid="uid://p1boxcrtnc8x" path="res://assets/cereal.png" id="6_cyimu"]
+[ext_resource type="Texture2D" uid="uid://cevrrly1hbrwa" path="res://assets/crema.png" id="7_1ajp5"]
+[ext_resource type="Texture2D" uid="uid://b0ccqvtddkqv2" path="res://assets/cake.png" id="8_n6ej2"]
+[ext_resource type="Texture2D" uid="uid://ey872e8k6x85" path="res://assets/diapers.png" id="9_5ljeo"]
+[ext_resource type="Texture2D" uid="uid://dbuxlbv3xbicg" path="res://assets/jar.png" id="10_eoj2g"]
+[ext_resource type="Texture2D" uid="uid://dwe3nx7ekgnwf" path="res://assets/bread.png" id="11_ogsti"]
+[ext_resource type="Texture2D" uid="uid://ctycu45j4v61j" path="res://assets/train.png" id="12_2piqf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mgdc0"]
 size = Vector2(389.498, 259.665)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_11tve"]
+size = Vector2(101.876, 125)
 
 [node name="shopping" type="Node2D"]
 script = ExtResource("1_8mh7u")
@@ -27,30 +38,145 @@ texture = ExtResource("4_urvpa")
 position = Vector2(3.09094, -2.06079)
 shape = SubResource("RectangleShape2D_mgdc0")
 
-[node name="groceries" parent="." instance=ExtResource("4_0v7ua")]
+[node name="groceries" type="Sprite2D" parent="."]
 position = Vector2(674, 101)
+scale = Vector2(0.789063, 1)
+texture = ExtResource("4_5o323")
+script = ExtResource("5_n3sru")
 
-[node name="groceries2" parent="." instance=ExtResource("4_0v7ua")]
+[node name="food_detection" type="Area2D" parent="groceries"]
+scale = Vector2(1.20755, 1)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="groceries/food_detection"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_11tve")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="groceries"]
+position = Vector2(-0.0842285, 0.956848)
+scale = Vector2(0.271376, 0.197914)
+texture = ExtResource("6_cyimu")
+
+[node name="groceries2" type="Sprite2D" parent="."]
 position = Vector2(843, 101)
+scale = Vector2(0.789063, 1)
+texture = ExtResource("4_5o323")
+script = ExtResource("5_n3sru")
 
-[node name="groceries3" parent="." instance=ExtResource("4_0v7ua")]
+[node name="food_detection" type="Area2D" parent="groceries2"]
+scale = Vector2(1.20755, 1)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="groceries2/food_detection"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_11tve")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="groceries2"]
+position = Vector2(-3.72777, 4.54207)
+scale = Vector2(0.184881, 0.169084)
+texture = ExtResource("7_1ajp5")
+
+[node name="groceries3" type="Sprite2D" parent="."]
 position = Vector2(938, 403)
+scale = Vector2(0.789063, 1)
+texture = ExtResource("4_5o323")
+script = ExtResource("5_n3sru")
 
-[node name="groceries4" parent="." instance=ExtResource("4_0v7ua")]
+[node name="food_detection" type="Area2D" parent="groceries3"]
+scale = Vector2(1.20755, 1)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="groceries3/food_detection"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_11tve")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="groceries3"]
+position = Vector2(0, 2.15344)
+scale = Vector2(0.270614, 0.202307)
+texture = ExtResource("8_n6ej2")
+
+[node name="groceries4" type="Sprite2D" parent="."]
 position = Vector2(775, 271.5)
 scale = Vector2(0.789063, 0.695313)
+texture = ExtResource("4_5o323")
+script = ExtResource("5_n3sru")
 
-[node name="groceries5" parent="." instance=ExtResource("4_0v7ua")]
+[node name="food_detection" type="Area2D" parent="groceries4"]
+scale = Vector2(1.20755, 1)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="groceries4/food_detection"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_11tve")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="groceries4"]
+position = Vector2(-3.80201, 2.49603)
+scale = Vector2(0.286119, 0.23079)
+texture = ExtResource("9_5ljeo")
+
+[node name="groceries5" type="Sprite2D" parent="."]
 position = Vector2(1024.75, 279.5)
 scale = Vector2(0.457031, 0.648438)
+texture = ExtResource("4_5o323")
+script = ExtResource("5_n3sru")
 
-[node name="groceries6" parent="." instance=ExtResource("4_0v7ua")]
+[node name="food_detection" type="Area2D" parent="groceries5"]
+scale = Vector2(1.20755, 1)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="groceries5/food_detection"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_11tve")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="groceries5"]
+position = Vector2(0.884607, 2.31335)
+scale = Vector2(0.244385, 0.208701)
+texture = ExtResource("10_eoj2g")
+
+[node name="groceries6" type="Sprite2D" parent="."]
 position = Vector2(674, 437)
 scale = Vector2(0.832031, 0.523438)
+texture = ExtResource("4_5o323")
+script = ExtResource("5_n3sru")
 
-[node name="groceries7" parent="." instance=ExtResource("4_0v7ua")]
+[node name="food_detection" type="Area2D" parent="groceries6"]
+scale = Vector2(1.20755, 1)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="groceries6/food_detection"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_11tve")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="groceries6"]
+position = Vector2(5.7041, 12.5431)
+scale = Vector2(0.159258, 0.231414)
+texture = ExtResource("11_ogsti")
+
+[node name="groceries7" type="Sprite2D" parent="."]
 position = Vector2(713, 570)
 scale = Vector2(0.789063, 0.78125)
+texture = ExtResource("4_5o323")
+script = ExtResource("5_n3sru")
+
+[node name="food_detection" type="Area2D" parent="groceries7"]
+scale = Vector2(1.20755, 1)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="groceries7/food_detection"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_11tve")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="groceries7"]
+position = Vector2(-2.38622, 7.67998)
+scale = Vector2(0.146713, 0.192)
+texture = ExtResource("12_2piqf")
 
 [node name="Button" type="Button" parent="."]
 offset_left = 981.0
@@ -65,4 +191,32 @@ position = Vector2(860, 0)
 
 [connection signal="area_entered" from="basket/basket_detection" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="basket/basket_detection" to="." method="_on_area_2d_area_exited"]
+[connection signal="area_entered" from="groceries/food_detection" to="groceries" method="_on_food_detection_area_entered"]
+[connection signal="area_exited" from="groceries/food_detection" to="groceries" method="_on_food_detection_area_exited"]
+[connection signal="mouse_entered" from="groceries/food_detection" to="groceries" method="_on_food_detection_mouse_entered"]
+[connection signal="mouse_exited" from="groceries/food_detection" to="groceries" method="_on_food_detection_mouse_exited"]
+[connection signal="area_entered" from="groceries2/food_detection" to="groceries2" method="_on_food_detection_area_entered"]
+[connection signal="area_exited" from="groceries2/food_detection" to="groceries2" method="_on_food_detection_area_exited"]
+[connection signal="mouse_entered" from="groceries2/food_detection" to="groceries2" method="_on_food_detection_mouse_entered"]
+[connection signal="mouse_exited" from="groceries2/food_detection" to="groceries2" method="_on_food_detection_mouse_exited"]
+[connection signal="area_entered" from="groceries3/food_detection" to="groceries3" method="_on_food_detection_area_entered"]
+[connection signal="area_exited" from="groceries3/food_detection" to="groceries3" method="_on_food_detection_area_exited"]
+[connection signal="mouse_entered" from="groceries3/food_detection" to="groceries3" method="_on_food_detection_mouse_entered"]
+[connection signal="mouse_exited" from="groceries3/food_detection" to="groceries3" method="_on_food_detection_mouse_exited"]
+[connection signal="area_entered" from="groceries4/food_detection" to="groceries4" method="_on_food_detection_area_entered"]
+[connection signal="area_exited" from="groceries4/food_detection" to="groceries4" method="_on_food_detection_area_exited"]
+[connection signal="mouse_entered" from="groceries4/food_detection" to="groceries4" method="_on_food_detection_mouse_entered"]
+[connection signal="mouse_exited" from="groceries4/food_detection" to="groceries4" method="_on_food_detection_mouse_exited"]
+[connection signal="area_entered" from="groceries5/food_detection" to="groceries5" method="_on_food_detection_area_entered"]
+[connection signal="area_exited" from="groceries5/food_detection" to="groceries5" method="_on_food_detection_area_exited"]
+[connection signal="mouse_entered" from="groceries5/food_detection" to="groceries5" method="_on_food_detection_mouse_entered"]
+[connection signal="mouse_exited" from="groceries5/food_detection" to="groceries5" method="_on_food_detection_mouse_exited"]
+[connection signal="area_entered" from="groceries6/food_detection" to="groceries6" method="_on_food_detection_area_entered"]
+[connection signal="area_exited" from="groceries6/food_detection" to="groceries6" method="_on_food_detection_area_exited"]
+[connection signal="mouse_entered" from="groceries6/food_detection" to="groceries6" method="_on_food_detection_mouse_entered"]
+[connection signal="mouse_exited" from="groceries6/food_detection" to="groceries6" method="_on_food_detection_mouse_exited"]
+[connection signal="area_entered" from="groceries7/food_detection" to="groceries7" method="_on_food_detection_area_entered"]
+[connection signal="area_exited" from="groceries7/food_detection" to="groceries7" method="_on_food_detection_area_exited"]
+[connection signal="mouse_entered" from="groceries7/food_detection" to="groceries7" method="_on_food_detection_mouse_entered"]
+[connection signal="mouse_exited" from="groceries7/food_detection" to="groceries7" method="_on_food_detection_mouse_exited"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -73,30 +73,28 @@ auto_translate_mode = 1
 visible = false
 offset_left = 461.0
 offset_top = 41.0
-offset_right = 682.0
-offset_bottom = 314.0
+offset_right = 747.0
+offset_bottom = 325.0
 button_mask = 0
-text = "This is Octomom
+text = "Katorah - Barista
 
-She has a kid, chores,
-school, and shopping to do.
-Make her keep working
-to make her forget about
-her dpression
+GEEZ! This one's mind is racing! Must be all that caffeine.
+
+A new mom working and attending school. Poor thing. But if we offered maternity leave, everyone would want to have a baby!
 
 
 
 "
+autowrap_mode = 2
 
 [node name="PlayButton" type="Button" parent="play"]
 auto_translate_mode = 1
 modulate = Color(0.339368, 0.587909, 1, 1)
 self_modulate = Color(0.28814, 0.64651, 1, 1)
 layout_mode = 0
-offset_left = 40.0
-offset_top = 197.0
-offset_right = 172.0
-offset_bottom = 256.0
+offset_top = 225.0
+offset_right = 286.0
+offset_bottom = 284.0
 theme_override_font_sizes/font_size = 21
 text = "Enter Mind"
 
