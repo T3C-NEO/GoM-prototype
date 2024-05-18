@@ -28,6 +28,7 @@ scale = Vector2(0.692121, 0.814439)
 texture = ExtResource("1_reg4j")
 
 [node name="basket" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(988, 587)
 scale = Vector2(0.48524, 0.48524)
 texture = ExtResource("4_urvpa")
