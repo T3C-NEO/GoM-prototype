@@ -10,7 +10,7 @@ func _physics_process(_delta):
 	mouse_position = get_global_mouse_position()
  
 	# This input will need to be created in the input map
-	if Input.is_action_pressed("forward"):
+	if Input.is_action_pressed("mouse_left"):
 		var direction = (mouse_position - position).normalized()
 		velocity = (direction * speed)
 	

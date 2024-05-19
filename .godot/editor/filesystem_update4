@@ -1,7 +1,15 @@
-res://Main sccene.tscn
-res://overworld.gd
-res://work (2).tscn
-res://shopping.tscn
-res://chores.tscn
 res://Baby Changing Station.tscn
-res://chores.gd
+res://overworld.gd
+res://baby_changing_station.gd
+res://menu.tscn
+res://menu.gd
+res://Main sccene.tscn
+res://work.tscn
+res://work (2).tscn
+res://overworld3.tscn
+res://overworld2.tscn
+res://overworld0.tscn
+res://plinko.tscn
+res://debt_popup.tscn
+res://minigame.tscn
+res://character_body_2d.gd
