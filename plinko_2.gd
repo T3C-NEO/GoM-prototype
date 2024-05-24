@@ -13,9 +13,9 @@ extends Node2D
 var landed : bool = false;
 
 var columnsA : int = 6;
-var columnsB : int = 5;
+var columnsB : int = 3;
 
-var rows : int = 9;
+var rows : int = 5;
 
 var biging = false;
 var fontSize = 80;
@@ -25,13 +25,13 @@ func _ready() -> void:
 	for row in range(rows):
 		for col in range(columnsA):
 			var prongs = prong.instantiate();
-			prongs.position = Vector2(190 + col * 150, 410 + row * 300);
+			prongs.position = Vector2(190 + col * 150, 410 + row * 600);
 			add_child(prongs);
 
 	for row in range(rows):
 		for col in range(columnsB):
 			var prongs = prong.instantiate();
-			prongs.position = Vector2(250 + col * 160, 555 + row * 300);
+			prongs.position = Vector2(410 + col * 160, 700 + row * 600);
 			add_child(prongs);
 
 
@@ -83,11 +83,6 @@ func _on_help_5_body_entered(body: Node2D) -> void:
 func _on_timer_timeout() -> void:
 	chip.position = Vector2(128, 237);
 	get_node("chip/cam").position_smoothing_speed = 2;
-
-
-func _on_slide_timer_timeout() -> void:
-	slides.visible = true;
-
 
 
 

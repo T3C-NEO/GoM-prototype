@@ -27,6 +27,11 @@ position = Vector2(1848, 331)
 scale = Vector2(2.52985, 2.52985)
 texture = ExtResource("2_540sd")
 
+[node name="Bad2" type="Sprite2D" parent="."]
+position = Vector2(210, 194)
+scale = Vector2(0.164117, 0.164117)
+texture = ExtResource("5_fvq6y")
+
 [node name="Guy3" type="Sprite2D" parent="."]
 position = Vector2(3503, 489)
 scale = Vector2(0.532587, 0.532587)
@@ -64,6 +69,14 @@ offset_top = 148.0
 offset_right = 2577.0
 offset_bottom = 430.0
 
+[node name="Button4" type="Button" parent="."]
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+offset_left = 149.0
+offset_top = 148.0
+offset_right = 335.0
+offset_bottom = 430.0
+
 [node name="Button2" type="Button" parent="."]
 offset_left = 1697.0
 offset_top = 127.0
@@ -84,7 +97,7 @@ offset_right = 86.0
 offset_bottom = 89.0
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_7okgq")]
-position = Vector2(586, 388)
+position = Vector2(1551, 376)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 limit_left = 0
@@ -131,7 +144,38 @@ offset_bottom = 243.0
 theme_override_font_sizes/font_size = 21
 text = "Enter Mind"
 
+[node name="play2" type="Button" parent="."]
+auto_translate_mode = 1
+visible = false
+offset_left = 392.0
+offset_top = 98.0
+offset_right = 618.0
+offset_bottom = 341.0
+button_mask = 0
+text = "Lauren - Graphic Designer
+
+Oof. All that debt from their partner's medical bills is driving them crazy. Let's pluck those thoughts out so they can work in peace. 
+
+
+
+"
+autowrap_mode = 2
+
+[node name="PlayButton2" type="Button" parent="play2"]
+auto_translate_mode = 1
+modulate = Color(0.339368, 0.587909, 1, 1)
+self_modulate = Color(0.28814, 0.64651, 1, 1)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 184.0
+offset_right = 226.0
+offset_bottom = 243.0
+theme_override_font_sizes/font_size = 21
+text = "Enter Mind"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="NextFloor/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="play/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="play2/PlayButton2" to="." method="_on_play_button_2_pressed"]

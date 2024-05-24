@@ -1,12 +1,17 @@
 extends Node2D
 
 var playBox;
+var playBox2;
 
 func _ready() -> void:
 	playBox = 	get_node("play");
+	playBox2 = 	get_node("play2");
 	if Game.DebtDone == true:
-		get_node("Bad").visible = false
-		get_node("Button").queue_free()
+		get_node("Bad").visible = false;
+		get_node("Button").queue_free();
+	if Game.CEODone == true:
+		get_node("Bad2").visible = false;
+		get_node("Button4").queue_free();
 		
 
 func _on_button_pressed() -> void:
@@ -19,7 +24,7 @@ func _on_button_pressed() -> void:
 
 
 func _on_button_2_pressed() -> void:
-	if Game.DebtDone == false:
+	if Game.DebtDone == false or Game.CEODone == false:
 		get_node("CharacterBody2D/textNode").visible = true
 		await get_tree().create_timer(2.0).timeout
 		get_node("CharacterBody2D/textNode").visible = false
@@ -37,3 +42,14 @@ func _on_play_button_pressed() -> void:
 
 func _on_button_3_pressed() -> void:
 	get_tree().change_scene_to_file("res://overworld3.tscn")
+
+
+func _on_button_4_pressed() -> void:
+	if playBox2.visible == false:
+		playBox2.visible = true
+	else:
+		playBox2.visible = false
+
+
+func _on_play_button_2_pressed() -> void:
+	get_tree().change_scene_to_file("res://plinko2.tscn")

@@ -1,9 +1,5 @@
-res://Baby Changing Station.tscn
-res://overworld.gd
-res://baby_changing_station.gd
-res://menu.tscn
-res://menu.gd
 res://Main sccene.tscn
+res://overworld.gd
 res://work.tscn
 res://work (2).tscn
 res://overworld3.tscn
@@ -12,4 +8,12 @@ res://overworld0.tscn
 res://plinko.tscn
 res://debt_popup.tscn
 res://minigame.tscn
-res://character_body_2d.gd
+res://Baby Changing Station.tscn
+res://menu.tscn
+res://plinko2.tscn
+res://plinko_2.gd
+res://plinkoEndGood.tscn
+res://plinko.gd
+res://plinko_end_good.gd
+res://overworld.tscn
+res://overworld1.gd
