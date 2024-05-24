@@ -1,21 +1,7 @@
 res://Main sccene.tscn
 res://overworld.gd
-res://work.tscn
-res://plinko.tscn
-res://minigame.tscn
-res://menu.tscn
-res://plinko2.tscn
-res://plinkoEndGood.tscn
-res://overworld.tscn
-res://overworld0.tscn
-res://pannel.tscn
-res://overworld3.tscn
-res://overworld2.tscn
-res://main_sccene.gd
 res://chores.tscn
-res://chores.gd
-res://game.gd
-res://work_(2).gd
 res://work (2).tscn
 res://bottom_tentacles.tscn
-res://bottom_tentacles.gd
+res://work_(2).gd
+res://main_sccene.gd

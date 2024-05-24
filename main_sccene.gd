@@ -17,7 +17,7 @@ func _process(_delta: float) -> void:
 		$Timer.start();
 		work.orders_served = false;
 		
-	print($Timer.time_left)
+	#print($Timer.time_left)
 	if Input.is_action_pressed("mouse_left"):
 		#get_node("left/baby changing station").visible = true
 		#get_node("right/baby changing station").visible = true

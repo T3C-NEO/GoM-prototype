@@ -14,7 +14,7 @@ var change_color : bool;
 var orders_served : bool; 
 var cancel_order : bool;
 var amount_to_deduct : int = 0;
-var dont_add : bool;
+var dont_add = [false, false, false];
 
 var brown1
 var brown2
@@ -57,9 +57,9 @@ func _process(delta: float) -> void:
 				icons[i].modulate.a -= 2 * delta;
 			else:
 				change_color = false;
-				if(!dont_add):
+				if(!dont_add[i]):
 					Game.money += 2;
-				dont_add = false;
+				dont_add[i] = false;
 				icons[i].texture = old_texture;
 				icons[i].modulate.a = 1;
 			
@@ -67,11 +67,12 @@ func _process(delta: float) -> void:
 		for i in range(icons.size()):
 			if(icons[i].texture == old_texture):
 				amount_to_deduct += 2;
+				dont_add[i] = true;
 		Game.money -= amount_to_deduct;
+		print(amount_to_deduct)
 		index = 0;
-		dont_add = true;
 		change_color = true;
-		cancel_order = false; 
+		cancel_order = false;
 
 		
 func _on_button_pressed() -> void:
@@ -79,7 +80,6 @@ func _on_button_pressed() -> void:
 	if num < fills.size():
 		fills[num].visible = true
 	else:
-		#get_node("Lose").visible = true
 		Game.money -= 2;
 		reset_fill();
 
@@ -95,21 +95,10 @@ func _on_done_pressed() -> void:
 			change_color = true;
 			
 		reset_fill();
-		#total -=1
-		#totals[total].visible = false
-		#if total == 0:
-			#total = 3
-			#visible = false
-			#totals1.visible = true
-			#totals2.visible = true
-			#totals3.visible = true
-			#num = rng.randi_range(0, 3)
-			#for n in num:
-				#fills[n].visible = true
-			#num-=1
+
 	else:
-		#get_node("Lose").visible = true
-		pass
+		Game.money -= 2;
+		reset_fill();
 
 func reset_fill() -> void:
 	brown1.visible = false

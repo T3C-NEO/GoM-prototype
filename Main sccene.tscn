@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://hn45jtoacue8"]
+[gd_scene load_steps=8 format=3 uid="uid://hn45jtoacue8"]
 
 [ext_resource type="Script" path="res://main_sccene.gd" id="1_bg2rm"]
 [ext_resource type="Script" path="res://left.gd" id="2_fadb5"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bwy8qxanv076u" path="res://work (2).tscn" id="3_bqcye"]
 [ext_resource type="PackedScene" uid="uid://lfnd5jmbp4xe" path="res://chores.tscn" id="5_sgyeq"]
 [ext_resource type="PackedScene" uid="uid://ssv6ed6c5h2e" path="res://shopping.tscn" id="6_oso0r"]
+[ext_resource type="PackedScene" uid="uid://hrf1qmtbye4e" path="res://bottom_tentacles.tscn" id="7_krswc"]
 
 [node name="main scene" type="Node2D"]
 script = ExtResource("1_bg2rm")
@@ -59,6 +60,8 @@ text = "$20.00"
 [node name="Timer" type="Timer" parent="."]
 wait_time = 7.0
 autostart = true
+
+[node name="bottom_tentacles" parent="." instance=ExtResource("7_krswc")]
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
