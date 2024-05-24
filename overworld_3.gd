@@ -1,10 +1,14 @@
 extends Node2D
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+var playBox;
 
+func _ready() -> void:
+	playBox = 	get_node("play");
+	Game.floor = 4;
+	if Game.OctoDone == true:
+		get_node("Bad").visible = false
+		get_node("Button").queue_free()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -12,4 +16,27 @@ func _process(delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
+	if playBox.visible == false:
+		playBox.visible = true
+	else:
+		playBox.visible = false
+
+
+func _on_button_2_pressed() -> void:
+	if Game.OctoDone == false:
+		get_node("CharacterBody2D/textNode").visible = true
+		await get_tree().create_timer(2.0).timeout
+		get_node("CharacterBody2D/textNode").visible = false
+	else:
+		get_tree().change_scene_to_file("res://pannel.tscn")
+
+
+func _on_button_3_pressed() -> void:
+	Game.CEODone = false
+	Game.DebtDone = false
+	Game.OctoDone = false
+	get_tree().change_scene_to_file("res://loading3.tscn")
+
+
+func _on_play_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Main sccene.tscn")

@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=3 uid="uid://bnrkx7cuqhnwg"]
+
+[ext_resource type="Texture2D" uid="uid://df7jnsp1sckgq" path="res://assets/sprites and images/placeholder pannel.png" id="1_8ybmh"]
+[ext_resource type="Script" path="res://pannel.gd" id="1_ivkd5"]
+[ext_resource type="Texture2D" uid="uid://cstgwgvn1p2ja" path="res://assets/Ghost.png" id="2_dtkii"]
+[ext_resource type="Texture2D" uid="uid://cp6fui2o1npm0" path="res://assets/sprites and images/lock.png" id="4_i65nr"]
+
+[node name="pannel" type="Node2D"]
+script = ExtResource("1_ivkd5")
+
+[node name="PlaceholderPannel" type="Sprite2D" parent="."]
+position = Vector2(572, 325)
+scale = Vector2(0.463671, 0.463671)
+texture = ExtResource("1_8ybmh")
+
+[node name="ButtonL" type="Button" parent="PlaceholderPannel"]
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+offset_left = -521.922
+offset_top = 239.394
+offset_right = -150.922
+offset_bottom = 603.394
+
+[node name="Button2" type="Button" parent="PlaceholderPannel"]
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+offset_left = -10.7836
+offset_top = 241.551
+offset_right = 360.216
+offset_bottom = 605.551
+
+[node name="Button3" type="Button" parent="PlaceholderPannel"]
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+offset_left = -526.236
+offset_top = -204.887
+offset_right = -155.236
+offset_bottom = 159.113
+
+[node name="Button4" type="Button" parent="PlaceholderPannel"]
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+offset_left = -10.7835
+offset_top = -202.73
+offset_right = 360.216
+offset_bottom = 161.27
+
+[node name="Button5" type="Button" parent="PlaceholderPannel"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -530.0
+offset_top = -625.444
+offset_right = -159.0
+offset_bottom = -261.444
+
+[node name="Button6" type="Button" parent="PlaceholderPannel"]
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+offset_left = -10.7835
+offset_top = -627.601
+offset_right = 360.216
+offset_bottom = -263.601
+
+[node name="Ghost" type="Sprite2D" parent="PlaceholderPannel"]
+position = Vector2(-338.602, 424.871)
+scale = Vector2(1.62562, 1.62562)
+texture = ExtResource("2_dtkii")
+
+[node name="Lock" type="Sprite2D" parent="PlaceholderPannel"]
+visible = false
+position = Vector2(185.476, -28.0372)
+scale = Vector2(1.54165, 1.54165)
+texture = ExtResource("4_i65nr")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
+[connection signal="pressed" from="PlaceholderPannel/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="PlaceholderPannel/Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="PlaceholderPannel/Button6" to="." method="_on_button_6_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

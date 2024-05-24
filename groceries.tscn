@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://drag_food_items.gd" id="2_rtjnq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_11tve"]
-size = Vector2(105, 124)
+size = Vector2(101.876, 125)
 
 [node name="groceries" type="Sprite2D"]
 scale = Vector2(0.789063, 1)
@@ -19,6 +19,8 @@ metadata/_edit_lock_ = true
 position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_11tve")
 metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
 
 [connection signal="area_entered" from="food_detection" to="." method="_on_food_detection_area_entered"]
 [connection signal="area_exited" from="food_detection" to="." method="_on_food_detection_area_exited"]

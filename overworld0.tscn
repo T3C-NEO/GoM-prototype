@@ -1,0 +1,122 @@
+[gd_scene load_steps=9 format=3 uid="uid://boi04ubreq1xg"]
+
+[ext_resource type="Script" path="res://overworld.gd" id="1_0u7lh"]
+[ext_resource type="Texture2D" uid="uid://bkwtlbf4q1cic" path="res://assets/corporate-office-flat-illustration-vector.jpg" id="2_j1ndj"]
+[ext_resource type="Texture2D" uid="uid://bbtr8ai31fia4" path="res://assets/elevator.png" id="3_dxnhk"]
+[ext_resource type="Texture2D" uid="uid://d3e5hjq3v36rx" path="res://assets/bad.png" id="5_b4vf7"]
+[ext_resource type="Texture2D" uid="uid://bcg75hwn4lksl" path="res://CEO.png" id="5_nynbn"]
+[ext_resource type="Texture2D" uid="uid://bprpgkyclvnwt" path="res://assets/sprites and images/tap here.png" id="6_gt2k2"]
+[ext_resource type="Texture2D" uid="uid://bchoy1ifddmg0" path="res://assets/Next floor.png" id="7_hsa3k"]
+[ext_resource type="PackedScene" uid="uid://dxn7a40jr2idf" path="res://character_body_2d.tscn" id="7_iss8g"]
+
+[node name="Overworld" type="Node2D"]
+script = ExtResource("1_0u7lh")
+
+[node name="Corporate-office-flat-illustration-vector" type="Sprite2D" parent="."]
+position = Vector2(753.225, 326)
+scale = Vector2(1.89306, 1.89306)
+texture = ExtResource("2_j1ndj")
+
+[node name="Elevator" type="Sprite2D" parent="."]
+position = Vector2(1848, 331)
+scale = Vector2(2.52985, 2.52985)
+texture = ExtResource("3_dxnhk")
+
+[node name="Bad" type="Sprite2D" parent="."]
+position = Vector2(324, 192)
+scale = Vector2(0.164117, 0.164117)
+texture = ExtResource("5_b4vf7")
+
+[node name="Ceo" type="Sprite2D" parent="."]
+position = Vector2(338, 289)
+scale = Vector2(0.248967, 0.248967)
+texture = ExtResource("5_nynbn")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 261.0
+offset_top = 159.0
+offset_right = 420.0
+offset_bottom = 423.0
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 1697.0
+offset_top = 127.0
+offset_right = 2002.0
+offset_bottom = 634.0
+
+[node name="TapHere" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(980, 318)
+texture = ExtResource("6_gt2k2")
+
+[node name="Timer" type="Timer" parent="TapHere"]
+one_shot = true
+
+[node name="Timer2" type="Timer" parent="TapHere"]
+one_shot = true
+autostart = true
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("7_iss8g")]
+position = Vector2(438, 238)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+limit_left = 0
+limit_top = 0
+limit_right = 2185
+limit_bottom = 650
+
+[node name="textNode" type="Button" parent="CharacterBody2D"]
+visible = false
+offset_left = -127.0
+offset_top = -182.0
+offset_right = 114.0
+offset_bottom = -105.0
+text = "I don't need to use that yet, 
+there's more meritocracy
+to spread  here >:)"
+
+[node name="play" type="Button" parent="."]
+auto_translate_mode = 1
+visible = false
+offset_left = 482.0
+offset_top = 94.0
+offset_right = 718.0
+offset_bottom = 314.0
+button_mask = 0
+text = "Clive Sterling - CEO
+
+Inherited the company from his father. Practically eating out of my hands already, but it's time for a tune-up.
+
+
+"
+autowrap_mode = 2
+
+[node name="PlayButton" type="Button" parent="play"]
+modulate = Color(0.339368, 0.587909, 1, 1)
+self_modulate = Color(0.28814, 0.64651, 1, 1)
+layout_mode = 0
+offset_top = 172.0
+offset_right = 236.0
+offset_bottom = 220.0
+theme_override_font_sizes/font_size = 21
+text = "Enter Mind"
+
+[node name="NextFloor" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1556, 469)
+texture = ExtResource("7_hsa3k")
+
+[node name="Button3" type="Button" parent="NextFloor"]
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+offset_left = -86.0
+offset_top = -86.0
+offset_right = 86.0
+offset_bottom = 89.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="timeout" from="TapHere/Timer2" to="." method="_on_timer_2_timeout"]
+[connection signal="pressed" from="play/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="NextFloor/Button3" to="." method="_on_button_3_pressed"]

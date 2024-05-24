@@ -1,15 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://ifh8e22bcmd7"]
+[gd_scene load_steps=9 format=3 uid="uid://ifh8e22bcmd7"]
 
 [ext_resource type="Texture2D" uid="uid://bkwtlbf4q1cic" path="res://assets/corporate-office-flat-illustration-vector.jpg" id="1_0vrrv"]
-[ext_resource type="Script" path="res://overworld.gd" id="1_ym7pq"]
+[ext_resource type="Script" path="res://overworld1.gd" id="1_5cjig"]
 [ext_resource type="Texture2D" uid="uid://bbtr8ai31fia4" path="res://assets/elevator.png" id="2_540sd"]
 [ext_resource type="PackedScene" uid="uid://dxn7a40jr2idf" path="res://character_body_2d.tscn" id="3_7okgq"]
 [ext_resource type="Texture2D" uid="uid://duriqk7iktit3" path="res://assets/guy.png" id="3_ck3c5"]
 [ext_resource type="Texture2D" uid="uid://d3e5hjq3v36rx" path="res://assets/bad.png" id="5_fvq6y"]
 [ext_resource type="Texture2D" uid="uid://dccu84csmbkm7" path="res://assets/girl.png" id="6_wj8ue"]
+[ext_resource type="Texture2D" uid="uid://bchoy1ifddmg0" path="res://assets/Next floor.png" id="7_3j10m"]
 
-[node name="Overworld" type="Node2D"]
-script = ExtResource("1_ym7pq")
+[node name="Overworld1" type="Node2D"]
+script = ExtResource("1_5cjig")
 
 [node name="Corporate-office-flat-illustration-vector" type="Sprite2D" parent="."]
 position = Vector2(753.225, 326)
@@ -25,6 +26,11 @@ texture = ExtResource("1_0vrrv")
 position = Vector2(1848, 331)
 scale = Vector2(2.52985, 2.52985)
 texture = ExtResource("2_540sd")
+
+[node name="Bad2" type="Sprite2D" parent="."]
+position = Vector2(210, 194)
+scale = Vector2(0.164117, 0.164117)
+texture = ExtResource("5_fvq6y")
 
 [node name="Guy3" type="Sprite2D" parent="."]
 position = Vector2(3503, 489)
@@ -63,14 +69,35 @@ offset_top = 148.0
 offset_right = 2577.0
 offset_bottom = 430.0
 
+[node name="Button4" type="Button" parent="."]
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+offset_left = 149.0
+offset_top = 148.0
+offset_right = 335.0
+offset_bottom = 430.0
+
 [node name="Button2" type="Button" parent="."]
 offset_left = 1697.0
 offset_top = 127.0
 offset_right = 2002.0
 offset_bottom = 634.0
 
+[node name="NextFloor" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1556, 469)
+texture = ExtResource("7_3j10m")
+
+[node name="Button3" type="Button" parent="NextFloor"]
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+offset_left = -86.0
+offset_top = -86.0
+offset_right = 86.0
+offset_bottom = 89.0
+
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_7okgq")]
-position = Vector2(586, 388)
+position = Vector2(1551, 376)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 limit_left = 0
@@ -88,5 +115,67 @@ text = "I don't need to use that yet,
 there's more meritocracy
 to spread  here >:)"
 
+[node name="play" type="Button" parent="."]
+auto_translate_mode = 1
+visible = false
+offset_left = 2629.0
+offset_top = 94.0
+offset_right = 2855.0
+offset_bottom = 337.0
+button_mask = 0
+text = "Lauren - Graphic Designer
+
+Oof. All that debt from their partner's medical bills is driving them crazy. Let's pluck those thoughts out so they can work in peace. 
+
+
+
+"
+autowrap_mode = 2
+
+[node name="PlayButton" type="Button" parent="play"]
+auto_translate_mode = 1
+modulate = Color(0.339368, 0.587909, 1, 1)
+self_modulate = Color(0.28814, 0.64651, 1, 1)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 184.0
+offset_right = 226.0
+offset_bottom = 243.0
+theme_override_font_sizes/font_size = 21
+text = "Enter Mind"
+
+[node name="play2" type="Button" parent="."]
+auto_translate_mode = 1
+visible = false
+offset_left = 392.0
+offset_top = 98.0
+offset_right = 618.0
+offset_bottom = 341.0
+button_mask = 0
+text = "A placeholder guy
+
+maybe some text about why his brain is so empty/thoughts are so scattered, maybe he has ADHD or something 
+
+
+
+"
+autowrap_mode = 2
+
+[node name="PlayButton2" type="Button" parent="play2"]
+auto_translate_mode = 1
+modulate = Color(0.339368, 0.587909, 1, 1)
+self_modulate = Color(0.28814, 0.64651, 1, 1)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 184.0
+offset_right = 226.0
+offset_bottom = 243.0
+theme_override_font_sizes/font_size = 21
+text = "Enter Mind"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="NextFloor/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="play/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="play2/PlayButton2" to="." method="_on_play_button_2_pressed"]

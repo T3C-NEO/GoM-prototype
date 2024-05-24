@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://hrf1qmtbye4e"]
+
+[ext_resource type="Script" path="res://bottom_tentacles.gd" id="1_3mu7j"]
+[ext_resource type="Texture2D" uid="uid://bfw2icv4q5201" path="res://assets/tentacle.png" id="1_qybxd"]
+
+[node name="bottom_tentacles" type="Node2D"]
+script = ExtResource("1_3mu7j")
+
+[node name="Tentacle" type="Sprite2D" parent="."]
+position = Vector2(185, 846)
+texture = ExtResource("1_qybxd")
+
+[node name="Tentacle2" type="Sprite2D" parent="."]
+position = Vector2(389, 878)
+texture = ExtResource("1_qybxd")
+
+[node name="Tentacle3" type="Sprite2D" parent="."]
+position = Vector2(551, 877)
+texture = ExtResource("1_qybxd")
+
+[node name="Tentacle4" type="Sprite2D" parent="."]
+position = Vector2(554, 866)
+texture = ExtResource("1_qybxd")
+flip_h = true
+
+[node name="Tentacle5" type="Sprite2D" parent="."]
+position = Vector2(938, 873)
+texture = ExtResource("1_qybxd")
+flip_h = true
+
+[node name="Tentacle6" type="Sprite2D" parent="."]
+position = Vector2(743, 860)
+texture = ExtResource("1_qybxd")
+flip_h = true

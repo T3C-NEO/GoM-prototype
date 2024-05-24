@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cchnm83tocc5v"]
+
+[ext_resource type="Script" path="res://Plink_Brain.gd" id="1_h53s6"]
+[ext_resource type="Texture2D" uid="uid://ixwputf3bwpy" path="res://brain.png" id="2_vr4ux"]
+
+[node name="Plink Brain" type="Node2D"]
+script = ExtResource("1_h53s6")
+
+[node name="Prong2" type="Sprite2D" parent="."]
+scale = Vector2(0.242188, 0.24219)
+texture = ExtResource("2_vr4ux")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -11,13 +11,17 @@ config_version=5
 [application]
 
 config/name="Ghost of Meritocracy Prototype"
-run/main_scene="res://overworld.tscn"
+run/main_scene="res://menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Game="*res://game.gd"
+
+[display]
+
+window/stretch/mode="viewport"
 
 [input]
 

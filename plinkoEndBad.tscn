@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://doka2jf1yop6c"]
+
+[ext_resource type="Script" path="res://plinko_end_good.gd" id="1_ft175"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_04wk6"]
+friction = 0.75
+bounce = 0.7
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kil7m"]
+size = Vector2(137, 1)
+
+[node name="plinkoEndBad" type="Label"]
+auto_translate_mode = 1
+offset_left = 504.0
+offset_top = 1892.0
+offset_right = 643.0
+offset_bottom = 2084.0
+theme_override_font_sizes/font_size = 30
+text = "Company
+hates it!"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_ft175")
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="."]
+position = Vector2(69, 182)
+mass = 200.0
+physics_material_override = SubResource("PhysicsMaterial_04wk6")
+gravity_scale = 0.0
+continuous_cd = 2
+contact_monitor = true
+max_contacts_reported = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
+position = Vector2(0.5, 8.5)
+shape = SubResource("RectangleShape2D_kil7m")
+
+[connection signal="body_entered" from="RigidBody2D2" to="." method="_on_rigid_body_2d_2_body_entered"]

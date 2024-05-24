@@ -1,20 +1,7 @@
-res://overworld.tscn
-res://overworld.gd
-res://character_body_2d.tscn
-res://minigame.tscn
-res://debt.tscn
-res://work.tscn
-res://overworld2.tscn
-res://loading.tscn
-res://loading2.tscn
-res://loading3.tscn
-res://assets/Main sccene.tscn
-res://work (2).tscn
 res://Main sccene.tscn
-res://groceries.tscn
-res://shopping.tscn
-res://work_(2).gd
+res://overworld.gd
 res://chores.tscn
-res://overworld3.tscn
-res://overworld_2.gd
-res://overworld_3.gd
+res://work (2).tscn
+res://bottom_tentacles.tscn
+res://work_(2).gd
+res://main_sccene.gd
