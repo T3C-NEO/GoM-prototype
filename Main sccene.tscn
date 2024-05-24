@@ -48,4 +48,17 @@ offset_bottom = 623.0
 text = "click to move on
 (for testing)"
 
+[node name="money" type="Label" parent="."]
+offset_left = 25.0
+offset_top = 17.0
+offset_right = 151.0
+offset_bottom = 70.0
+theme_override_font_sizes/font_size = 30
+text = "$20.00"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 7.0
+autostart = true
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

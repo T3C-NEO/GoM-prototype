@@ -17,6 +17,7 @@ func _process(delta: float) -> void:
 		visible = false
 		cleaned = 9
 		get_node("GrayBg").visible = true
+		get_node("GrayBg/Icon").visible = true
 		get_node("GrayBg/Icon2").visible = true
 		get_node("GrayBg/Icon3").visible = true
 		get_node("GrayBg/Icon4").visible = true
@@ -30,7 +31,7 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_mouse_exited() -> void:
 	if Input.is_action_pressed("mouse_left"):
-		get_node("GrayBg/Icon").visible = false
+		#get_node("GrayBg/Icon").visible = false
 		visible = false
 
 
