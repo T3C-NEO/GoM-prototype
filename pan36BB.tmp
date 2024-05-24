@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnrkx7cuqhnwg"]
+
+[ext_resource type="Texture2D" uid="uid://df7jnsp1sckgq" path="res://assets/sprites and images/placeholder pannel.png" id="1_8ybmh"]
+[ext_resource type="Script" path="res://pannel.gd" id="1_ivkd5"]
+[ext_resource type="Texture2D" uid="uid://cstgwgvn1p2ja" path="res://assets/Ghost.png" id="2_dtkii"]
+
+[node name="pannel" type="Node2D"]
+script = ExtResource("1_ivkd5")
+
+[node name="PlaceholderPannel" type="Sprite2D" parent="."]
+position = Vector2(572, 325)
+scale = Vector2(0.463671, 0.463671)
+texture = ExtResource("1_8ybmh")
+
+[node name="Button5" type="Button" parent="PlaceholderPannel"]
+offset_left = -530.0
+offset_top = -625.0
+offset_right = -159.0
+offset_bottom = -261.0
+
+[node name="Ghost" type="Sprite2D" parent="."]
+position = Vector2(657, 112)
+scale = Vector2(0.753752, 0.753752)
+texture = ExtResource("2_dtkii")
+
+[connection signal="pressed" from="PlaceholderPannel/Button5" to="." method="_on_button_5_pressed"]
