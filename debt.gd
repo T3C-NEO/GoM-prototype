@@ -31,12 +31,9 @@ func move():
 		var velocity = direction * (distance / timeToReach)
 		position += velocity * Engine.get_frames_per_second() / 60.0 # Manually calculate delta time
 
-
-
 func _on_button_pressed() -> void:
-	queue_free()
-	
-
+	Game.works -= 1;
+	queue_free();
 
 func _on_button_2_pressed() -> void:
-	queue_free()
+	pass

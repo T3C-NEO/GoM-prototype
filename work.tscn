@@ -1,21 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://d3wkdga5ngikt"]
+[gd_scene load_steps=4 format=3 uid="uid://d3wkdga5ngikt"]
 
 [ext_resource type="Texture2D" uid="uid://dj27kufgd1yxg" path="res://assets/work.png" id="1_gyrpn"]
 [ext_resource type="Script" path="res://work.gd" id="1_jw67y"]
+[ext_resource type="Texture2D" uid="uid://buv1q7or2ov2x" path="res://assets/sprites and images/all fees - debt ad2.png" id="3_tt7um"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D"]
 script = ExtResource("1_jw67y")
 
 [node name="Work" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(-6, -3)
 scale = Vector2(0.0991735, 0.0991736)
 texture = ExtResource("1_gyrpn")
 
 [node name="Button" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
-offset_left = -79.0
-offset_top = -42.0
-offset_right = 40.0
-offset_bottom = 55.0
+offset_left = -72.0
+offset_top = -74.0
+offset_right = 61.0
+offset_bottom = 60.0
+
+[node name="AllFees-DebtAd2" type="Sprite2D" parent="."]
+position = Vector2(-188, 97)
+scale = Vector2(0.71142, 0.71142)
+texture = ExtResource("3_tt7um")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

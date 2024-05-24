@@ -1,20 +1,36 @@
-[gd_scene load_steps=3 format=3 uid="uid://dqvtmoyotaj6a"]
+[gd_scene load_steps=4 format=3 uid="uid://dqvtmoyotaj6a"]
 
 [ext_resource type="Script" path="res://debt.gd" id="1_clrtf"]
 [ext_resource type="Texture2D" uid="uid://cy0vhbouoq3gi" path="res://assets/debt.png" id="1_r445e"]
+[ext_resource type="Texture2D" uid="uid://bkaprvvd0xj44" path="res://assets/sprites and images/we need you to work - work ad.png" id="2_pbeke"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D"]
 script = ExtResource("1_clrtf")
 
+[node name="WeNeedYouToWork-WorkAd" type="Sprite2D" parent="."]
+position = Vector2(-156, -15)
+scale = Vector2(0.698302, 0.698302)
+texture = ExtResource("2_pbeke")
+
 [node name="Debt" type="Sprite2D" parent="."]
+visible = false
 scale = Vector2(0.367188, 0.367188)
 texture = ExtResource("1_r445e")
 
 [node name="Button" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
-offset_left = -71.0
-offset_top = -80.0
-offset_right = 71.0
-offset_bottom = 96.0
+offset_left = -123.0
+offset_top = -70.0
+offset_right = 118.0
+offset_bottom = 94.0
+
+[node name="Button2" type="Button" parent="."]
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+offset_left = 83.0
+offset_top = -90.0
+offset_right = 115.0
+offset_bottom = -72.0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

@@ -3,5 +3,13 @@ res://overworld.gd
 res://chores.tscn
 res://work (2).tscn
 res://bottom_tentacles.tscn
-res://work_(2).gd
-res://main_sccene.gd
+res://minigame.tscn
+res://debt_popup.tscn
+res://lose.tscn
+res://debt.tscn
+res://debt.gd
+res://game.gd
+res://minigame.gd
+res://work.tscn
+res://work.gd
+res://debt_popup.gd
