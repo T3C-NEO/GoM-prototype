@@ -1,15 +1,14 @@
-res://Main sccene.tscn
+res://minigame.tscn
 res://overworld.gd
+res://Main sccene.tscn
 res://chores.tscn
 res://work (2).tscn
 res://bottom_tentacles.tscn
-res://minigame.tscn
 res://debt_popup.tscn
 res://lose.tscn
 res://debt.tscn
-res://debt.gd
-res://game.gd
-res://minigame.gd
 res://work.tscn
-res://work.gd
+res://minigame.gd
 res://debt_popup.gd
+res://work.gd
+res://debt.gd

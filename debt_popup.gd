@@ -11,7 +11,7 @@ extends Node2D
 var i;
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	i = randi_range(0,1)
+	i = randi_range(0,2)
 	ads[i].visible = true;
 	ads[i].scale.y = 1-(time2.time_left*4);
 	ads[i].scale.x = 1-(time2.time_left*4);

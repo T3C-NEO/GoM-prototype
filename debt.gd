@@ -11,7 +11,7 @@ func _ready():
 	set_random_destination()
 	moveTimer = randf_range(minDuration, maxDuration)
 
-func _process(delta):
+func _process(delta: float) -> void:
 	if moveTimer > 0:
 		moveTimer -= delta
 		move()
@@ -29,7 +29,7 @@ func move():
 		var distance = (destination - position).length()
 		var timeToReach = (distance / moveSpeed)+1
 		var velocity = direction * (distance / timeToReach)
-		position += velocity * Engine.get_frames_per_second() / 60.0 # Manually calculate delta time
+		position += velocity # Manually calculate delta time
 
 func _on_button_pressed() -> void:
 	Game.works -= 1;

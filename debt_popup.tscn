@@ -18,6 +18,10 @@ wait_time = 0.25
 one_shot = true
 autostart = true
 
+[node name="YouAreThe100,000,000Visitor-WorkAd" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("4_gf2rj")
+
 [node name="DebtPopup" type="Sprite2D" parent="."]
 visible = false
 texture = ExtResource("3_g26lk")
@@ -25,11 +29,6 @@ texture = ExtResource("3_g26lk")
 [node name="AllFees-DebtAd" type="Sprite2D" parent="."]
 visible = false
 texture = ExtResource("3_37gr1")
-
-[node name="YouAreThe100,000,000Visitor-WorkAd" type="Sprite2D" parent="."]
-visible = false
-scale = Vector2(0.697674, 0.697674)
-texture = ExtResource("4_gf2rj")
 
 [node name="Button" type="Button" parent="."]
 auto_translate_mode = 1
