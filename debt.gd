@@ -29,7 +29,7 @@ func move():
 		var distance = (destination - position).length()
 		var timeToReach = (distance / moveSpeed)+1
 		var velocity = direction * (distance / timeToReach)
-		position += velocity # Manually calculate delta time
+		position += velocity
 
 func _on_button_pressed() -> void:
 	Game.works -= 1;
