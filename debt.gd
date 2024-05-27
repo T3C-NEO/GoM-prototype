@@ -7,7 +7,12 @@ var maxDuration = 1.5
 var moveTimer = 0.0
 var moveSpeed = 10.0
 
+
+@onready var ads = [$"WeNeedYouToWork-WorkAd", $Blank1,$Blank3];
+
 func _ready():
+	var i = randi_range(0,2)
+	ads[i].visible = true;
 	set_random_destination()
 	moveTimer = randf_range(minDuration, maxDuration)
 

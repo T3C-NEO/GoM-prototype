@@ -1,9 +1,5 @@
-res://pannel_placeholder.gd
-res://pannel_placeholder.tscn
-res://overworld.gd
-res://pannel.tscn
-res://pannel.gd
 res://Main sccene.tscn
+res://overworld.gd
 res://chores.tscn
 res://work (2).tscn
 res://bottom_tentacles.tscn
@@ -11,5 +7,5 @@ res://minigame.tscn
 res://debt_popup.tscn
 res://debt.tscn
 res://work.tscn
-res://debt_popup.gd
+res://pannel.tscn
 res://debt.gd
