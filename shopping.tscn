@@ -190,6 +190,19 @@ text = "CHECKOUT"
 [node name="middle" type="Marker2D" parent="."]
 position = Vector2(860, 0)
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 7.0
+autostart = true
+
+[node name="cost" type="Label" parent="."]
+offset_left = 978.0
+offset_top = 6.0
+offset_right = 1094.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Total: $"
+
 [connection signal="area_entered" from="basket/basket_detection" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="basket/basket_detection" to="." method="_on_area_2d_area_exited"]
 [connection signal="area_entered" from="groceries/food_detection" to="groceries" method="_on_food_detection_area_entered"]
@@ -221,3 +234,4 @@ position = Vector2(860, 0)
 [connection signal="mouse_entered" from="groceries7/food_detection" to="groceries7" method="_on_food_detection_mouse_entered"]
 [connection signal="mouse_exited" from="groceries7/food_detection" to="groceries7" method="_on_food_detection_mouse_exited"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

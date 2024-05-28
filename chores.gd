@@ -8,13 +8,14 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var mouse = get_local_mouse_position()
 	squee.position.y = mouse.y
 	if mouse.x > 50 and mouse.x < 525:
 		squee.position.x = mouse.x
 	if cleaned == 0:
 		visible = false
+		Game.right_active = false;
 		cleaned = 9
 		get_node("GrayBg").visible = true
 		get_node("GrayBg/Icon").visible = true
@@ -37,3 +38,7 @@ func _on_area_2d_mouse_exited() -> void:
 
 func _on_area_2d_mouse_entered() -> void:
 	pass # Replace with function body.
+
+
+func _on_timer_timeout() -> void:
+	Game.right_active = true;
