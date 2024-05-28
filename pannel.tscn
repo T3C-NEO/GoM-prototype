@@ -68,6 +68,7 @@ scale = Vector2(0.802153, 0.802153)
 texture = ExtResource("2_dtkii")
 
 [node name="Lock" type="Sprite2D" parent="Panel"]
+visible = false
 modulate = Color(1, 1, 1, 0.694118)
 position = Vector2(-4.44141, -143.605)
 scale = Vector2(0.447707, 0.447707)
