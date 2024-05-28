@@ -13,8 +13,13 @@ func _physics_process(_delta):
 	if Input.is_action_pressed("mouse_left"):
 		var direction = (mouse_position - position).normalized()
 		velocity = (direction * speed)
+		if (direction.x > 0):
+			$Ghost.flip_h = false;
+		elif (direction.x < 0):
+			$Ghost.flip_h = true;
+		
 	
 	move_and_slide()
-	look_at(mouse_position)
+	#look_at(mouse_position)
 
 # Called when the node enters the scene tree for the first time.

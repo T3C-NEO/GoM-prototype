@@ -8,4 +8,11 @@ res://debt_popup.tscn
 res://debt.tscn
 res://work.tscn
 res://pannel.tscn
+res://debt_popup.gd
 res://debt.gd
+res://lose.tscn
+res://work.gd
+res://minigame.gd
+res://overworld0.tscn
+res://character_body_2d.tscn
+res://character_body_2d.gd

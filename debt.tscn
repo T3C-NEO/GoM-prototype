@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://debt.gd" id="1_clrtf"]
 [ext_resource type="Texture2D" uid="uid://cy0vhbouoq3gi" path="res://assets/debt.png" id="1_r445e"]
-[ext_resource type="Texture2D" uid="uid://ck7we3p8i20g2" path="res://assets/sprites and images/blank2.png" id="2_gpyfr"]
-[ext_resource type="Texture2D" uid="uid://ddhbjhayhh122" path="res://assets/sprites and images/blank1.png" id="4_klahf"]
+[ext_resource type="Texture2D" uid="uid://bkaprvvd0xj44" path="res://assets/sprites and images/we need you to work - work ad.png" id="2_mbr58"]
+[ext_resource type="Texture2D" uid="uid://cp6hf1ew778g4" path="res://assets/sprites and images/you are the 100,000,000 visitor- work ad.png" id="4_g8twu"]
 [ext_resource type="Texture2D" uid="uid://cmyb2o2alcdfm" path="res://assets/sprites and images/blank3.png" id="5_02cbe"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D"]
@@ -11,17 +11,15 @@ script = ExtResource("1_clrtf")
 
 [node name="WeNeedYouToWork-WorkAd" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(-156, -15)
-scale = Vector2(0.698302, 0.698302)
-texture = ExtResource("2_gpyfr")
+scale = Vector2(1.07619, 1.07619)
+texture = ExtResource("2_mbr58")
 
 [node name="Button" type="Button" parent="WeNeedYouToWork-WorkAd"]
-visible = false
 modulate = Color(1, 1, 1, 0)
-offset_left = 47.0
-offset_top = -79.0
-offset_right = 394.0
-offset_bottom = 156.0
+offset_left = -133.0
+offset_top = -73.0
+offset_right = 119.0
+offset_bottom = 100.0
 
 [node name="Debt" type="Sprite2D" parent="."]
 visible = false
@@ -38,7 +36,15 @@ offset_bottom = -72.0
 
 [node name="Blank1" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("4_klahf")
+texture = ExtResource("4_g8twu")
+
+[node name="Button" type="Button" parent="Blank1"]
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+offset_left = -100.0
+offset_top = -85.0
+offset_right = 98.0
+offset_bottom = 109.0
 
 [node name="Blank3" type="Sprite2D" parent="."]
 visible = false
@@ -46,3 +52,4 @@ texture = ExtResource("5_02cbe")
 
 [connection signal="pressed" from="WeNeedYouToWork-WorkAd/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Blank1/Button" to="." method="_on_button_pressed"]

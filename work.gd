@@ -7,7 +7,11 @@ var maxDuration = 1.5
 var moveTimer = 0.0
 var moveSpeed = 10.0
 
+@onready var ads = [$"PlaceYourDebt-DebtAd", $"AllFees-DebtAd2"];
+
 func _ready():
+	var i = randi_range(0,1)
+	ads[i].visible = true;
 	set_random_destination()
 	moveTimer = randf_range(minDuration, maxDuration)
 

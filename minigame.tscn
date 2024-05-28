@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bu6q7wiqucnws"]
+[gd_scene load_steps=13 format=3 uid="uid://bu6q7wiqucnws"]
 
 [ext_resource type="PackedScene" uid="uid://dqvtmoyotaj6a" path="res://debt.tscn" id="1_nsp0t"]
 [ext_resource type="Script" path="res://minigame.gd" id="1_x6bvj"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cpgb3lbvty6u3" path="res://assets/sprites and images/Gray bar 3.png" id="6_pot8n"]
 [ext_resource type="Texture2D" uid="uid://c5ickji6ialu0" path="res://assets/sprites and images/Gray bar 4.png" id="7_bqvpf"]
 [ext_resource type="Texture2D" uid="uid://b4tag438g3t40" path="res://assets/sprites and images/Gray bar 5.png" id="8_4783x"]
+[ext_resource type="PackedScene" uid="uid://d3wkdga5ngikt" path="res://work.tscn" id="12_57v2h"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_x6bvj")
@@ -77,23 +78,23 @@ position = Vector2(972, 337)
 [node name="AnimatedSprite2D12" parent="." instance=ExtResource("1_nsp0t")]
 position = Vector2(817, 481)
 
-[node name="AnimatedSprite2D13" parent="." instance=ExtResource("1_nsp0t")]
-position = Vector2(259, 535)
-
-[node name="AnimatedSprite2D14" parent="." instance=ExtResource("1_nsp0t")]
-position = Vector2(172, 365)
-
-[node name="AnimatedSprite2D15" parent="." instance=ExtResource("1_nsp0t")]
-position = Vector2(294, 177)
-
-[node name="AnimatedSprite2D16" parent="." instance=ExtResource("1_nsp0t")]
-position = Vector2(520, 140)
-
-[node name="AnimatedSprite2D17" parent="." instance=ExtResource("1_nsp0t")]
-position = Vector2(667, 263)
-
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 autostart = true
+
+[node name="AnimatedSprite2D6" parent="." instance=ExtResource("12_57v2h")]
+position = Vector2(667, 262)
+
+[node name="AnimatedSprite2D7" parent="." instance=ExtResource("12_57v2h")]
+position = Vector2(522, 140)
+
+[node name="AnimatedSprite2D8" parent="." instance=ExtResource("12_57v2h")]
+position = Vector2(294, 178)
+
+[node name="AnimatedSprite2D9" parent="." instance=ExtResource("12_57v2h")]
+position = Vector2(172, 364)
+
+[node name="AnimatedSprite2D10" parent="." instance=ExtResource("12_57v2h")]
+position = Vector2(260, 535)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,15 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://pvm6kqcajc7u"]
 
 [ext_resource type="Script" path="res://lose.gd" id="1_c3r5c"]
-[ext_resource type="Texture2D" uid="uid://b10hlks3nfgk8" path="res://lose.jpg" id="1_i0qvq"]
+[ext_resource type="Texture2D" uid="uid://dkmy6lk0efu7g" path="res://assets/sprites and images/Game_over_screen.png" id="2_0adkh"]
 
 [node name="lose" type="Node2D"]
 script = ExtResource("1_c3r5c")
 
 [node name="Lose" type="Sprite2D" parent="."]
 position = Vector2(575, 330)
-scale = Vector2(2.31667, 2.31667)
-texture = ExtResource("1_i0qvq")
+scale = Vector2(1.02469, 1.02469)
+texture = ExtResource("2_0adkh")
 
 [node name="Button" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)

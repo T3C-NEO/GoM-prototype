@@ -1,27 +1,45 @@
-[gd_scene load_steps=4 format=3 uid="uid://d3wkdga5ngikt"]
+[gd_scene load_steps=5 format=3 uid="uid://d3wkdga5ngikt"]
 
 [ext_resource type="Texture2D" uid="uid://dj27kufgd1yxg" path="res://assets/work.png" id="1_gyrpn"]
 [ext_resource type="Script" path="res://work.gd" id="1_jw67y"]
-[ext_resource type="Texture2D" uid="uid://buv1q7or2ov2x" path="res://assets/sprites and images/all fees - debt ad2.png" id="3_tt7um"]
+[ext_resource type="Texture2D" uid="uid://bt6nm3fgt1i7a" path="res://assets/sprites and images/place your debt- debt ad.png" id="3_87nvx"]
+[ext_resource type="Texture2D" uid="uid://lxj6ys4q2f4j" path="res://assets/sprites and images/all fees - debt ad.png" id="3_gsh5e"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D"]
 script = ExtResource("1_jw67y")
 
 [node name="Work" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(-6, -3)
 scale = Vector2(0.0991735, 0.0991736)
 texture = ExtResource("1_gyrpn")
 
-[node name="Button" type="Button" parent="."]
-modulate = Color(1, 1, 1, 0)
-offset_left = -72.0
-offset_top = -74.0
-offset_right = 61.0
-offset_bottom = 60.0
-
 [node name="AllFees-DebtAd2" type="Sprite2D" parent="."]
-position = Vector2(-188, 97)
-scale = Vector2(0.71142, 0.71142)
-texture = ExtResource("3_tt7um")
+visible = false
+position = Vector2(-1.52588e-05, -7.62939e-06)
+scale = Vector2(0.981132, 0.981132)
+texture = ExtResource("3_gsh5e")
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="Button" type="Button" parent="AllFees-DebtAd2"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -90.0
+offset_top = -80.0
+offset_right = 86.0
+offset_bottom = 97.0
+
+[node name="PlaceYourDebt-DebtAd" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-4.76837e-07, 0)
+scale = Vector2(0.859649, 0.859649)
+texture = ExtResource("3_87nvx")
+
+[node name="Button" type="Button" parent="PlaceYourDebt-DebtAd"]
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+offset_left = -105.0
+offset_top = -80.0
+offset_right = 103.0
+offset_bottom = 94.0
+
+[connection signal="pressed" from="AllFees-DebtAd2/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="PlaceYourDebt-DebtAd/Button" to="." method="_on_button_pressed"]

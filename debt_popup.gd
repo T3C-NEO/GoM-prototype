@@ -7,19 +7,17 @@ extends Node2D
 
 @onready var debt = $DebtPopup;
 
-@onready var ads = [$DebtPopup, $"AllFees-DebtAd",$"YouAreThe100,000,000Visitor-WorkAd"];
+@onready var ads = [$DebtPopup, $"AllFees-DebtAd"];
 
 
 
 var i;
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	i = randi_range(0,2)
+	i = randi_range(0,1)
 	ads[i].visible = true;
 	ads[i].scale.y = 1-(time2.time_left*4);
 	ads[i].scale.x = 1-(time2.time_left*4);
-	ads[i].modulate.g = time.time_left;
-	ads[i].modulate.b = time.time_left;
 	
 	destination.x = randf_range(207,942)
 	destination.y = randf_range(116,536)
@@ -29,8 +27,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	ads[i].scale.y = 1-(time2.time_left*4);
 	ads[i].scale.x = 1-(time2.time_left*4);
-	ads[i].modulate.g = time.time_left;
-	ads[i].modulate.b = time.time_left;
+	#ads[i].modulate.g = time.time_left;
+	#ads[i].modulate.b = time.time_left;
 	position = position.lerp(destination, delta)
 
 
@@ -39,5 +37,5 @@ func _on_timer_timeout() -> void:
 
 
 func _on_button_pressed() -> void:
-	queue_free();
+	get_tree().change_scene_to_file("res://lose.tscn")
 	
