@@ -137,6 +137,10 @@ position = Vector2(496, 282)
 scale = Vector2(0.302734, 0.302734)
 texture = ExtResource("4_gjmlf")
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 7.0
+autostart = true
+
 [connection signal="mouse_entered" from="GrayBg/Icon/Area2D" to="GrayBg/Icon" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="GrayBg/Icon2/Area2D" to="GrayBg/Icon2" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="GrayBg/Icon3/Area2D" to="GrayBg/Icon3" method="_on_area_2d_mouse_entered"]
@@ -146,3 +150,4 @@ texture = ExtResource("4_gjmlf")
 [connection signal="mouse_entered" from="GrayBg/Icon7/Area2D" to="GrayBg/Icon7" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="GrayBg/Icon8/Area2D" to="GrayBg/Icon8" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="GrayBg/Icon9/Area2D" to="GrayBg/Icon9" method="_on_area_2d_mouse_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

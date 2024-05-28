@@ -42,6 +42,7 @@ visible = false
 position = Vector2(-576, 0)
 
 [node name="Button" type="Button" parent="."]
+visible = false
 offset_left = 481.0
 offset_top = 503.0
 offset_right = 672.0
@@ -63,5 +64,30 @@ autostart = true
 
 [node name="bottom_tentacles" parent="." instance=ExtResource("7_krswc")]
 
+[node name="Left_Timer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[node name="Right_Timer" type="Timer" parent="."]
+wait_time = 10.0
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 369.0
+offset_top = 42.0
+offset_right = 549.0
+offset_bottom = 69.0
+value = 100.0
+fill_mode = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = 371.0
+offset_top = 14.0
+offset_right = 547.0
+offset_bottom = 37.0
+text = "End of Shift"
+horizontal_alignment = 1
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Left_Timer" to="." method="_on_left_timer_timeout"]
+[connection signal="timeout" from="Right_Timer" to="." method="_on_right_timer_timeout"]

@@ -79,7 +79,12 @@ offset_top = -64.0
 offset_right = 66.0
 offset_bottom = 64.0
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 7.0
+autostart = true
+
 [connection signal="pressed" from="Icon/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Icon2/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Icon3/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="Icon4/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -15,6 +15,7 @@ func _process(_delta: float) -> void:
 		get_node("Icon").visible = true
 		get_node("Icon2").visible = true
 		visible = false
+		Game.right_active = false;
 		
 		
 
@@ -42,3 +43,7 @@ func _on_button_4_pressed() -> void:
 	get_node("Icon3").visible = true
 	get_node("Icon4").visible = false
 	step1 -= 1;
+
+
+func _on_timer_timeout() -> void:
+	Game.right_active = true;

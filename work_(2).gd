@@ -69,7 +69,7 @@ func _process(delta: float) -> void:
 				amount_to_deduct += 2;
 				dont_add[i] = true;
 		Game.money -= amount_to_deduct;
-		print(amount_to_deduct)
+		#print(amount_to_deduct)
 		index = 0;
 		change_color = true;
 		cancel_order = false;
@@ -91,9 +91,10 @@ func _on_done_pressed() -> void:
 			index += 1;
 		else:
 			index = 0;
+			Game.left_active = false;
 			orders_served = true;
 			change_color = true;
-			
+
 		reset_fill();
 
 	else:

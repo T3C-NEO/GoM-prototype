@@ -4,6 +4,7 @@ var can_grab : bool;
 var holding : bool;
 var moving : bool;
 var can_drop : bool;
+var in_basket : bool;
 
 var start_pos : Vector2;
 var basket_pos : Vector2;
@@ -16,7 +17,7 @@ func _ready() -> void:
 	start_pos = position; 
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	#print(holding);
 	controls();
 	grab();
@@ -37,8 +38,10 @@ func grab():
 		
 	if(can_drop && Input.is_action_just_released("mouse_left")):
 		position = basket_pos;
+		in_basket = true;
 	elif(!can_drop && Input.is_action_just_released("mouse_left")):
 		position = start_pos; 
+		in_basket = false;
 	
 	boundaries();
 

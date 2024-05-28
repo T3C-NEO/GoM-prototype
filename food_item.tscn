@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cu5m68d7s7ig"]
 
-[ext_resource type="Texture2D" uid="uid://d366604qp13hw" path="res://icon.svg" id="1_mudky"]
+[ext_resource type="Texture2D" uid="uid://dw3v7igquv1sl" path="res://icon.svg" id="1_mudky"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t2y4p"]
 size = Vector2(105, 124)
