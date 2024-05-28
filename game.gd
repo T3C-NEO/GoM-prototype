@@ -8,7 +8,11 @@ var OctoDone : bool = false;
 
 var PlinkNum : int = 0;
 
+#what floor you're on
 var floor : int = 6;
+
+#keeping track of oomoos
+var works : int = 5;
 
 #keeping track of Katorah's minigame
 var money : int = 20; 

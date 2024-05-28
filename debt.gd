@@ -7,11 +7,16 @@ var maxDuration = 1.5
 var moveTimer = 0.0
 var moveSpeed = 10.0
 
+
+@onready var ads = [$"WeNeedYouToWork-WorkAd", $Blank1];
+
 func _ready():
+	var i = randi_range(0,1)
+	ads[i].visible = true;
 	set_random_destination()
 	moveTimer = randf_range(minDuration, maxDuration)
 
-func _process(delta):
+func _process(delta: float) -> void:
 	if moveTimer > 0:
 		moveTimer -= delta
 		move()
@@ -29,14 +34,11 @@ func move():
 		var distance = (destination - position).length()
 		var timeToReach = (distance / moveSpeed)+1
 		var velocity = direction * (distance / timeToReach)
-		position += velocity * Engine.get_frames_per_second() / 60.0 # Manually calculate delta time
-
-
+		position += velocity
 
 func _on_button_pressed() -> void:
-	queue_free()
-	
-
+	Game.works -= 1;
+	queue_free();
 
 func _on_button_2_pressed() -> void:
-	queue_free()
+	pass

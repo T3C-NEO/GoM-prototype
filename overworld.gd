@@ -5,12 +5,17 @@ var playBox;
 @onready var timer = $TapHere/Timer;
 var clicked = true;
 
+@onready var ghost = $Ghost;
+@onready var time2 = $Ghost/Timer;
+
 func _ready() -> void:
 	playBox = 	get_node("play");
 	Game.floor = 6;
 	if Game.CEODone == true:
 		get_node("Bad").visible = false
 		get_node("Button").queue_free()
+	ghost.scale.y = 1-(time2.time_left*4);
+	ghost.scale.x = 1-(time2.time_left*4);
 		
 func _process(_delta: float) -> void:
 	if (clicked == false):
@@ -20,6 +25,9 @@ func _process(_delta: float) -> void:
 	if (clicked == false and Input.is_action_pressed("mouse_left")):
 		clicked = true;
 		timer.start();
+	ghost.position = ghost.position.lerp(Vector2(513,237), _delta * 4)
+	ghost.scale.y = 1-(time2.time_left*4);
+	ghost.scale.x = 1-(time2.time_left*4);
 	
 func _on_button_pressed() -> void:
 	if playBox.visible == false:
