@@ -17,7 +17,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if (Game.works == 0):
 		Game.DebtDone = true
-		get_tree().change_scene_to_file("res://overworld.tscn")
+		get_tree().change_scene_to_file("res://win.tscn")
 	$ProgressBar.position = $ProgressBar.position.lerp(barEnd, delta/2)
 	if ($ProgressBar.position.x > 1400):
 		$ProgressBar.position.x = 949;

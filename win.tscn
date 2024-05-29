@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://d3myl4vekfdnw"]
+
+[ext_resource type="Script" path="res://win.gd" id="1_rti7k"]
+[ext_resource type="Texture2D" uid="uid://205ydc8vjhtb" path="res://assets/sprites and images/progress bar background.png" id="2_2a0nj"]
+[ext_resource type="Texture2D" uid="uid://b35nedadhjxgw" path="res://assets/sprites and images/progress bar.png" id="3_2re7w"]
+[ext_resource type="Texture2D" uid="uid://ckfuwspqaclir" path="res://assets/sprites and images/background - Copy2.png" id="4_533hl"]
+[ext_resource type="Texture2D" uid="uid://xm2ogh1lor4n" path="res://assets/sprites and images/progress square win.png" id="5_6qywt"]
+
+[node name="win" type="Node2D"]
+script = ExtResource("1_rti7k")
+
+[node name="ProgressBarBackground" type="Sprite2D" parent="."]
+position = Vector2(803.667, 391)
+scale = Vector2(0.740741, 0.740741)
+texture = ExtResource("2_2a0nj")
+
+[node name="ProgressBar" type="Sprite2D" parent="."]
+position = Vector2(592, 391)
+scale = Vector2(0.740741, 0.740741)
+texture = ExtResource("3_2re7w")
+
+[node name="Background-Copy" type="Sprite2D" parent="."]
+position = Vector2(577, 322)
+texture = ExtResource("4_533hl")
+
+[node name="ProgressSquare" type="Sprite2D" parent="."]
+position = Vector2(803.667, 391)
+scale = Vector2(0.740741, 0.740741)
+texture = ExtResource("5_6qywt")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = -18.0
+offset_top = -48.0
+offset_right = 1185.0
+offset_bottom = 704.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

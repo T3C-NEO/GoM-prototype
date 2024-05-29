@@ -54,8 +54,6 @@ func _process(_delta: float) -> void:
 	if (chip.position.y < 380 and moving == true):
 		moving = false;
 		chip.position = Vector2(128, 237);
-	if Input.is_action_pressed("forward"):
-		chip.drop = false;
 
 func _on_button_pressed() -> void:
 	chip.drop = true;
@@ -77,17 +75,17 @@ func _on_small_timeout() -> void:
 
 func _on_help_25_body_entered(body: Node2D) -> void:
 	if(body.name == "chip" and landed == false):
-		Game.PlinkNum += 25;
+		Game.PlinkNum += 100;
 		landed = true;
 		
 func _on_help_15_body_entered(body: Node2D) -> void:
 	if(body.name == "chip" and landed == false):
-		Game.PlinkNum += 15;
+		Game.PlinkNum += 10;
 		landed = true;
 		
 func _on_help_5_body_entered(body: Node2D) -> void:
 	if(body.name == "chip" and landed == false):
-		Game.PlinkNum += 5;
+		Game.PlinkNum += 1;
 		landed = true;
 
 

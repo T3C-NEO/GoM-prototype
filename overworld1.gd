@@ -2,6 +2,7 @@ extends Node2D
 
 var playBox;
 var playBox2;
+@onready var ghost = $CharacterBody2D;
 
 func _ready() -> void:
 	playBox = 	get_node("play");
@@ -13,6 +14,12 @@ func _ready() -> void:
 	if Game.CEODone == true:
 		get_node("Bad2").visible = false;
 		get_node("Button4").queue_free();
+		
+func _process(delta: float) -> void:
+	if (ghost.position.x > 2200 and ghost.position.x < 2750):
+		playBox.visible = true;
+	else:
+		playBox.visible = false;
 		
 
 func _on_button_pressed() -> void:
