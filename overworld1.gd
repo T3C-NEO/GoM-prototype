@@ -3,6 +3,8 @@ extends Node2D
 var playBox;
 var playBox2;
 @onready var ghost = $CharacterBody2D;
+@onready var plinko2Done = $plinko2Done;
+@onready var debtDone = $debtDone;
 
 func _ready() -> void:
 	playBox = 	get_node("play");
@@ -10,16 +12,29 @@ func _ready() -> void:
 	Game.floor = 5;
 	if Game.DebtDone == true:
 		get_node("Bad").visible = false;
-		get_node("Button").queue_free();
+		#get_node("Button").queue_free();
 	if Game.CEODone == true:
 		get_node("Bad2").visible = false;
-		get_node("Button4").queue_free();
+		#get_node("Button4").queue_free();
 		
 func _process(delta: float) -> void:
-	if (ghost.position.x > 2200 and ghost.position.x < 2750):
-		playBox.visible = true;
+	if (ghost.position.x > 2250 and ghost.position.x < 2750):
+		if (Game.DebtDone == false):
+			playBox.visible = true;
+		else:
+			debtDone.visible = true;
 	else:
 		playBox.visible = false;
+		debtDone.visible = false;
+		
+	if (ghost.position.x > 0 and ghost.position.x < 500):
+		if (Game.CEODone == false):
+			playBox2.visible = true;
+		else:
+			plinko2Done.visible = true;
+	else:
+		playBox2.visible = false;
+		plinko2Done.visible = false;
 		
 
 func _on_button_pressed() -> void:
