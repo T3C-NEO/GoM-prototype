@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ifh8e22bcmd7"]
+[gd_scene load_steps=13 format=3 uid="uid://ifh8e22bcmd7"]
 
 [ext_resource type="Texture2D" uid="uid://bkwtlbf4q1cic" path="res://assets/corporate-office-flat-illustration-vector.jpg" id="1_0vrrv"]
 [ext_resource type="Script" path="res://overworld1.gd" id="1_5cjig"]
@@ -8,6 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://d3e5hjq3v36rx" path="res://assets/bad.png" id="5_fvq6y"]
 [ext_resource type="Texture2D" uid="uid://dccu84csmbkm7" path="res://assets/girl.png" id="6_wj8ue"]
 [ext_resource type="Texture2D" uid="uid://bchoy1ifddmg0" path="res://assets/Next floor.png" id="7_3j10m"]
+[ext_resource type="Texture2D" uid="uid://beiyje8mynfdo" path="res://assets/sprites and images/lauren sketch BG.png" id="7_crau6"]
+[ext_resource type="Texture2D" uid="uid://bvrmmltrr0tmh" path="res://assets/sprites and images/lauren sketch BG elevator.png" id="8_18dd6"]
+[ext_resource type="Texture2D" uid="uid://cyp8y1e7x5454" path="res://assets/sprites and images/lauren 1.png" id="11_t7qhj"]
+[ext_resource type="Texture2D" uid="uid://hx32gyjyq24b" path="res://assets/sprites and images/lauren 2.png" id="12_tqymi"]
 
 [node name="Overworld1" type="Node2D"]
 script = ExtResource("1_5cjig")
@@ -62,6 +66,17 @@ position = Vector2(1282, 446)
 scale = Vector2(0.54888, 0.54888)
 texture = ExtResource("6_wj8ue")
 
+[node name="LaurenSketchBg" type="Sprite2D" parent="."]
+position = Vector2(895, 334)
+scale = Vector2(0.347917, 0.347917)
+texture = ExtResource("7_crau6")
+
+[node name="LaurenSketchBg2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(895, 334)
+scale = Vector2(0.347917, 0.347917)
+texture = ExtResource("8_18dd6")
+
 [node name="Button" type="Button" parent="."]
 visible = false
 modulate = Color(1, 1, 1, 0)
@@ -80,10 +95,11 @@ offset_right = 335.0
 offset_bottom = 430.0
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 1697.0
-offset_top = 127.0
-offset_right = 2002.0
-offset_bottom = 634.0
+modulate = Color(1, 1, 1, 0.619608)
+offset_left = 48.0
+offset_top = 48.0
+offset_right = 214.0
+offset_bottom = 276.0
 
 [node name="NextFloor" type="Sprite2D" parent="."]
 visible = false
@@ -99,12 +115,12 @@ offset_right = 86.0
 offset_bottom = 89.0
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_7okgq")]
-position = Vector2(1551, 376)
+position = Vector2(298, 161)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 limit_left = 0
 limit_top = 0
-limit_right = 3695
+limit_right = 1790
 limit_bottom = 650
 
 [node name="textNode" type="Button" parent="CharacterBody2D"]
@@ -120,10 +136,10 @@ to spread  here >:)"
 [node name="play" type="Button" parent="."]
 auto_translate_mode = 1
 visible = false
-offset_left = 2584.0
-offset_top = 18.0
-offset_right = 2810.0
-offset_bottom = 261.0
+offset_left = 973.0
+offset_top = 48.0
+offset_right = 1199.0
+offset_bottom = 291.0
 button_mask = 0
 text = "Lauren - Graphic Designer
 
@@ -149,10 +165,10 @@ text = "Enter Mind"
 [node name="debtDone" type="Button" parent="."]
 auto_translate_mode = 1
 visible = false
-offset_left = 2569.0
-offset_top = 32.0
-offset_right = 2795.0
-offset_bottom = 217.0
+offset_left = 978.0
+offset_top = 60.0
+offset_right = 1204.0
+offset_bottom = 245.0
 button_mask = 0
 text = "Lauren - Graphic Designer
 
@@ -202,6 +218,17 @@ this guy is now working hard or something
 
 "
 autowrap_mode = 2
+
+[node name="Lauren3" type="Sprite2D" parent="."]
+position = Vector2(1255, 357)
+scale = Vector2(0.321918, 0.321917)
+texture = ExtResource("11_t7qhj")
+
+[node name="Lauren2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1255, 357)
+scale = Vector2(0.321918, 0.321917)
+texture = ExtResource("12_tqymi")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]

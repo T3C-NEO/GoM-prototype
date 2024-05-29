@@ -1,17 +1,9 @@
-res://Main sccene.tscn
+res://overworld.tscn
 res://overworld.gd
-res://plinko.gd
-res://chores.tscn
-res://work (2).tscn
-res://minigame.tscn
-res://debt.tscn
-res://overworld0.tscn
 res://character_body_2d.tscn
 res://pannel.tscn
-res://plinko.tscn
 res://win.tscn
-res://lose.tscn
-res://win.gd
-res://minigame.gd
-res://overworld.tscn
+res://overworld0.tscn
+res://plinko.tscn
 res://overworld1.gd
+res://plinkoEndGood.tscn

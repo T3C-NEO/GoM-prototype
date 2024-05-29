@@ -13,12 +13,14 @@ func _ready() -> void:
 	if Game.DebtDone == true:
 		get_node("Bad").visible = false;
 		#get_node("Button").queue_free();
+		$Lauren3.visible = false;
+		$Lauren2.visible = true;
 	if Game.CEODone == true:
 		get_node("Bad2").visible = false;
 		#get_node("Button4").queue_free();
 		
 func _process(delta: float) -> void:
-	if (ghost.position.x > 2250 and ghost.position.x < 2750):
+	if (ghost.position.x > 1105 and ghost.position.x < 1405):
 		if (Game.DebtDone == false):
 			playBox.visible = true;
 		else:
@@ -27,15 +29,15 @@ func _process(delta: float) -> void:
 		playBox.visible = false;
 		debtDone.visible = false;
 		
-	if (ghost.position.x > 0 and ghost.position.x < 500):
-		if (Game.CEODone == false):
-			playBox2.visible = true;
-		else:
-			plinko2Done.visible = true;
-	else:
-		playBox2.visible = false;
-		plinko2Done.visible = false;
-		
+	#if (ghost.position.x > 0 and ghost.position.x < 500):
+		#if (Game.CEODone == false):
+			#playBox2.visible = true;
+		#else:
+			#plinko2Done.visible = true;
+	#else:
+		#playBox2.visible = false;
+		#plinko2Done.visible = false;
+		#
 
 func _on_button_pressed() -> void:
 	if playBox.visible == false:
