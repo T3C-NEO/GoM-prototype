@@ -1,3 +1,11 @@
-res://pannel.tscn
+res://Main sccene.tscn
 res://overworld.gd
-res://pannel.gd
+res://chores.tscn
+res://work (2).tscn
+res://minigame.tscn
+res://debt.tscn
+res://overworld0.tscn
+res://character_body_2d.tscn
+res://pannel.tscn
+res://plinko.tscn
+res://plinko.gd

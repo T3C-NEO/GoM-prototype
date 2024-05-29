@@ -12,6 +12,10 @@ extends Node2D
 
 var landed : bool = false;
 
+var moving : bool = false;
+var setPos : bool = false;
+var coolPos;
+
 var columnsA : int = 6;
 var columnsB : int = 5;
 
@@ -45,6 +49,13 @@ func _process(_delta: float) -> void:
 		fontSize -= 5;
 	else:
 		fontSize += 5;
+	if (moving == true):
+		chip.position = chip.position.lerp(Vector2(-416, 237), _delta * 2)
+	if (chip.position.y < 380 and moving == true):
+		moving = false;
+		chip.position = Vector2(128, 237);
+	if Input.is_action_pressed("forward"):
+		chip.drop = false;
 
 func _on_button_pressed() -> void:
 	chip.drop = true;
@@ -81,7 +92,8 @@ func _on_help_5_body_entered(body: Node2D) -> void:
 
 
 func _on_timer_timeout() -> void:
-	chip.position = Vector2(128, 237);
+	moving = true;
+	#chip.position = Vector2(128, 237);
 	get_node("chip/cam").position_smoothing_speed = 2;
 
 

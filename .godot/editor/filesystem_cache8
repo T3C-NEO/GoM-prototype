@@ -1,13 +1,13 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1716915291
-Baby Changing Station.tscn::PackedScene::3144732048480362712::1716499656::0::1::::<><>::res://baby_changing_station.gd<>uid://xgcwavswjihc::::res://assets/gray_bg.png<>uid://ccqtfas7kpm8t::::res://baby.png<>uid://cf7enixisf8a5::::res://background 2.jpg<>uid://got2lxnbjvie::::res://assets/change_diaper.png
+::res://::1716925067
+Baby Changing Station.tscn::PackedScene::3144732048480362712::1716915674::0::1::::<><>::res://baby_changing_station.gd<>uid://xgcwavswjihc::::res://assets/gray_bg.png<>uid://ccqtfas7kpm8t::::res://baby.png<>uid://cf7enixisf8a5::::res://background 2.jpg<>uid://got2lxnbjvie::::res://assets/change_diaper.png
 baby.png::CompressedTexture2D::4947411679833691581::1714777745::1715368344::1::::<><>::
-baby_changing_station.gd::GDScript::-1::1716087028::0::1::::<>Node2D<>::
+baby_changing_station.gd::GDScript::-1::1716915674::0::1::::<>Node2D<>::
 background 2.jpg::CompressedTexture2D::5190112213103181226::1714777745::1715368344::1::::<><>::
 background 3.jpg::CompressedTexture2D::6660154381589825892::1714777745::1715368344::1::::<><>::
 background.jpg::CompressedTexture2D::7437249370359640179::1714777745::1715368344::1::::<><>::
 basket.png::CompressedTexture2D::2068709834619400358::1714777745::1715368344::1::::<><>::
-bottom_tentacles.gd::GDScript::-1::1716598741::0::1::::<>Node2D<>::
+bottom_tentacles.gd::GDScript::-1::1716915674::0::1::::<>Node2D<>::
 bottom_tentacles.tscn::PackedScene::526767202667416094::1716868710::0::1::::<><>::res://bottom_tentacles.gd<>uid://bfw2icv4q5201::::res://assets/tentacle.png
 brain.png::CompressedTexture2D::610355078280016150::1715383185::1715383320::1::::<><>::
 brain.tscn::PackedScene::4928482226780650217::1715384857::0::1::::<><>::res://Plink_Brain.gd<>uid://ixwputf3bwpy::::res://brain.png
@@ -18,9 +18,9 @@ character_body_2d.gd::GDScript::-1::1716869647::0::1::::<>CharacterBody2D<>::
 character_body_2d.tscn::PackedScene::8802386871555323603::1716869647::0::1::::<><>::res://character_body_2d.gd<>uid://cstgwgvn1p2ja::::res://assets/Ghost.png
 chip.gd::GDScript::-1::1715959861::0::1::::<>RigidBody2D<>::
 chip.tscn::PackedScene::7596997736583438666::1715404401::0::1::::<><>::uid://daowmkj8xd7py::::res://assets/chip.png<>res://chip.gd
-chores.gd::GDScript::-1::1716598741::0::1::::<>Node2D<>::
-chores.tscn::PackedScene::783195437227263182::1716869634::0::1::::<><>::res://chores.gd<>uid://xgcwavswjihc::::res://assets/gray_bg.png<>uid://cf7enixisf8a5::::res://background 2.jpg<>res://cleaning.gd<>uid://c8iy7wjoo8iku::::res://squeegee.png<>uid://ib4enq4pss8y::::res://assets/suds.png
-cleaning.gd::GDScript::-1::1714777745::0::1::::<>Sprite2D<>::
+chores.gd::GDScript::-1::1716915674::0::1::::<>Node2D<>::
+chores.tscn::PackedScene::783195437227263182::1716915674::0::1::::<><>::res://chores.gd<>uid://xgcwavswjihc::::res://assets/gray_bg.png<>uid://cf7enixisf8a5::::res://background 2.jpg<>res://cleaning.gd<>uid://c8iy7wjoo8iku::::res://squeegee.png<>uid://ib4enq4pss8y::::res://assets/suds.png
+cleaning.gd::GDScript::-1::1716915674::0::1::::<>Sprite2D<>::
 coffee machine.png::CompressedTexture2D::8706999663663945102::1714777745::1715368344::1::::<><>::
 coffee.webp::CompressedTexture2D::5661069793610065344::1714777745::1715368344::1::::<><>::
 CROWN.png::CompressedTexture2D::4452041337786475031::1715406244::1715406243::1::::<><>::
@@ -28,10 +28,10 @@ debt.gd::GDScript::-1::1716867100::0::1::::<>AnimatedSprite2D<>::
 debt.tscn::PackedScene::8326811307576203954::1716869634::0::1::::<><>::res://debt.gd<>uid://cy0vhbouoq3gi::::res://assets/debt.png<>uid://bkaprvvd0xj44::::res://assets/sprites and images/we need you to work - work ad.png<>uid://cp6hf1ew778g4::::res://assets/sprites and images/you are the 100,000,000 visitor- work ad.png<>uid://cmyb2o2alcdfm::::res://assets/sprites and images/blank3.png
 debt_popup.gd::GDScript::-1::1716868079::0::1::::<>Node2D<>::
 debt_popup.tscn::PackedScene::7280013897723703592::1716868710::0::1::::<><>::res://debt_popup.gd<>uid://lxj6ys4q2f4j::::res://assets/sprites and images/all fees - debt ad.png<>uid://bt6nm3fgt1i7a::::res://assets/sprites and images/place your debt- debt ad.png
-drag_food_items.gd::GDScript::-1::1715362473::0::1::::<>Sprite2D<>::
+drag_food_items.gd::GDScript::-1::1716915674::0::1::::<>Sprite2D<>::
 emplyee.png::CompressedTexture2D::332615629784243791::1715405089::1715405090::1::::<><>::
 export_presets.cfg::TextFile::-1::1715375174::0::1::::<><>::
-food_item.tscn::PackedScene::183509861049326918::1715364839::0::1::::<><>::uid://d366604qp13hw::::res://icon.svg
+food_item.tscn::PackedScene::183509861049326918::1716915674::0::1::::<><>::uid://dw3v7igquv1sl::::res://icon.svg
 game.gd::GDScript::-1::1716598741::0::1::::<>Node<>::
 groceries.tscn::PackedScene::6671136615844635161::1715959861::0::1::::<><>::uid://dw3v7igquv1sl::::res://icon.svg<>res://drag_food_items.gd
 icon.svg::CompressedTexture2D::8762551820692918975::1713068775::1713068795::1::::<><>::
@@ -49,8 +49,8 @@ loading_2.gd::GDScript::-1::1715374356::0::1::::<>Node2D<>::
 lose.gd::GDScript::-1::1716598741::0::1::::<>Node2D<>::
 lose.jpg::CompressedTexture2D::4263385279145505541::1714777745::1715368344::1::::<><>::
 lose.tscn::PackedScene::1096969100971590500::1716868125::0::1::::<><>::res://lose.gd<>uid://dkmy6lk0efu7g::::res://assets/sprites and images/Game_over_screen.png
-Main sccene.tscn::PackedScene::519973685574011145::1716869634::0::1::::<><>::res://main_sccene.gd<>res://left.gd<>uid://bk2ljowoyy8cq::::res://Baby Changing Station.tscn<>uid://bwy8qxanv076u::::res://work (2).tscn<>uid://lfnd5jmbp4xe::::res://chores.tscn<>uid://ssv6ed6c5h2e::::res://shopping.tscn<>uid://hrf1qmtbye4e::::res://bottom_tentacles.tscn
-main_sccene.gd::GDScript::-1::1716598741::0::1::::<>Node2D<>::
+Main sccene.tscn::PackedScene::519973685574011145::1716915674::0::1::::<><>::res://main_sccene.gd<>res://left.gd<>uid://bk2ljowoyy8cq::::res://Baby Changing Station.tscn<>uid://bwy8qxanv076u::::res://work (2).tscn<>uid://lfnd5jmbp4xe::::res://chores.tscn<>uid://ssv6ed6c5h2e::::res://shopping.tscn<>uid://hrf1qmtbye4e::::res://bottom_tentacles.tscn
+main_sccene.gd::GDScript::-1::1716915674::0::1::::<>Node2D<>::
 menu.gd::GDScript::-1::1716087168::0::1::::<>Node2D<>::
 menu.tscn::PackedScene::1374928519957232233::1716517880::0::1::::<><>::res://menu.gd
 minigame.gd::GDScript::-1::1716868673::0::1::::<>Node2D<>::
@@ -59,12 +59,12 @@ overworld0.tscn::PackedScene::3387150282290650780::1716869634::0::1::::<><>::res
 overworld1.gd::GDScript::-1::1716517653::0::1::::<>Node2D<>::
 overworld2.tscn::PackedScene::363235661763417062::1716517882::0::1::::<><>::res://overworld_2.gd<>uid://bkwtlbf4q1cic::::res://assets/corporate-office-flat-illustration-vector.jpg<>uid://bbtr8ai31fia4::::res://assets/elevator.png<>uid://duriqk7iktit3::::res://assets/guy.png<>uid://dxn7a40jr2idf::::res://character_body_2d.tscn<>uid://bchoy1ifddmg0::::res://assets/Next floor.png<>uid://dccu84csmbkm7::::res://assets/girl.png
 overworld3.tscn::PackedScene::2181968875698674904::1716517882::0::1::::<><>::res://overworld_3.gd<>uid://dmxqn7ipbraw5::::res://image (1).png<>uid://bbtr8ai31fia4::::res://assets/elevator.png<>uid://ba60r4hju8jg5::::res://image (2).png<>uid://d3e5hjq3v36rx::::res://assets/bad.png<>uid://bchoy1ifddmg0::::res://assets/Next floor.png<>uid://dxn7a40jr2idf::::res://character_body_2d.tscn
-overworld.gd::GDScript::-1::1716869222::0::1::::<>Node2D<>::
+overworld.gd::GDScript::-1::1716915603::0::1::::<>Node2D<>::
 overworld.tscn::PackedScene::572316841054089974::1716517881::0::1::::<><>::uid://bkwtlbf4q1cic::::res://assets/corporate-office-flat-illustration-vector.jpg<>res://overworld1.gd<>uid://bbtr8ai31fia4::::res://assets/elevator.png<>uid://dxn7a40jr2idf::::res://character_body_2d.tscn<>uid://duriqk7iktit3::::res://assets/guy.png<>uid://d3e5hjq3v36rx::::res://assets/bad.png<>uid://dccu84csmbkm7::::res://assets/girl.png<>uid://bchoy1ifddmg0::::res://assets/Next floor.png
 overworld_2.gd::GDScript::-1::1715959862::0::1::::<>Node2D<>::
-overworld_3.gd::GDScript::-1::1716517579::0::1::::<>Node2D<>::
-pannel.gd::GDScript::-1::1716753485::0::1::::<>Node2D<>::
-pannel.tscn::PackedScene::3334620000761209694::1716868710::0::1::::<><>::res://pannel.gd<>uid://cstgwgvn1p2ja::::res://assets/Ghost.png<>uid://cj0xtiugxh034::::res://assets/sprites and images/panel.png<>uid://cp6fui2o1npm0::::res://assets/sprites and images/lock.png<>uid://b3xircff7p45v::::res://assets/sprites and images/panel close button.png
+overworld_3.gd::GDScript::-1::1716915674::0::1::::<>Node2D<>::
+pannel.gd::GDScript::-1::1716915604::0::1::::<>Node2D<>::
+pannel.tscn::PackedScene::3334620000761209694::1716915603::0::1::::<><>::res://pannel.gd<>uid://cstgwgvn1p2ja::::res://assets/Ghost.png<>uid://cj0xtiugxh034::::res://assets/sprites and images/panel.png<>uid://cp6fui2o1npm0::::res://assets/sprites and images/lock.png<>uid://b3xircff7p45v::::res://assets/sprites and images/panel close button.png
 pannel_placeholder.gd::GDScript::-1::1716751863::0::1::::<>Node2D<>::
 pannel_placeholder.tscn::PackedScene::2111497321294516705::1716751872::0::1::::<><>::res://pannel_placeholder.gd<>uid://df7jnsp1sckgq::::res://assets/sprites and images/placeholder pannel.png<>uid://cstgwgvn1p2ja::::res://assets/Ghost.png<>uid://cp6fui2o1npm0::::res://assets/sprites and images/lock.png
 plinko2.tscn::PackedScene::7475079040080519954::1716517880::0::1::::<><>::res://plinko_2.gd<>uid://cy0ulhhhioo0i::::res://assets/plinko_bg.png<>uid://dan1knpiv2v6q::::res://assets/bar.png<>uid://kf3sbyywvudp::::res://assets/PLINKO.png<>uid://cq53u6u73xym4::::res://assets/PLINKO2.png<>uid://b2l1ygnpiv1p1::::res://assets/prong.png<>uid://dgibpb4jh42t7::::res://chip.tscn<>uid://cchnm83tocc5v::::res://brain.tscn<>uid://d2kdlub43s8xr::::res://assets/plinko_bottom.png<>uid://bk2ixtbqbokxy::::res://plinkoEndGood.tscn<>uid://ixwputf3bwpy::::res://brain.png
@@ -73,14 +73,16 @@ plinko.tscn::PackedScene::4994801136588926220::1716517879::0::1::::<><>::uid://c
 plinkoEndBad.tscn::PackedScene::8162598337635921612::1716009807::0::1::::<><>::res://plinko_end_good.gd
 plinkoEndGood.tscn::PackedScene::3144575128852306062::1716517880::0::1::::<><>::res://plinko_end_good.gd<>uid://e0eepias5l5x::::res://emplyee.png
 plinko_2.gd::GDScript::-1::1716506838::0::1::::<>Node2D<>::
+plinko_3.gd::GDScript::-1::1716915674::0::1::::<>Node2D<>::
+plinko_3.tscn::PackedScene::8634157341787500893::1716915674::0::1::::<><>::res://plinko_3.gd<>uid://cy0ulhhhioo0i::::res://assets/plinko_bg.png<>uid://dan1knpiv2v6q::::res://assets/bar.png<>uid://dgibpb4jh42t7::::res://chip.tscn<>uid://bffd5ynosnexh::::res://Prong.tscn<>uid://cchnm83tocc5v::::res://brain.tscn<>uid://namwb8e1ovp2::::res://assets/underBar.png<>uid://c3vmta57cuvv6::::res://assets/greenBar.png
 plinko_end_good.gd::GDScript::-1::1716510020::0::1::::<>Label<>::
 Plink_Brain.gd::GDScript::-1::1715959858::0::1::::<>Node2D<>::
 prong.gd::GDScript::-1::1715405759::0::1::::<>Node2D<>::
 Prong.tscn::PackedScene::2747923796752535341::1715408725::0::1::::<><>::res://prong.gd<>uid://ixwputf3bwpy::::res://brain.png
 rigid_body_2d.gd::GDScript::-1::1713497873::0::1::::<>RigidBody2D<>::
 shelves2.jpg::CompressedTexture2D::3323607745231457144::1714777745::1715368344::1::::<><>::
-shopping.gd::GDScript::-1::1715362473::0::1::::<>Node2D<>::
-shopping.tscn::PackedScene::1301888617656979174::1716019181::0::1::::<><>::res://shopping.gd<>uid://bnl8lmcx5c6qm::::res://shelves2.jpg<>uid://dw3v7igquv1sl::::res://icon.svg<>uid://4qdl4evwita1::::res://basket.png<>res://drag_food_items.gd<>uid://p1boxcrtnc8x::::res://assets/cereal.png<>uid://cevrrly1hbrwa::::res://assets/crema.png<>uid://b0ccqvtddkqv2::::res://assets/cake.png<>uid://ey872e8k6x85::::res://assets/diapers.png<>uid://dbuxlbv3xbicg::::res://assets/jar.png<>uid://dwe3nx7ekgnwf::::res://assets/bread.png<>uid://ctycu45j4v61j::::res://assets/train.png
+shopping.gd::GDScript::-1::1716915674::0::1::::<>Node2D<>::
+shopping.tscn::PackedScene::1301888617656979174::1716915674::0::1::::<><>::res://shopping.gd<>uid://bnl8lmcx5c6qm::::res://shelves2.jpg<>uid://dw3v7igquv1sl::::res://icon.svg<>uid://4qdl4evwita1::::res://basket.png<>res://drag_food_items.gd<>uid://p1boxcrtnc8x::::res://assets/cereal.png<>uid://cevrrly1hbrwa::::res://assets/crema.png<>uid://b0ccqvtddkqv2::::res://assets/cake.png<>uid://ey872e8k6x85::::res://assets/diapers.png<>uid://dbuxlbv3xbicg::::res://assets/jar.png<>uid://dwe3nx7ekgnwf::::res://assets/bread.png<>uid://ctycu45j4v61j::::res://assets/train.png
 sprite_2d.gd::GDScript::-1::1713500436::0::1::::<>Sprite2D<>::
 sprite_2d.tscn::PackedScene::2044491325979674046::1713501001::0::1::::<><>::res://sprite_2d.gd<>uid://cy0vhbouoq3gi::::res://assets/debt.png
 squeegee.png::CompressedTexture2D::7107103752778154992::1714777745::1715368344::1::::<><>::
@@ -88,8 +90,8 @@ work (2).gd::GDScript::-1::1715364789::0::1::::<>Node2D<>::
 work (2).tscn::PackedScene::3982153751947817322::1716869634::0::1::::<><>::res://work_(2).gd<>uid://cf7enixisf8a5::::res://background 2.jpg<>uid://dlia2yv16o1f8::::res://assets/coffee_cup.png<>uid://c7v45wji36njd::::res://brown.webp<>uid://xgcwavswjihc::::res://assets/gray_bg.png<>uid://didmnk1yvy662::::res://assets/coffee_maker.png<>uid://mcrfrwiwwsgc::::res://lid.jpg<>uid://b10hlks3nfgk8::::res://lose.jpg<>uid://btyemlhblegh8::::res://assets/order_incomplete.png<>uid://cp1sl0ot4722j::::res://line.png
 work.gd::GDScript::-1::1716868386::0::1::::<>AnimatedSprite2D<>::
 work.tscn::PackedScene::9170578827363685703::1716868710::0::1::::<><>::uid://dj27kufgd1yxg::::res://assets/work.png<>res://work.gd<>uid://bt6nm3fgt1i7a::::res://assets/sprites and images/place your debt- debt ad.png<>uid://lxj6ys4q2f4j::::res://assets/sprites and images/all fees - debt ad.png
-work_(2).gd::GDScript::-1::1716598741::0::1::::<>Node2D<>::
-::res://assets/::1716598741
+work_(2).gd::GDScript::-1::1716915674::0::1::::<>Node2D<>::
+::res://assets/::1716915674
 bad.png::CompressedTexture2D::9134641693029191045::1713499012::1713499109::1::::<><>::
 bar.png::CompressedTexture2D::7187696168001308394::1715371949::1715371949::1::::<><>::
 black_bg.png::CompressedTexture2D::1962349129835356679::1716009806::1716009806::1::::<><>::
@@ -109,6 +111,7 @@ elevator.png::CompressedTexture2D::2496923838399738373::1713069495::1713069497::
 Ghost.png::CompressedTexture2D::6075867667827447190::1713069961::1713069968::1::::<><>::
 girl.png::CompressedTexture2D::7305043292018366312::1713498823::1713498826::1::::<><>::
 gray_bg.png::CompressedTexture2D::1626890424939037112::1716019181::1716086872::1::::<><>::
+greenBar.png::CompressedTexture2D::6782243503885304573::1716915674::1716925086::1::::<><>::
 grocery_1.png::CompressedTexture2D::3286362046612894536::1715959859::1715959859::1::::<><>::
 guy.png::CompressedTexture2D::8598648229348423290::1713498797::1713498826::1::::<><>::
 ideas24.png::CompressedTexture2D::2016757242155443232::1713498337::1713498340::1::::<><>::

@@ -512,7 +512,7 @@ offset_right = 138.0
 offset_bottom = 141.0
 theme_override_font_sizes/font_size = 50
 text = "
-+25"
+$100"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -532,7 +532,7 @@ offset_right = 138.0
 offset_bottom = 141.0
 theme_override_font_sizes/font_size = 50
 text = "
-+15"
+$10"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -552,7 +552,7 @@ offset_right = 138.0
 offset_bottom = 141.0
 theme_override_font_sizes/font_size = 50
 text = "
-+15"
+$10"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -572,7 +572,7 @@ offset_right = 138.0
 offset_bottom = 141.0
 theme_override_font_sizes/font_size = 50
 text = "
-+5"
+$1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -592,7 +592,7 @@ offset_right = 138.0
 offset_bottom = 141.0
 theme_override_font_sizes/font_size = 50
 text = "
-+5"
+$1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -607,7 +607,7 @@ offset_right = 68.0
 offset_bottom = -42.0
 theme_override_font_sizes/font_size = 50
 text = "
-+0"
+$0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -622,7 +622,7 @@ offset_right = 68.0
 offset_bottom = -42.0
 theme_override_font_sizes/font_size = 50
 text = "
-+0"
+$0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
