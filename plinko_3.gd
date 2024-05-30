@@ -9,6 +9,7 @@ var columnsB : int = 5;
 var rows : int = 9;
 
 var win : bool;
+var lose : bool;
 
 
 func _ready() -> void:
@@ -32,13 +33,17 @@ func _process(delta: float) -> void:
 	if(Input.is_action_just_pressed("mouse_left")):
 		chip.drop = true;
 	
-	if(win):
+	if(win || lose):
 		var timer = get_tree().create_timer(2);
 		await timer.timeout;
-		get_tree().change_scene_to_file("res://overworld3.tscn");
+		get_tree().change_scene_to_file("res://overworld_4.tscn");
 
 
 func _on_win_body_entered(body: Node2D) -> void:
 	if(body.name == "chip"):
 		win = true;
-		print("YERRR")
+
+
+func _on_lose_detection_body_entered(body: Node2D) -> void:
+	if(body.name == "chip"):
+		lose = true;
