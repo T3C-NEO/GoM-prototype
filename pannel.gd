@@ -3,16 +3,17 @@ extends Node2D
 
 @onready var ghost = $Panel/Ghost;
 @onready var timer = $Panel/Timer;
-@onready var lock = $Panel/Lock;
+@onready var lock = $Panel/Lock3;
+@onready var lock2 = $Panel/Lock5;
 
 
 var going;
 var starting;
 
 var f6 : Vector2 = Vector2(-16, -302);
-var f5 : Vector2 = Vector2(137, -304);
-var f4 : Vector2 = Vector2(-6, -155);
-var f3 : Vector2 = Vector2(-345, -23);
+var f5 : Vector2 = Vector2(146, -155);
+var f4 : Vector2 = Vector2(-16, -11);
+var f3 : Vector2 = Vector2(-16, 131);
 var f2 : Vector2 = Vector2(181, 424);
 var fL : Vector2 = Vector2(-345, 424);
 # Called when the node enters the scene tree for the first time.
@@ -25,6 +26,8 @@ func _ready() -> void:
 		ghost.position = f4
 	if (Game.DebtDone == false):
 		lock.visible = true;
+	if (Game.OctoDone == false):
+		lock2.visible = true;
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -35,6 +38,8 @@ func _process(delta: float) -> void:
 		ghost.position = ghost.position.lerp(f5, delta * 4)
 	elif (going == 4):
 		ghost.position = ghost.position.lerp(f4, delta * 4)
+	elif (going == 3):
+		ghost.position = ghost.position.lerp(f3, delta * 4)
 
 
 func _on_button_5_pressed() -> void:
@@ -68,3 +73,13 @@ func _on_button_close_pressed() -> void:
 	elif (going == 4):
 		Game.ghostPos = Vector2(303,213)
 		get_tree().change_scene_to_file("res://overworld3.tscn")
+	elif (going == 3):
+		Game.ghostPos = Vector2(303,213)
+		get_tree().change_scene_to_file("res://overworld_4.tscn")
+
+
+func _on_button_4_pressed() -> void:
+	if (lock2.visible == false):
+		going = 3;
+		timer.start();
+		$PanelCloseButton.visible = false;

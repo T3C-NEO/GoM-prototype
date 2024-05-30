@@ -1,14 +1,12 @@
-res://win.tscn
+res://pannel.tscn
 res://overworld.gd
+res://pannel.gd
+res://win.tscn
 res://overworld0.tscn
 res://plinko.tscn
 res://character_body_2d.tscn
-res://pannel.tscn
 res://plinkoEndGood.tscn
 res://overworld2.tscn
 res://overworld.tscn
 res://overworld3.tscn
-res://game.gd
-res://plinko_end_good.gd
 res://plinko2.tscn
-res://character_body_2d.gd
