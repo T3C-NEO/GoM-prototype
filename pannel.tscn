@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bnrkx7cuqhnwg"]
+[gd_scene load_steps=7 format=3 uid="uid://bnrkx7cuqhnwg"]
 
 [ext_resource type="Script" path="res://pannel.gd" id="1_ivkd5"]
 [ext_resource type="Texture2D" uid="uid://cj0xtiugxh034" path="res://assets/sprites and images/panel.png" id="2_mtvxc"]
 [ext_resource type="Texture2D" uid="uid://c4ntn1f3bvvq7" path="res://assets/sprites and images/sprite small.png" id="3_2fbd5"]
+[ext_resource type="Texture2D" uid="uid://coffn8clig0t7" path="res://assets/sprites and images/elevator_numbers_first_adjustment.png" id="3_c11jg"]
 [ext_resource type="Texture2D" uid="uid://cp6fui2o1npm0" path="res://assets/sprites and images/lock.png" id="4_i65nr"]
 [ext_resource type="Texture2D" uid="uid://b3xircff7p45v" path="res://assets/sprites and images/panel close button.png" id="5_ecl63"]
 
@@ -13,6 +14,11 @@ script = ExtResource("1_ivkd5")
 position = Vector2(567, 321)
 scale = Vector2(0.675463, 0.675463)
 texture = ExtResource("2_mtvxc")
+
+[node name="ElevatorNumbersFirstAdjustment" type="Sprite2D" parent="Panel"]
+position = Vector2(0.00012207, -1.48044)
+scale = Vector2(2.70664, 2.70664)
+texture = ExtResource("3_c11jg")
 
 [node name="ButtonL" type="Button" parent="Panel"]
 auto_translate_mode = 1
