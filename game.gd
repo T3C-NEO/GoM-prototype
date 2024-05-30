@@ -7,10 +7,10 @@ var DebtDone : bool = false;
 var OctoDone : bool = false;
 
 #keeps track of bossman plinko 
-var sliders_active : bool; 
+var sliders_active : bool = true; 
 
 #for final plinko 
-var final_plinko : bool = true;
+var final_plinko : bool;
 
 var PlinkNum : int = 0;
 
