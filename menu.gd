@@ -1,15 +1,10 @@
 extends Node2D
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	pass
-
-
-func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://plinko.tscn")
+	#one second buffer for any trigger happy players
+	var timer = get_tree().create_timer(1);
+	await timer.timeout;
+	if(Input.is_action_just_pressed("mouse_left")):
+		get_tree().change_scene_to_file("res://plinko.tscn");

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ifh8e22bcmd7"]
+[gd_scene load_steps=14 format=3 uid="uid://ifh8e22bcmd7"]
 
 [ext_resource type="Texture2D" uid="uid://bkwtlbf4q1cic" path="res://assets/corporate-office-flat-illustration-vector.jpg" id="1_0vrrv"]
 [ext_resource type="Script" path="res://overworld1.gd" id="1_5cjig"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bvrmmltrr0tmh" path="res://assets/sprites and images/lauren sketch BG elevator.png" id="8_18dd6"]
 [ext_resource type="Texture2D" uid="uid://cyp8y1e7x5454" path="res://assets/sprites and images/lauren 1.png" id="11_t7qhj"]
 [ext_resource type="Texture2D" uid="uid://hx32gyjyq24b" path="res://assets/sprites and images/lauren 2.png" id="12_tqymi"]
+[ext_resource type="FontFile" uid="uid://b6s06d0lcphiv" path="res://Nitw.otf" id="13_ewu11"]
 
 [node name="Overworld1" type="Node2D"]
 script = ExtResource("1_5cjig")
@@ -140,8 +141,10 @@ offset_left = -127.0
 offset_top = -182.0
 offset_right = 114.0
 offset_bottom = -105.0
-text = "I don't need to use that yet, 
-there's more meritocracy
+theme_override_fonts/font = ExtResource("13_ewu11")
+theme_override_font_sizes/font_size = 20
+text = "I don't need to use that yet. 
+There's more meritocracy
 to spread  here >:)"
 
 [node name="play" type="Button" parent="."]
@@ -151,6 +154,8 @@ offset_left = 973.0
 offset_top = 48.0
 offset_right = 1199.0
 offset_bottom = 291.0
+theme_override_fonts/font = ExtResource("13_ewu11")
+theme_override_font_sizes/font_size = 23
 button_mask = 0
 text = "Lauren - Graphic Designer
 
@@ -169,7 +174,8 @@ offset_left = 1.0
 offset_top = 184.0
 offset_right = 226.0
 offset_bottom = 243.0
-theme_override_font_sizes/font_size = 21
+theme_override_fonts/font = ExtResource("13_ewu11")
+theme_override_font_sizes/font_size = 40
 text = "Enter Mind"
 
 [node name="debtDone" type="Button" parent="."]
@@ -179,8 +185,10 @@ offset_left = 978.0
 offset_top = 60.0
 offset_right = 1204.0
 offset_bottom = 245.0
+theme_override_fonts/font = ExtResource("13_ewu11")
+theme_override_font_sizes/font_size = 25
 button_mask = 0
-text = "It's not debt relief but at least it's relief from debt! "
+text = "It's not debt relief, but at least it's relief from debt! "
 autowrap_mode = 2
 
 [node name="play2" type="Button" parent="."]
@@ -202,6 +210,7 @@ autowrap_mode = 2
 
 [node name="PlayButton2" type="Button" parent="play2"]
 auto_translate_mode = 1
+visible = false
 modulate = Color(0.339368, 0.587909, 1, 1)
 self_modulate = Color(0.28814, 0.64651, 1, 1)
 layout_mode = 0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://deq8pvm1dxu2e"]
+[gd_scene load_steps=49 format=3 uid="uid://deq8pvm1dxu2e"]
 
 [ext_resource type="Script" path="res://plinko_2.gd" id="1_hnnt1"]
 [ext_resource type="Texture2D" uid="uid://cy0ulhhhioo0i" path="res://assets/plinko_bg.png" id="2_8jft8"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dgibpb4jh42t7" path="res://chip.tscn" id="7_17o8f"]
 [ext_resource type="PackedScene" uid="uid://cchnm83tocc5v" path="res://brain.tscn" id="8_8l85y"]
 [ext_resource type="Texture2D" uid="uid://d2kdlub43s8xr" path="res://assets/plinko_bottom.png" id="9_ngvsc"]
+[ext_resource type="FontFile" uid="uid://b6s06d0lcphiv" path="res://Nitw.otf" id="10_jcqot"]
 [ext_resource type="PackedScene" uid="uid://bk2ixtbqbokxy" path="res://plinkoEndGood.tscn" id="11_okmlq"]
 [ext_resource type="Texture2D" uid="uid://ixwputf3bwpy" path="res://brain.png" id="12_ri007"]
 
@@ -449,7 +450,8 @@ offset_top = 96.0
 offset_right = 1077.0
 offset_bottom = 167.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 45
+theme_override_fonts/font = ExtResource("10_jcqot")
+theme_override_font_sizes/font_size = 70
 text = "DROP"
 
 [node name="Button2" type="Button" parent="."]
@@ -476,7 +478,8 @@ shape = SubResource("RectangleShape2D_deil1")
 [node name="Label" type="Label" parent="plinkoEndGood/Help25"]
 offset_right = 138.0
 offset_bottom = 141.0
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("10_jcqot")
+theme_override_font_sizes/font_size = 75
 text = "
 +25"
 horizontal_alignment = 1
@@ -497,7 +500,8 @@ shape = SubResource("RectangleShape2D_deil1")
 auto_translate_mode = 1
 offset_right = 138.0
 offset_bottom = 141.0
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("10_jcqot")
+theme_override_font_sizes/font_size = 75
 text = "
 +15"
 horizontal_alignment = 1
@@ -518,7 +522,8 @@ shape = SubResource("RectangleShape2D_deil1")
 auto_translate_mode = 1
 offset_right = 138.0
 offset_bottom = 141.0
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("10_jcqot")
+theme_override_font_sizes/font_size = 75
 text = "
 +15"
 horizontal_alignment = 1
@@ -539,7 +544,8 @@ shape = SubResource("RectangleShape2D_deil1")
 auto_translate_mode = 1
 offset_right = 138.0
 offset_bottom = 141.0
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("10_jcqot")
+theme_override_font_sizes/font_size = 75
 text = "
 +5"
 horizontal_alignment = 1
@@ -560,7 +566,8 @@ shape = SubResource("RectangleShape2D_deil1")
 auto_translate_mode = 1
 offset_right = 138.0
 offset_bottom = 141.0
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("10_jcqot")
+theme_override_font_sizes/font_size = 75
 text = "
 +5"
 horizontal_alignment = 1
@@ -576,7 +583,8 @@ offset_left = -70.0
 offset_top = -183.0
 offset_right = 68.0
 offset_bottom = -42.0
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("10_jcqot")
+theme_override_font_sizes/font_size = 75
 text = "
 +0"
 horizontal_alignment = 1
@@ -592,7 +600,8 @@ offset_left = -70.0
 offset_top = -183.0
 offset_right = 68.0
 offset_bottom = -42.0
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("10_jcqot")
+theme_override_font_sizes/font_size = 75
 text = "
 +0"
 horizontal_alignment = 1
@@ -610,7 +619,8 @@ offset_left = 22.0
 offset_top = 30.0
 offset_right = 108.0
 offset_bottom = 135.0
-theme_override_font_sizes/font_size = 76
+theme_override_fonts/font = ExtResource("10_jcqot")
+theme_override_font_sizes/font_size = 90
 text = "20/20"
 
 [node name="Label8" type="Label" parent="."]
@@ -618,7 +628,8 @@ offset_left = 202.0
 offset_top = -18.0
 offset_right = 915.0
 offset_bottom = 159.0
-theme_override_font_sizes/font_size = 80
+theme_override_fonts/font = ExtResource("10_jcqot")
+theme_override_font_sizes/font_size = 100
 text = "IDEATE!"
 horizontal_alignment = 1
 vertical_alignment = 1

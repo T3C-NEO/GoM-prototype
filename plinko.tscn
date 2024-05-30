@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://cdfrv6t5xjef1"]
+[gd_scene load_steps=51 format=3 uid="uid://cdfrv6t5xjef1"]
 
 [ext_resource type="Texture2D" uid="uid://cy0ulhhhioo0i" path="res://assets/plinko_bg.png" id="1_64o2h"]
 [ext_resource type="Script" path="res://plinko.gd" id="1_ge8pn"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://ixwputf3bwpy" path="res://brain.png" id="7_ih25j"]
 [ext_resource type="Texture2D" uid="uid://d2kdlub43s8xr" path="res://assets/plinko_bottom.png" id="7_r2ux3"]
 [ext_resource type="Texture2D" uid="uid://c7v45wji36njd" path="res://brown.webp" id="9_bkl6b"]
+[ext_resource type="FontFile" uid="uid://b6s06d0lcphiv" path="res://Nitw.otf" id="10_xpbpv"]
 [ext_resource type="PackedScene" uid="uid://bk2ixtbqbokxy" path="res://plinkoEndGood.tscn" id="10_y5v5x"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_koea5"]
@@ -453,18 +454,9 @@ offset_top = 96.0
 offset_right = 1077.0
 offset_bottom = 167.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 45
+theme_override_fonts/font = ExtResource("10_xpbpv")
+theme_override_font_sizes/font_size = 70
 text = "DROP"
-
-[node name="Button2" type="Button" parent="."]
-visible = false
-offset_left = 8.0
-offset_top = 1696.0
-offset_right = 1135.0
-offset_bottom = 1890.0
-theme_override_font_sizes/font_size = 41
-text = "You win!
-(click to move on cuz I'm not fucking with collisions rn)"
 
 [node name="Slides" type="Node2D" parent="."]
 
@@ -514,7 +506,8 @@ shape = SubResource("RectangleShape2D_deil1")
 [node name="Label" type="Label" parent="plinkoEndGood/Help25"]
 offset_right = 138.0
 offset_bottom = 141.0
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("10_xpbpv")
+theme_override_font_sizes/font_size = 80
 text = "
 +100"
 horizontal_alignment = 1
@@ -534,7 +527,8 @@ shape = SubResource("RectangleShape2D_deil1")
 auto_translate_mode = 1
 offset_right = 138.0
 offset_bottom = 141.0
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("10_xpbpv")
+theme_override_font_sizes/font_size = 80
 text = "
 +10"
 horizontal_alignment = 1
@@ -554,7 +548,8 @@ shape = SubResource("RectangleShape2D_deil1")
 auto_translate_mode = 1
 offset_right = 138.0
 offset_bottom = 141.0
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("10_xpbpv")
+theme_override_font_sizes/font_size = 80
 text = "
 +10"
 horizontal_alignment = 1
@@ -574,7 +569,8 @@ shape = SubResource("RectangleShape2D_deil1")
 auto_translate_mode = 1
 offset_right = 138.0
 offset_bottom = 141.0
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("10_xpbpv")
+theme_override_font_sizes/font_size = 80
 text = "
 +1"
 horizontal_alignment = 1
@@ -594,7 +590,8 @@ shape = SubResource("RectangleShape2D_deil1")
 auto_translate_mode = 1
 offset_right = 138.0
 offset_bottom = 141.0
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("10_xpbpv")
+theme_override_font_sizes/font_size = 80
 text = "
 +1"
 horizontal_alignment = 1
@@ -609,7 +606,8 @@ offset_left = -70.0
 offset_top = -183.0
 offset_right = 68.0
 offset_bottom = -42.0
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("10_xpbpv")
+theme_override_font_sizes/font_size = 80
 text = "
 +0"
 horizontal_alignment = 1
@@ -624,7 +622,8 @@ offset_left = -70.0
 offset_top = -183.0
 offset_right = 68.0
 offset_bottom = -42.0
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("10_xpbpv")
+theme_override_font_sizes/font_size = 80
 text = "
 +0"
 horizontal_alignment = 1
@@ -642,7 +641,8 @@ offset_left = 22.0
 offset_top = 30.0
 offset_right = 108.0
 offset_bottom = 135.0
-theme_override_font_sizes/font_size = 76
+theme_override_fonts/font = ExtResource("10_xpbpv")
+theme_override_font_sizes/font_size = 90
 text = "20/20"
 
 [node name="Label8" type="Label" parent="."]
@@ -650,7 +650,8 @@ offset_left = 202.0
 offset_top = -18.0
 offset_right = 915.0
 offset_bottom = 159.0
-theme_override_font_sizes/font_size = 80
+theme_override_fonts/font = ExtResource("10_xpbpv")
+theme_override_font_sizes/font_size = 100
 text = "IDEATE!"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -667,7 +668,6 @@ one_shot = true
 [connection signal="body_entered" from="chip" to="." method="_on_chip_body_entered"]
 [connection signal="timeout" from="chip/Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="timeout" from="Slides/Slide Timer" to="." method="_on_slide_timer_timeout"]
 [connection signal="body_entered" from="plinkoEndGood/Help25" to="." method="_on_help_25_body_entered"]
 [connection signal="body_entered" from="plinkoEndGood2/Help15" to="." method="_on_help_15_body_entered"]

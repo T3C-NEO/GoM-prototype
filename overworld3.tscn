@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://6c7ydesqu4lo"]
+[gd_scene load_steps=14 format=3 uid="uid://6c7ydesqu4lo"]
 
 [ext_resource type="Script" path="res://overworld_3.gd" id="1_6xq0q"]
 [ext_resource type="Texture2D" uid="uid://dmxqn7ipbraw5" path="res://image (1).png" id="2_80s34"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://popqd1qbvkfp" path="res://assets/sprites and images/kotorah 2.png" id="8_vka8t"]
 [ext_resource type="Texture2D" uid="uid://ctdunuivd68st" path="res://assets/sprites and images/extra 1.png" id="11_olk4v"]
 [ext_resource type="Texture2D" uid="uid://uhtd2t1dwqfw" path="res://assets/sprites and images/extra 2.png" id="12_a43yv"]
+[ext_resource type="FontFile" uid="uid://b6s06d0lcphiv" path="res://Nitw.otf" id="12_hy1e8"]
 
 [node name="Overworld3" type="Node2D"]
 script = ExtResource("1_6xq0q")
@@ -98,6 +99,8 @@ offset_left = -127.0
 offset_top = -182.0
 offset_right = 114.0
 offset_bottom = -105.0
+theme_override_fonts/font = ExtResource("12_hy1e8")
+theme_override_font_sizes/font_size = 20
 text = "I don't need to use that yet, 
 there's more meritocracy
 to spread  here >:)"
@@ -105,16 +108,20 @@ to spread  here >:)"
 [node name="play" type="Button" parent="."]
 auto_translate_mode = 1
 visible = false
-offset_left = 1204.0
-offset_top = 26.0
-offset_right = 1490.0
-offset_bottom = 310.0
+offset_left = 1129.0
+offset_top = 278.0
+offset_right = 1387.0
+offset_bottom = 559.0
+theme_override_fonts/font = ExtResource("12_hy1e8")
+theme_override_font_sizes/font_size = 21
 button_mask = 0
 text = "Katorah - Barista
 
 GEEZ! This one's mind is racing! Must be all that caffeine.
 
-A new mom working and attending school. Poor thing. But if we offered maternity leave, everyone would want to have a baby!
+A new mom working and attending school? Poor thing.
+
+But if we offered maternity leave, everyone would want to have a baby!
 
 
 
@@ -127,18 +134,21 @@ modulate = Color(0.339368, 0.587909, 1, 1)
 self_modulate = Color(0.28814, 0.64651, 1, 1)
 layout_mode = 0
 offset_top = 225.0
-offset_right = 286.0
-offset_bottom = 284.0
-theme_override_font_sizes/font_size = 21
+offset_right = 258.0
+offset_bottom = 281.0
+theme_override_fonts/font = ExtResource("12_hy1e8")
+theme_override_font_sizes/font_size = 40
 text = "Enter Mind"
 
 [node name="octodone" type="Button" parent="."]
 auto_translate_mode = 1
 visible = false
-offset_left = 1199.0
-offset_top = 38.0
-offset_right = 1400.0
-offset_bottom = 186.0
+offset_left = 1133.0
+offset_top = 278.0
+offset_right = 1334.0
+offset_bottom = 426.0
+theme_override_fonts/font = ExtResource("12_hy1e8")
+theme_override_font_sizes/font_size = 25
 button_mask = 0
 text = "That was close. She has some dark thoughts down there. But who needs therapy when you've got me?!"
 autowrap_mode = 2
@@ -163,6 +173,8 @@ offset_left = 595.0
 offset_top = 12.0
 offset_right = 821.0
 offset_bottom = 255.0
+theme_override_fonts/font = ExtResource("12_hy1e8")
+theme_override_font_sizes/font_size = 25
 button_mask = 0
 text = "Robert - Intern
 
@@ -182,7 +194,8 @@ offset_left = 1.0
 offset_top = 184.0
 offset_right = 226.0
 offset_bottom = 243.0
-theme_override_font_sizes/font_size = 21
+theme_override_fonts/font = ExtResource("12_hy1e8")
+theme_override_font_sizes/font_size = 40
 text = "Enter Mind"
 
 [node name="plinko2Done" type="Button" parent="."]
@@ -192,6 +205,8 @@ offset_left = 601.0
 offset_top = 25.0
 offset_right = 801.0
 offset_bottom = 171.0
+theme_override_fonts/font = ExtResource("12_hy1e8")
+theme_override_font_sizes/font_size = 25
 button_mask = 0
 text = "Glad I got through to him because he may need to stay late today. "
 autowrap_mode = 2

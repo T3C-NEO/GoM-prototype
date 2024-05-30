@@ -1,16 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://tua4v37xqd8l"]
+[gd_scene load_steps=3 format=3 uid="uid://tua4v37xqd8l"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_qfxoi"]
+[ext_resource type="Texture2D" uid="uid://ds5gthi5wvjos" path="res://assets/title_screen.png" id="2_teosy"]
 
 [node name="menu" type="Node2D"]
 script = ExtResource("1_qfxoi")
 
 [node name="Button" type="Button" parent="."]
+visible = false
 offset_left = 409.0
 offset_top = 261.0
 offset_right = 698.0
 offset_bottom = 427.0
 theme_override_font_sizes/font_size = 116
 text = "Play"
+
+[node name="TitleScreen" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("2_teosy")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

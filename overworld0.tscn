@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://boi04ubreq1xg"]
+[gd_scene load_steps=15 format=3 uid="uid://boi04ubreq1xg"]
 
 [ext_resource type="Script" path="res://overworld.gd" id="1_0u7lh"]
 [ext_resource type="Texture2D" uid="uid://bkwtlbf4q1cic" path="res://assets/corporate-office-flat-illustration-vector.jpg" id="2_j1ndj"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cbi8f7an5k4np" path="res://assets/sprites and images/boss sketch room elevator.png" id="7_hi4bu"]
 [ext_resource type="Texture2D" uid="uid://bchoy1ifddmg0" path="res://assets/Next floor.png" id="7_hsa3k"]
 [ext_resource type="PackedScene" uid="uid://dxn7a40jr2idf" path="res://character_body_2d.tscn" id="7_iss8g"]
+[ext_resource type="FontFile" uid="uid://b6s06d0lcphiv" path="res://Nitw.otf" id="10_01yue"]
 [ext_resource type="Texture2D" uid="uid://mkcoy28k0wp8" path="res://assets/sprites and images/boss sketch room.png" id="10_7bwa3"]
 [ext_resource type="Texture2D" uid="uid://cij4gldeypg7e" path="res://assets/sprites and images/player sprite 1.png" id="10_x0n3w"]
 
@@ -101,10 +102,12 @@ shape = SubResource("CircleShape2D_y58ly")
 
 [node name="play" type="Button" parent="."]
 auto_translate_mode = 1
-offset_left = 564.0
-offset_top = 22.0
-offset_right = 783.0
-offset_bottom = 237.0
+offset_left = 754.0
+offset_top = 397.0
+offset_right = 973.0
+offset_bottom = 612.0
+theme_override_fonts/font = ExtResource("10_01yue")
+theme_override_font_sizes/font_size = 20
 button_mask = 0
 text = "Clive Sterling - CEO
 
