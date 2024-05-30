@@ -63,6 +63,8 @@ func _on_button_close_pressed() -> void:
 	if (going == 6):
 		get_tree().change_scene_to_file("res://overworld0.tscn")
 	elif (going == 5):
+		Game.ghostPos = Vector2(298,161)
 		get_tree().change_scene_to_file("res://overworld.tscn")
 	elif (going == 4):
+		Game.ghostPos = Vector2(303,213)
 		get_tree().change_scene_to_file("res://overworld3.tscn")

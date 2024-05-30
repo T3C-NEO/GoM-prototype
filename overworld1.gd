@@ -18,6 +18,9 @@ func _ready() -> void:
 	if Game.CEODone == true:
 		get_node("Bad2").visible = false;
 		#get_node("Button4").queue_free();
+	if (Game.ghostPos != Vector2(0,0)):
+		ghost.position = Game.ghostPos;
+	
 		
 func _process(delta: float) -> void:
 	if (ghost.position.x > 1105 and ghost.position.x < 1405):
@@ -49,7 +52,7 @@ func _on_button_pressed() -> void:
 
 
 func _on_button_2_pressed() -> void:
-	if Game.DebtDone == false or Game.CEODone == false:
+	if Game.DebtDone == false:
 		get_node("CharacterBody2D/textNode").visible = true
 		await get_tree().create_timer(2.0).timeout
 		get_node("CharacterBody2D/textNode").visible = false
@@ -58,6 +61,7 @@ func _on_button_2_pressed() -> void:
 		
 
 func _on_play_button_pressed() -> void:
+	Game.ghostPos = ghost.position
 	get_tree().change_scene_to_file("res://minigame.tscn")
 	
 

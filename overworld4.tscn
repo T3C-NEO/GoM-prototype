@@ -1,0 +1,117 @@
+[gd_scene load_steps=8 format=3 uid="uid://blk131jxqock3"]
+
+[ext_resource type="Script" path="res://overworld_3.gd" id="1_w37no"]
+[ext_resource type="Texture2D" uid="uid://dmxqn7ipbraw5" path="res://image (1).png" id="2_bixt1"]
+[ext_resource type="Texture2D" uid="uid://bbtr8ai31fia4" path="res://assets/elevator.png" id="3_stq8i"]
+[ext_resource type="Texture2D" uid="uid://d3e5hjq3v36rx" path="res://assets/bad.png" id="4_8h8hj"]
+[ext_resource type="Texture2D" uid="uid://ba60r4hju8jg5" path="res://image (2).png" id="5_h2c3x"]
+[ext_resource type="PackedScene" uid="uid://dxn7a40jr2idf" path="res://character_body_2d.tscn" id="6_ap20p"]
+[ext_resource type="Texture2D" uid="uid://bchoy1ifddmg0" path="res://assets/Next floor.png" id="7_ttvrx"]
+
+[node name="Overworld3" type="Node2D"]
+script = ExtResource("1_w37no")
+
+[node name="Image(1)" type="Sprite2D" parent="."]
+position = Vector2(862.407, 328.734)
+scale = Vector2(1.24767, 1.24767)
+texture = ExtResource("2_bixt1")
+
+[node name="Image(1)2" type="Sprite2D" parent="."]
+position = Vector2(2592, 326)
+scale = Vector2(1.24767, 1.24767)
+texture = ExtResource("2_bixt1")
+
+[node name="Elevator" type="Sprite2D" parent="."]
+position = Vector2(1848, 331)
+scale = Vector2(2.52985, 2.52985)
+texture = ExtResource("3_stq8i")
+
+[node name="Bad" type="Sprite2D" parent="."]
+position = Vector2(310, 102)
+scale = Vector2(0.164117, 0.164117)
+texture = ExtResource("4_8h8hj")
+
+[node name="Image(2)" type="Sprite2D" parent="."]
+position = Vector2(862.407, 328.734)
+scale = Vector2(1.248, 1.248)
+texture = ExtResource("5_h2c3x")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 232.0
+offset_top = 74.0
+offset_right = 412.0
+offset_bottom = 371.0
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 1697.0
+offset_top = 127.0
+offset_right = 2002.0
+offset_bottom = 634.0
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("6_ap20p")]
+position = Vector2(2101, 354)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+limit_left = 0
+limit_top = 0
+limit_right = 3455
+limit_bottom = 650
+
+[node name="textNode" type="Button" parent="CharacterBody2D"]
+visible = false
+offset_left = -127.0
+offset_top = -182.0
+offset_right = 114.0
+offset_bottom = -105.0
+text = "I don't need to use that yet, 
+there's more meritocracy
+to spread  here >:)"
+
+[node name="play" type="Button" parent="."]
+auto_translate_mode = 1
+visible = false
+offset_left = 461.0
+offset_top = 41.0
+offset_right = 747.0
+offset_bottom = 325.0
+button_mask = 0
+text = "Katorah - Barista
+
+GEEZ! This one's mind is racing! Must be all that caffeine.
+
+A new mom working and attending school. Poor thing. But if we offered maternity leave, everyone would want to have a baby!
+
+
+
+"
+autowrap_mode = 2
+
+[node name="PlayButton" type="Button" parent="play"]
+auto_translate_mode = 1
+modulate = Color(0.339368, 0.587909, 1, 1)
+self_modulate = Color(0.28814, 0.64651, 1, 1)
+layout_mode = 0
+offset_top = 225.0
+offset_right = 286.0
+offset_bottom = 284.0
+theme_override_font_sizes/font_size = 21
+text = "Enter Mind"
+
+[node name="NextFloor" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1556, 469)
+texture = ExtResource("7_ttvrx")
+
+[node name="Button3" type="Button" parent="NextFloor"]
+auto_translate_mode = 1
+modulate = Color(1, 1, 1, 0)
+offset_left = -86.0
+offset_top = -86.0
+offset_right = 86.0
+offset_bottom = 89.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="play/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="NextFloor/Button3" to="." method="_on_button_3_pressed"]

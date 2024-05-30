@@ -7,3 +7,8 @@ res://overworld0.tscn
 res://plinko.tscn
 res://overworld1.gd
 res://plinkoEndGood.tscn
+res://overworld3.tscn
+res://overworld_3.gd
+res://overworld2.tscn
+res://game.gd
+res://pannel.gd

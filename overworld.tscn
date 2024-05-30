@@ -114,6 +114,17 @@ offset_top = -86.0
 offset_right = 86.0
 offset_bottom = 89.0
 
+[node name="Lauren3" type="Sprite2D" parent="."]
+position = Vector2(1255, 357)
+scale = Vector2(0.321918, 0.321917)
+texture = ExtResource("11_t7qhj")
+
+[node name="Lauren2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1255, 357)
+scale = Vector2(0.321918, 0.321917)
+texture = ExtResource("12_tqymi")
+
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_7okgq")]
 position = Vector2(298, 161)
 
@@ -218,17 +229,6 @@ this guy is now working hard or something
 
 "
 autowrap_mode = 2
-
-[node name="Lauren3" type="Sprite2D" parent="."]
-position = Vector2(1255, 357)
-scale = Vector2(0.321918, 0.321917)
-texture = ExtResource("11_t7qhj")
-
-[node name="Lauren2" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(1255, 357)
-scale = Vector2(0.321918, 0.321917)
-texture = ExtResource("12_tqymi")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]

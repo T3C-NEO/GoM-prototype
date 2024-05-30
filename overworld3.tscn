@@ -1,12 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://6c7ydesqu4lo"]
+[gd_scene load_steps=13 format=3 uid="uid://6c7ydesqu4lo"]
 
 [ext_resource type="Script" path="res://overworld_3.gd" id="1_6xq0q"]
 [ext_resource type="Texture2D" uid="uid://dmxqn7ipbraw5" path="res://image (1).png" id="2_80s34"]
 [ext_resource type="Texture2D" uid="uid://bbtr8ai31fia4" path="res://assets/elevator.png" id="3_xxxy2"]
 [ext_resource type="Texture2D" uid="uid://ba60r4hju8jg5" path="res://image (2).png" id="5_0hrhx"]
 [ext_resource type="Texture2D" uid="uid://d3e5hjq3v36rx" path="res://assets/bad.png" id="5_to0le"]
+[ext_resource type="Texture2D" uid="uid://cmtf7xnaleb7p" path="res://assets/sprites and images/cafe 1.png" id="6_2ks2w"]
 [ext_resource type="Texture2D" uid="uid://bchoy1ifddmg0" path="res://assets/Next floor.png" id="7_abjex"]
 [ext_resource type="PackedScene" uid="uid://dxn7a40jr2idf" path="res://character_body_2d.tscn" id="7_eyhb2"]
+[ext_resource type="Texture2D" uid="uid://bkfyiumevoaxt" path="res://assets/sprites and images/kotorah 1.png" id="7_s81co"]
+[ext_resource type="Texture2D" uid="uid://popqd1qbvkfp" path="res://assets/sprites and images/kotorah 2.png" id="8_vka8t"]
+[ext_resource type="Texture2D" uid="uid://ctdunuivd68st" path="res://assets/sprites and images/extra 1.png" id="11_olk4v"]
+[ext_resource type="Texture2D" uid="uid://uhtd2t1dwqfw" path="res://assets/sprites and images/extra 2.png" id="12_a43yv"]
 
 [node name="Overworld3" type="Node2D"]
 script = ExtResource("1_6xq0q")
@@ -36,7 +41,24 @@ position = Vector2(862.407, 328.734)
 scale = Vector2(1.248, 1.248)
 texture = ExtResource("5_0hrhx")
 
+[node name="Cafe1" type="Sprite2D" parent="."]
+position = Vector2(890, 329)
+scale = Vector2(0.348, 0.348)
+texture = ExtResource("6_2ks2w")
+
+[node name="Kotorah1" type="Sprite2D" parent="."]
+position = Vector2(1143, 178)
+scale = Vector2(0.348, 0.348)
+texture = ExtResource("7_s81co")
+
+[node name="Kotorah2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1143, 178)
+scale = Vector2(0.348, 0.348)
+texture = ExtResource("8_vka8t")
+
 [node name="Button" type="Button" parent="."]
+visible = false
 modulate = Color(1, 1, 1, 0)
 offset_left = 232.0
 offset_top = 74.0
@@ -44,18 +66,30 @@ offset_right = 412.0
 offset_bottom = 371.0
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 1697.0
-offset_top = 127.0
-offset_right = 2002.0
-offset_bottom = 634.0
+modulate = Color(1, 1, 1, 0.658824)
+offset_left = 40.0
+offset_top = 41.0
+offset_right = 215.0
+offset_bottom = 275.0
+
+[node name="Extra1" type="Sprite2D" parent="."]
+position = Vector2(534, 207)
+scale = Vector2(0.348, 0.348)
+texture = ExtResource("11_olk4v")
+
+[node name="Extra2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(526, 216)
+scale = Vector2(0.348, 0.348)
+texture = ExtResource("12_a43yv")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("7_eyhb2")]
-position = Vector2(2101, 354)
+position = Vector2(303, 213)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 limit_left = 0
 limit_top = 0
-limit_right = 3455
+limit_right = 1785
 limit_bottom = 650
 
 [node name="textNode" type="Button" parent="CharacterBody2D"]
@@ -71,10 +105,10 @@ to spread  here >:)"
 [node name="play" type="Button" parent="."]
 auto_translate_mode = 1
 visible = false
-offset_left = 461.0
-offset_top = 41.0
-offset_right = 747.0
-offset_bottom = 325.0
+offset_left = 1204.0
+offset_top = 26.0
+offset_right = 1490.0
+offset_bottom = 310.0
 button_mask = 0
 text = "Katorah - Barista
 
@@ -98,6 +132,18 @@ offset_bottom = 284.0
 theme_override_font_sizes/font_size = 21
 text = "Enter Mind"
 
+[node name="octodone" type="Button" parent="."]
+auto_translate_mode = 1
+offset_left = 1199.0
+offset_top = 38.0
+offset_right = 1364.0
+offset_bottom = 186.0
+button_mask = 0
+text = "Katorah - Barista
+
+That's right, just keep working, don't think about your struggles"
+autowrap_mode = 2
+
 [node name="NextFloor" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(1556, 469)
@@ -111,7 +157,52 @@ offset_top = -86.0
 offset_right = 86.0
 offset_bottom = 89.0
 
+[node name="play2" type="Button" parent="."]
+auto_translate_mode = 1
+visible = false
+offset_left = 595.0
+offset_top = 12.0
+offset_right = 821.0
+offset_bottom = 255.0
+button_mask = 0
+text = "A placeholder guy
+
+maybe some text about why his brain is so empty/thoughts are so scattered, maybe he has ADHD or something 
+
+
+
+"
+autowrap_mode = 2
+
+[node name="PlayButton2" type="Button" parent="play2"]
+auto_translate_mode = 1
+modulate = Color(0.339368, 0.587909, 1, 1)
+self_modulate = Color(0.28814, 0.64651, 1, 1)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 184.0
+offset_right = 226.0
+offset_bottom = 243.0
+theme_override_font_sizes/font_size = 21
+text = "Enter Mind"
+
+[node name="plinko2Done" type="Button" parent="."]
+auto_translate_mode = 1
+visible = false
+offset_left = 601.0
+offset_top = 25.0
+offset_right = 801.0
+offset_bottom = 171.0
+button_mask = 0
+text = "A placeholder guy
+
+this guy is now working hard or something
+
+"
+autowrap_mode = 2
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="play/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="NextFloor/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="play2/PlayButton2" to="." method="_on_play_button_2_pressed"]

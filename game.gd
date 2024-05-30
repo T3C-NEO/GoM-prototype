@@ -25,6 +25,9 @@ var money : int = 20;
 var left_active : bool;
 var right_active : bool;
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 #trying something with global pos
 var ghostPos : Vector2 = Vector2(514,241);
