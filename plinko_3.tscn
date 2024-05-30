@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dvapkskno67kr"]
+[gd_scene load_steps=19 format=3 uid="uid://dvapkskno67kr"]
 
 [ext_resource type="Script" path="res://plinko_3.gd" id="1_keefl"]
 [ext_resource type="Texture2D" uid="uid://cy0ulhhhioo0i" path="res://assets/plinko_bg.png" id="1_nsyex"]
@@ -34,6 +34,9 @@ b = Vector2(-493.056, 123.698)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_052wt"]
 size = Vector2(25, 196)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tbdwp"]
+size = Vector2(350, 49.9998)
+
 [node name="plinko_3" type="Node2D"]
 script = ExtResource("1_keefl")
 
@@ -43,8 +46,8 @@ scale = Vector2(0.900781, 1.69954)
 texture = ExtResource("1_nsyex")
 
 [node name="PlinkoBg2" type="Sprite2D" parent="."]
-position = Vector2(577, 5507)
-scale = Vector2(0.901, 1.7)
+position = Vector2(577, 5657)
+scale = Vector2(0.901, 1.83889)
 texture = ExtResource("1_nsyex")
 
 [node name="Bar" type="Sprite2D" parent="."]
@@ -53,8 +56,8 @@ scale = Vector2(0.959375, 0.49)
 texture = ExtResource("2_stw50")
 
 [node name="PlinkoNoTriangles" type="Sprite2D" parent="."]
-position = Vector2(576.5, 3846)
-scale = Vector2(0.925781, 3.56296)
+position = Vector2(576.5, 3892.5)
+scale = Vector2(0.925781, 3.60602)
 texture = ExtResource("3_qojxi")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="PlinkoNoTriangles"]
@@ -70,14 +73,6 @@ shape = SubResource("SegmentShape2D_51gq3")
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="PlinkoNoTriangles/StaticBody2D"]
 shape = SubResource("SegmentShape2D_gw3lm")
 
-[node name="prong" parent="." instance=ExtResource("7_gptmw")]
-visible = false
-position = Vector2(260, 435)
-
-[node name="prong3" parent="." instance=ExtResource("6_yje1x")]
-position = Vector2(775, 6852)
-scale = Vector2(3, 3)
-
 [node name="chip" parent="." instance=ExtResource("6_0vo5a")]
 position = Vector2(113, 237)
 
@@ -88,8 +83,6 @@ limit_right = 1152
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 
-[node name="prong2" parent="." instance=ExtResource("6_yje1x")]
-
 [node name="Plink Brain" parent="." instance=ExtResource("7_gptmw")]
 
 [node name="UnderBar" type="Sprite2D" parent="."]
@@ -98,23 +91,102 @@ position = Vector2(578.5, 3575.5)
 scale = Vector2(3.38, 3.82)
 texture = ExtResource("7_h4le6")
 
-[node name="GreenBar" type="Sprite2D" parent="."]
+[node name="Win Bars" type="Node2D" parent="."]
+
+[node name="GreenBar" type="Sprite2D" parent="Win Bars"]
 position = Vector2(585, 3575)
 scale = Vector2(0.144, 0.767999)
 texture = ExtResource("8_dg1ck")
 
-[node name="Win" type="Area2D" parent="GreenBar"]
+[node name="Win" type="Area2D" parent="Win Bars/GreenBar"]
 metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GreenBar/Win"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Bars/GreenBar/Win"]
 position = Vector2(2.34088, -25.8745)
 shape = SubResource("RectangleShape2D_svwah")
 metadata/_edit_lock_ = true
 
-[node name="Floor" type="StaticBody2D" parent="GreenBar"]
+[node name="Floor" type="StaticBody2D" parent="Win Bars/GreenBar"]
+metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GreenBar/Floor"]
-scale = Vector2(1, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Bars/GreenBar/Floor"]
+shape = SubResource("SegmentShape2D_agc8n")
+metadata/_edit_lock_ = true
+
+[node name="GreenBar2" type="Sprite2D" parent="Win Bars"]
+position = Vector2(85, 7552.5)
+scale = Vector2(0.144, 0.747998)
+texture = ExtResource("8_dg1ck")
+
+[node name="Win" type="Area2D" parent="Win Bars/GreenBar2"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Bars/GreenBar2/Win"]
+position = Vector2(2.34088, -25.8745)
+shape = SubResource("RectangleShape2D_svwah")
+metadata/_edit_lock_ = true
+
+[node name="Floor" type="StaticBody2D" parent="Win Bars/GreenBar2"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Bars/GreenBar2/Floor"]
+shape = SubResource("SegmentShape2D_agc8n")
+metadata/_edit_lock_ = true
+
+[node name="GreenBar3" type="Sprite2D" parent="Win Bars"]
+position = Vector2(411, 7552.5)
+scale = Vector2(0.144, 0.755996)
+texture = ExtResource("8_dg1ck")
+
+[node name="Win" type="Area2D" parent="Win Bars/GreenBar3"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Bars/GreenBar3/Win"]
+position = Vector2(2.34088, -25.8745)
+shape = SubResource("RectangleShape2D_svwah")
+metadata/_edit_lock_ = true
+
+[node name="Floor" type="StaticBody2D" parent="Win Bars/GreenBar3"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Bars/GreenBar3/Floor"]
+shape = SubResource("SegmentShape2D_agc8n")
+metadata/_edit_lock_ = true
+
+[node name="GreenBar4" type="Sprite2D" parent="Win Bars"]
+position = Vector2(737, 7552.5)
+scale = Vector2(0.144, 0.747998)
+texture = ExtResource("8_dg1ck")
+
+[node name="Win" type="Area2D" parent="Win Bars/GreenBar4"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Bars/GreenBar4/Win"]
+position = Vector2(2.34088, -25.8745)
+shape = SubResource("RectangleShape2D_svwah")
+metadata/_edit_lock_ = true
+
+[node name="Floor" type="StaticBody2D" parent="Win Bars/GreenBar4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Bars/GreenBar4/Floor"]
+shape = SubResource("SegmentShape2D_agc8n")
+
+[node name="GreenBar5" type="Sprite2D" parent="Win Bars"]
+position = Vector2(1063, 7552.5)
+scale = Vector2(0.144, 0.748004)
+texture = ExtResource("8_dg1ck")
+
+[node name="Win" type="Area2D" parent="Win Bars/GreenBar5"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Bars/GreenBar5/Win"]
+position = Vector2(2.34088, -25.8745)
+shape = SubResource("RectangleShape2D_svwah")
+metadata/_edit_lock_ = true
+
+[node name="Floor" type="StaticBody2D" parent="Win Bars/GreenBar5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Bars/GreenBar5/Floor"]
 shape = SubResource("SegmentShape2D_agc8n")
 
 [node name="bottom" type="Sprite2D" parent="."]
@@ -148,6 +220,44 @@ shape = SubResource("RectangleShape2D_052wt")
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="bottom/StaticBody2D"]
 position = Vector2(255, 942)
 shape = SubResource("RectangleShape2D_052wt")
+
+[node name="bottom2" type="Sprite2D" parent="."]
+position = Vector2(575, 6647)
+scale = Vector2(0.94606, 0.961035)
+texture = ExtResource("9_b8fr7")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="bottom2"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bottom2/StaticBody2D"]
+position = Vector2(-432.5, 942)
+shape = SubResource("RectangleShape2D_052wt")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="bottom2/StaticBody2D"]
+position = Vector2(-260, 942)
+shape = SubResource("RectangleShape2D_052wt")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="bottom2/StaticBody2D"]
+position = Vector2(83.5, 942)
+shape = SubResource("RectangleShape2D_052wt")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="bottom2/StaticBody2D"]
+position = Vector2(-89, 942)
+shape = SubResource("RectangleShape2D_052wt")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="bottom2/StaticBody2D"]
+position = Vector2(427.5, 942)
+shape = SubResource("RectangleShape2D_052wt")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="bottom2/StaticBody2D"]
+position = Vector2(255, 942)
+shape = SubResource("RectangleShape2D_052wt")
+metadata/_edit_lock_ = true
 
 [node name="triangles" type="Node2D" parent="."]
 
@@ -201,56 +311,113 @@ scale = Vector2(3, 3)
 position = Vector2(234, 5902)
 rotation = -1.5708
 
-[node name="prong4" parent="." instance=ExtResource("6_yje1x")]
+[node name="all prongs" type="Node2D" parent="."]
+
+[node name="prong4" parent="all prongs" instance=ExtResource("6_yje1x")]
 position = Vector2(535, 5008)
 
-[node name="single_triangle" parent="prong4" instance=ExtResource("11_t5bg2")]
+[node name="single_triangle" parent="all prongs/prong4" instance=ExtResource("11_t5bg2")]
 position = Vector2(550, 50)
 rotation = 3.14159
 
-[node name="prong5" parent="." instance=ExtResource("6_yje1x")]
+[node name="prong5" parent="all prongs" instance=ExtResource("6_yje1x")]
 position = Vector2(122, 7188)
 
-[node name="prong6" parent="." instance=ExtResource("6_yje1x")]
+[node name="prong6" parent="all prongs" instance=ExtResource("6_yje1x")]
 position = Vector2(262, 7188)
 
-[node name="prong7" parent="." instance=ExtResource("6_yje1x")]
+[node name="prong7" parent="all prongs" instance=ExtResource("6_yje1x")]
 position = Vector2(401, 7188)
 
-[node name="prong8" parent="." instance=ExtResource("6_yje1x")]
+[node name="prong8" parent="all prongs" instance=ExtResource("6_yje1x")]
 position = Vector2(544, 7188)
 
-[node name="prong9" parent="." instance=ExtResource("6_yje1x")]
+[node name="prong9" parent="all prongs" instance=ExtResource("6_yje1x")]
 position = Vector2(700, 7188)
 
-[node name="prong10" parent="." instance=ExtResource("6_yje1x")]
+[node name="prong10" parent="all prongs" instance=ExtResource("6_yje1x")]
 position = Vector2(849, 7188)
 
-[node name="prong11" parent="." instance=ExtResource("6_yje1x")]
+[node name="prong11" parent="all prongs" instance=ExtResource("6_yje1x")]
 position = Vector2(991, 7188)
 
-[node name="prong12" parent="." instance=ExtResource("6_yje1x")]
+[node name="prong12" parent="all prongs" instance=ExtResource("6_yje1x")]
 position = Vector2(400, 4820)
 
-[node name="prong" parent="prong12" instance=ExtResource("6_yje1x")]
+[node name="prong" parent="all prongs/prong12" instance=ExtResource("6_yje1x")]
 position = Vector2(308, 9)
 
-[node name="prong" parent="prong12/prong" instance=ExtResource("6_yje1x")]
+[node name="prong" parent="all prongs/prong12/prong" instance=ExtResource("6_yje1x")]
 position = Vector2(-511, 427)
 
-[node name="prong" parent="prong12/prong/prong" instance=ExtResource("6_yje1x")]
+[node name="prong" parent="all prongs/prong12/prong/prong" instance=ExtResource("6_yje1x")]
 position = Vector2(738, -114)
 
-[node name="prong" parent="prong12/prong/prong/prong" instance=ExtResource("6_yje1x")]
+[node name="prong" parent="all prongs/prong12/prong/prong/prong" instance=ExtResource("6_yje1x")]
 position = Vector2(-344, 740)
 
-[node name="prong13" parent="." instance=ExtResource("6_yje1x")]
+[node name="prong13" parent="all prongs" instance=ExtResource("6_yje1x")]
 position = Vector2(486, 6911)
 
-[node name="prong" parent="prong13" instance=ExtResource("6_yje1x")]
+[node name="prong" parent="all prongs/prong13" instance=ExtResource("6_yje1x")]
 position = Vector2(347, -668)
 
-[node name="prong14" parent="." instance=ExtResource("6_yje1x")]
+[node name="prong14" parent="all prongs" instance=ExtResource("6_yje1x")]
 position = Vector2(701, 6565)
 
-[connection signal="body_entered" from="GreenBar/Win" to="." method="_on_win_body_entered"]
+[node name="prong" parent="all prongs" instance=ExtResource("7_gptmw")]
+visible = false
+position = Vector2(260, 435)
+
+[node name="prong3" parent="all prongs" instance=ExtResource("6_yje1x")]
+position = Vector2(775, 6852)
+scale = Vector2(3, 3)
+
+[node name="prong2" parent="all prongs" instance=ExtResource("6_yje1x")]
+
+[node name="Lose Bars" type="Node2D" parent="."]
+
+[node name="Red Bar" type="Sprite2D" parent="Lose Bars"]
+position = Vector2(247, 7552)
+scale = Vector2(0.4, 3.75998)
+texture = ExtResource("7_h4le6")
+
+[node name="Lose Detection" type="Area2D" parent="Lose Bars/Red Bar"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lose Bars/Red Bar/Lose Detection"]
+position = Vector2(0.00012207, 0.00012207)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_tbdwp")
+
+[node name="Red Bar2" type="Sprite2D" parent="Lose Bars"]
+position = Vector2(573, 7552)
+scale = Vector2(0.4, 3.75998)
+texture = ExtResource("7_h4le6")
+
+[node name="Lose Detection" type="Area2D" parent="Lose Bars/Red Bar2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lose Bars/Red Bar2/Lose Detection"]
+position = Vector2(0.00012207, 0.00012207)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_tbdwp")
+
+[node name="Red Bar3" type="Sprite2D" parent="Lose Bars"]
+position = Vector2(898, 7552)
+scale = Vector2(0.4, 3.75998)
+texture = ExtResource("7_h4le6")
+
+[node name="Lose Detection" type="Area2D" parent="Lose Bars/Red Bar3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lose Bars/Red Bar3/Lose Detection"]
+position = Vector2(0.00012207, 0.00012207)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_tbdwp")
+
+[connection signal="body_entered" from="Win Bars/GreenBar/Win" to="." method="_on_win_body_entered"]
+[connection signal="body_entered" from="Win Bars/GreenBar2/Win" to="." method="_on_win_body_entered"]
+[connection signal="body_entered" from="Win Bars/GreenBar3/Win" to="." method="_on_win_body_entered"]
+[connection signal="body_entered" from="Win Bars/GreenBar4/Win" to="." method="_on_win_body_entered"]
+[connection signal="body_entered" from="Win Bars/GreenBar5/Win" to="." method="_on_win_body_entered"]
+[connection signal="body_entered" from="Lose Bars/Red Bar/Lose Detection" to="." method="_on_lose_detection_body_entered"]
+[connection signal="body_entered" from="Lose Bars/Red Bar2/Lose Detection" to="." method="_on_lose_detection_body_entered"]
+[connection signal="body_entered" from="Lose Bars/Red Bar3/Lose Detection" to="." method="_on_lose_detection_body_entered"]
