@@ -154,8 +154,7 @@ offset_bottom = 291.0
 button_mask = 0
 text = "Lauren - Graphic Designer
 
-Oof. All that debt from their partner's medical bills is driving them crazy. Let's pluck those thoughts out so they can work in peace. 
-
+Massive debt troubling the mind, huh? Classic!  I'll pluck those thoughts out so you can work in peace. 
 
 
 "
@@ -181,9 +180,7 @@ offset_top = 60.0
 offset_right = 1204.0
 offset_bottom = 245.0
 button_mask = 0
-text = "Lauren - Graphic Designer
-
-Finally, with all those silly thoughts of debt gone she can work or something"
+text = "It's not debt relief but at least it's relief from debt! "
 autowrap_mode = 2
 
 [node name="play2" type="Button" parent="."]

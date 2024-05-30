@@ -1,10 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://cp11m87rr6eq0"]
+[gd_scene load_steps=9 format=3 uid="uid://cp11m87rr6eq0"]
 
 [ext_resource type="Script" path="res://overworld_4.gd" id="1_tujme"]
 [ext_resource type="Texture2D" uid="uid://dmxqn7ipbraw5" path="res://image (1).png" id="2_c078n"]
 [ext_resource type="Texture2D" uid="uid://bbtr8ai31fia4" path="res://assets/elevator.png" id="3_qmjap"]
 [ext_resource type="Texture2D" uid="uid://d3e5hjq3v36rx" path="res://assets/bad.png" id="4_pmc3y"]
 [ext_resource type="PackedScene" uid="uid://dxn7a40jr2idf" path="res://character_body_2d.tscn" id="5_q4dck"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rivd8"]
+size = Vector2(181.038, 211.87)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oflij"]
 radius = 104.13
@@ -25,6 +28,18 @@ position = Vector2(1492, 332)
 scale = Vector2(2.52985, 2.52985)
 texture = ExtResource("3_qmjap")
 
+[node name="elevator_button" type="Button" parent="Elevator"]
+offset_left = -64.1624
+offset_top = -83.0
+offset_right = 68.8376
+offset_bottom = 121.0
+
+[node name="elevator_detection" type="Area2D" parent="Elevator"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator/elevator_detection"]
+position = Vector2(-19.3687, 15.416)
+shape = SubResource("RectangleShape2D_rivd8")
+
 [node name="Bad" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.54902)
 position = Vector2(310, 102)
@@ -41,7 +56,7 @@ limit_right = 1785
 limit_bottom = 650
 metadata/_edit_lock_ = true
 
-[node name="textNode" type="Button" parent="Ghost"]
+[node name="player_text" type="Button" parent="Ghost"]
 auto_translate_mode = 1
 visible = false
 offset_left = -127.0
@@ -101,6 +116,9 @@ position = Vector2(313, 130)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Marker2D/Player Detection"]
 shape = SubResource("CircleShape2D_11bs0")
 
+[connection signal="pressed" from="Elevator/elevator_button" to="." method="_on_elevator_button_pressed"]
+[connection signal="body_entered" from="Elevator/elevator_detection" to="." method="_on_elevator_detection_body_entered"]
+[connection signal="body_exited" from="Elevator/elevator_detection" to="." method="_on_elevator_detection_body_exited"]
 [connection signal="pressed" from="play/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="body_entered" from="Marker2D/Player Detection" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Marker2D/Player Detection" to="." method="_on_area_2d_body_exited"]

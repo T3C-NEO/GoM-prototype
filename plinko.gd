@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var prong = preload("res://prong.tscn");
+@onready var prong = preload("res://Prong.tscn");
 @onready var chip = $chip;
 @onready var brains = $CanvasLayer/Label;
 @onready var goal = $Label8;
@@ -41,7 +41,7 @@ func _ready() -> void:
 			add_child(prongs);
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Game.PlinkNum < 10:
 		brains.text = "0"+str(Game.PlinkNum)+"/50";
 	else:
@@ -51,11 +51,14 @@ func _process(delta: float) -> void:
 		fontSize -= 5;
 	else:
 		fontSize += 5;
-	if (moving == true):
-		chip.position = chip.position.lerp(Vector2(-416, 237), delta * 4)
-	if (chip.position.y < 380 and moving == true):
+	if (moving):
+		var tween = get_tree().create_tween();
+		tween.tween_property(get_node("chip/cam"), "offset", Vector2.ZERO, 3).set_trans(Tween.TRANS_LINEAR);
+		await tween.finished;
 		moving = false;
-		chip.position = Vector2(128, 237);
+	
+		#moving = false;
+		#chip.position = Vector2(128, 237);
 		
 	move_slides();
 
@@ -107,6 +110,7 @@ func _on_timer_timeout() -> void:
 	moving = true;
 	#chip.position = Vector2(128, 237);
 	get_node("chip/cam").position_smoothing_speed = 2;
+
 
 
 func _on_slide_timer_timeout() -> void:

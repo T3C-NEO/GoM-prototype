@@ -4,6 +4,7 @@ extends Node2D
 @onready var work = $work;
 @onready var tentacles = $bottom_tentacles;
 @onready var progress = $ProgressBar;
+@onready var shopping = $right/shopping;
 
 var target_time : float = 60.0;
 
@@ -14,7 +15,8 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	money.text = "$" + str(Game.money) + ".00"
-
+	
+	change_color();
 
 	target_time -= delta;
 	progress.value = map(target_time, 60.0, 0.0, 100.0, 0.0);
@@ -35,6 +37,13 @@ func _process(delta: float) -> void:
 		work.orders_served = false;
 		
 	#print($Timer.time_left)
+	
+func change_color():
+	if(shopping.can_afford):
+		money.add_theme_color_override("font_color", Color.WHITE);
+	else:
+		money.add_theme_color_override("font_color", Color.RED);
+
 
 func _on_button_pressed() -> void:
 	end_level();
@@ -53,7 +62,8 @@ func _on_left_timer_timeout() -> void:
 func _on_right_timer_timeout() -> void:
 	#Game.right_active = true;
 	pass
-	
+
+
 func end_level():
 	Game.OctoDone = true
 	get_tree().change_scene_to_file("res://overworld3.tscn")

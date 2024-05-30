@@ -83,6 +83,15 @@ offset_bottom = 64.0
 wait_time = 7.0
 autostart = true
 
+[node name="Label" type="Label" parent="."]
+offset_left = 30.0
+offset_top = 41.0
+offset_right = 392.0
+offset_bottom = 99.0
+theme_override_font_sizes/font_size = 40
+text = "Change the diaper!"
+horizontal_alignment = 1
+
 [connection signal="pressed" from="Icon/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Icon2/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Icon3/Button3" to="." method="_on_button_3_pressed"]

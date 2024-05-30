@@ -5,6 +5,7 @@ var holding_item : bool;
 var CEODone : bool = false;
 var DebtDone : bool = false;
 var OctoDone : bool = false;
+var demoDone : bool = false;
 
 #keeps track of bossman plinko 
 var sliders_active : bool = true; 

@@ -120,5 +120,13 @@ offset_bottom = 383.0
 theme_override_font_sizes/font_size = 16
 text = "fill line"
 
+[node name="Label" type="Label" parent="."]
+offset_left = 203.0
+offset_top = 58.0
+offset_right = 337.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 30
+text = "Tap to fill"
+
 [connection signal="pressed" from="CoffeeMachine/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="done" to="." method="_on_done_pressed"]

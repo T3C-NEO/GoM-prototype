@@ -389,12 +389,13 @@ scale = Vector2(0.04, 0.04)
 texture = ExtResource("6_vvb4x")
 
 [node name="chip" parent="." instance=ExtResource("7_17o8f")]
-position = Vector2(-416, 3471)
+position = Vector2(130, 241)
 physics_material_override = SubResource("PhysicsMaterial_jyg1f")
 continuous_cd = 2
 
 [node name="cam" type="Camera2D" parent="chip"]
 position = Vector2(59, 111)
+offset = Vector2(0, 3000)
 limit_left = 0
 limit_top = 0
 limit_right = 1150

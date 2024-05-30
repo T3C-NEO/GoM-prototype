@@ -1,19 +1,27 @@
 extends Node2D
 
+@onready var text = $Label;
+
+
 var squee
 var cleaned = 9
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	text.scale = Vector2.ZERO;
 	squee = get_node("Squeegee")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	var tween = get_tree().create_tween();
+	tween.tween_property(text, "scale", Vector2(1, 1), 3);
+	
 	var mouse = get_local_mouse_position()
 	squee.position.y = mouse.y
 	if mouse.x > 50 and mouse.x < 525:
 		squee.position.x = mouse.x
 	if cleaned == 0:
+		text.visible = false;
 		visible = false
 		Game.right_active = false;
 		cleaned = 9

@@ -9,6 +9,9 @@ var clicked = true;
 @onready var ghost = $Ghost;
 @onready var time2 = $Ghost/Timer;
 
+@onready var play = $play;
+var show_thoughts : bool; 
+
 func _ready() -> void:
 	playBox = 	get_node("play");
 	Game.floor = 6;
@@ -16,7 +19,9 @@ func _ready() -> void:
 		get_node("Bad").visible = false
 		get_node("Button").queue_free()
 		
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
+	play.visible = show_thoughts;
+	
 	if (clicked == false):
 		tap.modulate.a = 1-(timer.time_left);
 	if (clicked == true):
@@ -79,3 +84,13 @@ func _on_timer_4_timeout() -> void:
 	tween.tween_property(ghost, "scale", Vector2(0.645,0.645), 1)
 	#clicked = false;
 	$TapHere/Timer2.start();
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if(body.name == "CharacterBody2D"):
+		show_thoughts = true;
+
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	if(body.name == "CharacterBody2D"):
+		show_thoughts = false;

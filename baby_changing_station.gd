@@ -1,19 +1,24 @@
 extends Node2D
 
+@onready var text = $Label;
 var step1 = 2
-# Called when the node enters the scene tree for the first time.
+
+
 func _ready() -> void:
-	pass # Replace with function body.
+	text.scale = Vector2.ZERO;
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	var tween = get_tree().create_tween();
+	tween.tween_property(text, "scale", Vector2(1, 1), 3);
+	
 	if step1 == 0:
 		get_node("Icon3").visible = true
 	if step1 == -4:
 		step1 = 2;
 		get_node("Icon").visible = true
 		get_node("Icon2").visible = true
+		text.visible = false;
 		visible = false
 		Game.right_active = false;
 		

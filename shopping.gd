@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var text = $Label;
+
 @onready var food = $groceries;
 @onready var food2 = $groceries2;
 @onready var food3 = $groceries3;
@@ -19,9 +21,12 @@ extends Node2D
 var total_cost : int = 0;
 var amount_to_add : Array[int] = [7, 6, 3, 30, 5, 4, 20];
 var in_basket : Array = [false, false, false, false, false, false, false];
-#idk why I'm doing it this way 
+
+var can_afford : bool;
 
 func _ready() -> void:
+	text.scale = Vector2.ZERO;
+	
 	#setting basket position for later
 	for i in range(food_array.size()):
 		food_array[i].basket_pos = $basket.position;
@@ -30,7 +35,16 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
+	var tween = get_tree().create_tween();
+	tween.tween_property(text, "scale", Vector2(1, 1), 3);
+	
 	cost.text = "Total: $" + str(total_cost);
+	
+	#work minigame will track this boolean to change text color
+	if(total_cost <= Game.money):
+		can_afford = true;
+	else:
+		can_afford = false;
 	
 	#resets everything when game is over
 	if(!visible):
@@ -48,9 +62,10 @@ func _process(_delta: float) -> void:
 
 func _on_button_pressed() -> void:
 	#ends game as long as player doesn't go over budget
-	if(total_cost <= Game.money):
+	if(can_afford):
 		Game.money -= total_cost;
 		Game.right_active = false;
+		text.visible = false;
 		visible = false;
 
 

@@ -203,6 +203,15 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Total: $"
 
+[node name="Label" type="Label" parent="."]
+offset_left = 902.0
+offset_top = 108.0
+offset_right = 1117.0
+offset_bottom = 196.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Purchase Items!"
+
 [connection signal="area_entered" from="basket/basket_detection" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="basket/basket_detection" to="." method="_on_area_2d_area_exited"]
 [connection signal="area_entered" from="groceries/food_detection" to="groceries" method="_on_food_detection_area_entered"]

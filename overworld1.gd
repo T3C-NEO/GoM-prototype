@@ -22,7 +22,7 @@ func _ready() -> void:
 		ghost.position = Game.ghostPos;
 	
 		
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if (ghost.position.x > 1105 and ghost.position.x < 1405):
 		if (Game.DebtDone == false):
 			playBox.visible = true;

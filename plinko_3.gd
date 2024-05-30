@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var prong = preload("res://prong.tscn");
+@onready var prong = preload("res://Prong.tscn");
 @onready var chip = $chip;
 
 var columnsA : int = 6;
@@ -29,13 +29,14 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if(Input.is_action_just_pressed("mouse_left")):
 		chip.drop = true;
 	
 	if(win || lose):
 		var timer = get_tree().create_timer(2);
 		await timer.timeout;
+		Game.demoDone = true;
 		get_tree().change_scene_to_file("res://overworld_4.tscn");
 
 

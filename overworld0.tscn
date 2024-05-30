@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://boi04ubreq1xg"]
+[gd_scene load_steps=14 format=3 uid="uid://boi04ubreq1xg"]
 
 [ext_resource type="Script" path="res://overworld.gd" id="1_0u7lh"]
 [ext_resource type="Texture2D" uid="uid://bkwtlbf4q1cic" path="res://assets/corporate-office-flat-illustration-vector.jpg" id="2_j1ndj"]
@@ -11,6 +11,12 @@
 [ext_resource type="PackedScene" uid="uid://dxn7a40jr2idf" path="res://character_body_2d.tscn" id="7_iss8g"]
 [ext_resource type="Texture2D" uid="uid://mkcoy28k0wp8" path="res://assets/sprites and images/boss sketch room.png" id="10_7bwa3"]
 [ext_resource type="Texture2D" uid="uid://cij4gldeypg7e" path="res://assets/sprites and images/player sprite 1.png" id="10_x0n3w"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y58ly"]
+radius = 94.6563
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qv4br"]
+radius = 174.0
 
 [node name="Overworld" type="Node2D"]
 script = ExtResource("1_0u7lh")
@@ -90,28 +96,30 @@ text = "I don't need to use that yet,
 there's more meritocracy
 to spread  here >:)"
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_y58ly")
+
 [node name="play" type="Button" parent="."]
 auto_translate_mode = 1
-visible = false
-offset_left = 482.0
-offset_top = 94.0
-offset_right = 718.0
-offset_bottom = 314.0
+offset_left = 564.0
+offset_top = 22.0
+offset_right = 783.0
+offset_bottom = 237.0
 button_mask = 0
 text = "Clive Sterling - CEO
 
-Inherited the company from his father. Practically eating out of my hands already, but it's time for a tune-up.
+Inherited a million-dollar company and took it the extra mile to become a self-made billionaire! 
 
-
-"
+Not sure which of us needs the other more..."
 autowrap_mode = 2
 
 [node name="PlayButton" type="Button" parent="play"]
+visible = false
 modulate = Color(0.339368, 0.587909, 1, 1)
 self_modulate = Color(0.28814, 0.64651, 1, 1)
 layout_mode = 0
 offset_top = 172.0
-offset_right = 236.0
+offset_right = 241.0
 offset_bottom = 220.0
 theme_override_font_sizes/font_size = 21
 text = "Enter Mind"
@@ -141,6 +149,12 @@ one_shot = true
 one_shot = true
 autostart = true
 
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(893, 245)
+shape = SubResource("CircleShape2D_qv4br")
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="timeout" from="TapHere/Timere" to="." method="_on_timer_timeout"]
@@ -148,3 +162,5 @@ autostart = true
 [connection signal="pressed" from="play/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="NextFloor/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="timeout" from="Ghost/Timer4" to="." method="_on_timer_4_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

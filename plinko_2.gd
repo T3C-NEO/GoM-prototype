@@ -1,11 +1,11 @@
 extends Node2D
 
-@onready var prong = preload("res://prong.tscn");
+@onready var prong = preload("res://Prong.tscn");
 @onready var chip = $chip;
 @onready var brains = $CanvasLayer/Label;
 @onready var goal = $Label8;
 
-@onready var slides = $Slides;
+#@onready var slides = $Slides;
 
 @onready var big = $Label8/Big;
 @onready var small = $Label8/small;
@@ -20,8 +20,13 @@ var rows : int = 5;
 var biging = false;
 var fontSize = 80;
 
+var moving : bool;
+
 
 func _ready() -> void:
+	chip.position = Vector2(128, 237);
+	get_node("chip/cam").position_smoothing_speed = 2;
+	
 	for row in range(rows):
 		for col in range(columnsA):
 			var prongs = prong.instantiate();
@@ -45,6 +50,12 @@ func _process(_delta: float) -> void:
 		fontSize -= 5;
 	else:
 		fontSize += 5;
+		
+	if(moving):
+		var tween = get_tree().create_tween();
+		tween.tween_property(get_node("chip/cam"), "offset", Vector2.ZERO, 3).set_trans(Tween.TRANS_LINEAR);
+		await tween.finished;
+		moving = false;
 
 func _on_button_pressed() -> void:
 	chip.drop = true;
@@ -81,8 +92,9 @@ func _on_help_5_body_entered(body: Node2D) -> void:
 
 
 func _on_timer_timeout() -> void:
-	chip.position = Vector2(128, 237);
-	get_node("chip/cam").position_smoothing_speed = 2;
+	moving = true;
+	#chip.position = Vector2(128, 237);
+	#get_node("chip/cam").position_smoothing_speed = 2;
 
 
 

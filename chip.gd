@@ -21,9 +21,8 @@ func _process(delta: float) -> void:
 		self.gravity_scale = 1.5;
 	elif(!stop):
 		new_drop_point(delta);
-		
-	boundaries_for_final_plinko();
-		
+
+
 func set_drop_point() -> void:
 	var mouse : Vector2 = get_global_mouse_position();
 	
@@ -45,10 +44,3 @@ func new_drop_point(delta : float) -> void:
 	
 	if(position.x < 65 || position.x > 1085):
 		speed *= -1;
-
-func boundaries_for_final_plinko():
-	#sets, ummm, the boundaries for final plinko
-	if(position.x < 0):
-		position.x = 1150;
-	if(position.x > 1150):
-		position.x = 0;

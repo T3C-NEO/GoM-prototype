@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var text = $Label;
+
 @onready var icon1 = $Icon;
 @onready var icon2 = $Icon2;
 @onready var icon3 = $Icon3;
@@ -62,6 +64,7 @@ func _process(delta: float) -> void:
 				dont_add[i] = false;
 				icons[i].texture = old_texture;
 				icons[i].modulate.a = 1;
+
 			
 	elif(cancel_order):
 		for i in range(icons.size()):
@@ -73,8 +76,12 @@ func _process(delta: float) -> void:
 		index = 0;
 		change_color = true;
 		cancel_order = false;
+	
+	#turn off text after a while
+	if(orders_served && text.visible):
+		text.visible = false;
 
-		
+
 func _on_button_pressed() -> void:
 	num+=1
 	if num < fills.size():

@@ -134,14 +134,13 @@ text = "Enter Mind"
 
 [node name="octodone" type="Button" parent="."]
 auto_translate_mode = 1
+visible = false
 offset_left = 1199.0
 offset_top = 38.0
-offset_right = 1364.0
+offset_right = 1400.0
 offset_bottom = 186.0
 button_mask = 0
-text = "Katorah - Barista
-
-That's right, just keep working, don't think about your struggles"
+text = "That was close. She has some dark thoughts down there. But who needs therapy when you've got me?!"
 autowrap_mode = 2
 
 [node name="NextFloor" type="Sprite2D" parent="."]
@@ -165,9 +164,9 @@ offset_top = 12.0
 offset_right = 821.0
 offset_bottom = 255.0
 button_mask = 0
-text = "A placeholder guy
+text = "Robert - Intern
 
-maybe some text about why his brain is so empty/thoughts are so scattered, maybe he has ADHD or something 
+What a scatterbrain! I don't care if you're not being paid. You should ALWAYS give 110 percent!
 
 
 
@@ -194,11 +193,7 @@ offset_top = 25.0
 offset_right = 801.0
 offset_bottom = 171.0
 button_mask = 0
-text = "A placeholder guy
-
-this guy is now working hard or something
-
-"
+text = "Glad I got through to him because he may need to stay late today. "
 autowrap_mode = 2
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
