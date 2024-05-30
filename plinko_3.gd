@@ -12,6 +12,8 @@ var win : bool;
 
 
 func _ready() -> void:
+	Game.final_plinko = true;
+	
 	for row in range(rows):
 		for col in range(columnsA):
 			var prongs = prong.instantiate();
@@ -34,17 +36,9 @@ func _process(delta: float) -> void:
 		var timer = get_tree().create_timer(2);
 		await timer.timeout;
 		get_tree().change_scene_to_file("res://overworld3.tscn");
-		
-
-func _on_left_body_entered(body: Node2D) -> void:
-	if(body.name == "chip"):
-		get_tree().change_scene_to_file("res://overworld3.tscn");
-
-
-func _on_right_body_entered(body: Node2D) -> void:
-	if(body.name == "chip"):
-		get_tree().change_scene_to_file("res://overworld3.tscn");
 
 
 func _on_win_body_entered(body: Node2D) -> void:
-	win = true;
+	if(body.name == "chip"):
+		win = true;
+		print("YERRR")

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://ciclthaio3ekx"]
+
+[ext_resource type="Texture2D" uid="uid://7a3878k2yfd3" path="res://assets/single_triangle.png" id="1_7f12o"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_kk5ww"]
+a = Vector2(-55, -111)
+b = Vector2(56, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_donq0"]
+a = Vector2(-55, -110)
+b = Vector2(-54, 111)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_puxgo"]
+a = Vector2(56, 0)
+b = Vector2(-54, 110)
+
+[node name="single_triangle" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_7f12o")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("SegmentShape2D_kk5ww")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("SegmentShape2D_donq0")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("SegmentShape2D_puxgo")

@@ -2,6 +2,7 @@ extends RigidBody2D
 
 var move : bool;
 var drop : bool;
+var stop : bool;
 
 var speed : float = 1500.0;
 
@@ -10,10 +11,18 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	if(drop):
+	#adds sliders to ceo level
+	if(Game.sliders_active):
+		if(position.y > 3100 && drop && !stop):
+			stop = true;
+			self.freeze = true;
+	
+	if(drop && !stop):
 		self.gravity_scale = 1.5;
-	else:
+	elif(!stop):
 		new_drop_point(delta);
+		
+	boundaries_for_final_plinko();
 		
 func set_drop_point() -> void:
 	var mouse : Vector2 = get_global_mouse_position();
@@ -36,3 +45,10 @@ func new_drop_point(delta : float) -> void:
 	
 	if(position.x < 65 || position.x > 1085):
 		speed *= -1;
+
+func boundaries_for_final_plinko():
+	#sets, ummm, the boundaries for final plinko
+	if(position.x < 0):
+		position.x = 1150;
+	if(position.x > 1150):
+		position.x = 0;

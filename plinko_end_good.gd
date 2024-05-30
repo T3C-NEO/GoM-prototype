@@ -17,6 +17,7 @@ func _process(_delta: float) -> void:
 		await timer.timeout;
 		if(Game.PlinkNum >= 50):
 			Game.CEODone = true
+			Game.sliders_active = false;
 			if this.get_parent().get_name() == "Plinko":
 				get_tree().change_scene_to_file("res://overworld0.tscn")
 			elif this.get_parent().get_name() == "Plinko2":

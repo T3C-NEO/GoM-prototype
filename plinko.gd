@@ -6,6 +6,8 @@ extends Node2D
 @onready var goal = $Label8;
 
 @onready var slides = $Slides;
+@onready var left_slide = $Slides/left_slide;
+@onready var right_slide = $Slides/right_slide; 
 
 @onready var big = $Label8/Big;
 @onready var small = $Label8/small;
@@ -39,7 +41,7 @@ func _ready() -> void:
 			add_child(prongs);
 
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	if Game.PlinkNum < 10:
 		brains.text = "0"+str(Game.PlinkNum)+"/50";
 	else:
@@ -50,10 +52,12 @@ func _process(_delta: float) -> void:
 	else:
 		fontSize += 5;
 	if (moving == true):
-		chip.position = chip.position.lerp(Vector2(-416, 237), _delta * 2)
+		chip.position = chip.position.lerp(Vector2(-416, 237), delta * 4)
 	if (chip.position.y < 380 and moving == true):
 		moving = false;
 		chip.position = Vector2(128, 237);
+		
+	move_slides();
 
 func _on_button_pressed() -> void:
 	chip.drop = true;
@@ -61,8 +65,18 @@ func _on_button_pressed() -> void:
 
 func _on_button_2_pressed() -> void:
 	Game.CEODone = true
-	get_tree().change_scene_to_file("res://overworld0.tscn")
+	Game.sliders_active = false;
+	#get_tree().change_scene_to_file("res://overworld0.tscn")
 
+
+func move_slides():
+	if(chip.stop):
+		var tween = get_tree().create_tween().set_parallel(true);
+		tween.tween_property(left_slide, "position", Vector2(268.08, 3311.67), 3);
+		tween.tween_property(right_slide, "position", Vector2(888.365, 3311.67), 3);
+		
+		await tween.finished;
+		chip.freeze = false;
 
 func _on_big_timeout() -> void:
 	biging = true;
@@ -97,7 +111,3 @@ func _on_timer_timeout() -> void:
 
 func _on_slide_timer_timeout() -> void:
 	slides.visible = true;
-
-
-
-

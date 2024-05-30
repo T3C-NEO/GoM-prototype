@@ -51,6 +51,7 @@ func _on_button_2_pressed() -> void:
 		
 
 func _on_play_button_pressed() -> void:
+	Game.sliders_active = true;
 	get_tree().change_scene_to_file("res://plinko.tscn")
 	
 

@@ -466,30 +466,33 @@ text = "You win!
 (click to move on cuz I'm not fucking with collisions rn)"
 
 [node name="Slides" type="Node2D" parent="."]
-visible = false
 
-[node name="Sprite2D" type="Sprite2D" parent="Slides"]
-position = Vector2(888.365, 3311.67)
+[node name="right_slide" type="Sprite2D" parent="Slides"]
+position = Vector2(1432, 3032)
 rotation = -0.47822
 scale = Vector2(0.519206, 0.0259909)
 texture = ExtResource("9_bkl6b")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Slides/Sprite2D"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Slides/right_slide"]
+metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Slides/Sprite2D/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slides/right_slide/StaticBody2D"]
 shape = SubResource("RectangleShape2D_4spm8")
+metadata/_edit_lock_ = true
 
-[node name="Sprite2D2" type="Sprite2D" parent="Slides"]
-position = Vector2(268.08, 3311.67)
+[node name="left_slide" type="Sprite2D" parent="Slides"]
+position = Vector2(-279, 3032)
 rotation = 0.47822
 scale = Vector2(0.519206, 0.0259909)
 texture = ExtResource("9_bkl6b")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Slides/Sprite2D2"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Slides/left_slide"]
+metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Slides/Sprite2D2/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slides/left_slide/StaticBody2D"]
 position = Vector2(-0.129761, -8.19141)
 shape = SubResource("RectangleShape2D_4spm8")
+metadata/_edit_lock_ = true
 
 [node name="Slide Timer" type="Timer" parent="Slides"]
 wait_time = 4.0
