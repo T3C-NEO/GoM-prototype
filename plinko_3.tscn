@@ -80,6 +80,7 @@ position = Vector2(113, 237)
 limit_left = 0
 limit_top = 0
 limit_right = 1152
+limit_bottom = 7700
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 
@@ -386,7 +387,6 @@ texture = ExtResource("7_h4le6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lose Bars/Red Bar/Lose Detection"]
 position = Vector2(0.00012207, 0.00012207)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_tbdwp")
 
 [node name="Red Bar2" type="Sprite2D" parent="Lose Bars"]
@@ -398,7 +398,6 @@ texture = ExtResource("7_h4le6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lose Bars/Red Bar2/Lose Detection"]
 position = Vector2(0.00012207, 0.00012207)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_tbdwp")
 
 [node name="Red Bar3" type="Sprite2D" parent="Lose Bars"]
@@ -410,7 +409,6 @@ texture = ExtResource("7_h4le6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lose Bars/Red Bar3/Lose Detection"]
 position = Vector2(0.00012207, 0.00012207)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_tbdwp")
 
 [connection signal="body_entered" from="Win Bars/GreenBar/Win" to="." method="_on_win_body_entered"]
