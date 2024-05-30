@@ -7,10 +7,10 @@ var DebtDone : bool = false;
 var OctoDone : bool = false;
 
 #keeps track of bossman plinko 
-var sliders_active : bool; 
+var sliders_active : bool = true; 
 
 #for final plinko 
-var final_plinko : bool = true;
+var final_plinko : bool;
 
 var PlinkNum : int = 0;
 
@@ -25,9 +25,5 @@ var money : int = 20;
 var left_active : bool;
 var right_active : bool;
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 #trying something with global pos
 var ghostPos : Vector2 = Vector2(514,241);
