@@ -1,11 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://dxn7a40jr2idf"]
 
 [ext_resource type="Script" path="res://character_body_2d.gd" id="1_thsrc"]
-[ext_resource type="Texture2D" uid="uid://cstgwgvn1p2ja" path="res://assets/Ghost.png" id="2_1puil"]
+[ext_resource type="Texture2D" uid="uid://cij4gldeypg7e" path="res://assets/sprites and images/player sprite 1.png" id="2_sbusc"]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+scale = Vector2(0.645216, 0.645216)
 script = ExtResource("1_thsrc")
 
 [node name="Ghost" type="Sprite2D" parent="."]
 position = Vector2(-2, -3)
-texture = ExtResource("2_1puil")
+texture = ExtResource("2_sbusc")
