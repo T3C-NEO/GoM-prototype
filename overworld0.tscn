@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://boi04ubreq1xg"]
+[gd_scene load_steps=12 format=3 uid="uid://boi04ubreq1xg"]
 
 [ext_resource type="Script" path="res://overworld.gd" id="1_0u7lh"]
 [ext_resource type="Texture2D" uid="uid://bkwtlbf4q1cic" path="res://assets/corporate-office-flat-illustration-vector.jpg" id="2_j1ndj"]
@@ -6,9 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://d3e5hjq3v36rx" path="res://assets/bad.png" id="5_b4vf7"]
 [ext_resource type="Texture2D" uid="uid://bcg75hwn4lksl" path="res://CEO.png" id="5_nynbn"]
 [ext_resource type="Texture2D" uid="uid://bprpgkyclvnwt" path="res://assets/sprites and images/tap here.png" id="6_gt2k2"]
+[ext_resource type="Texture2D" uid="uid://cbi8f7an5k4np" path="res://assets/sprites and images/boss sketch room elevator.png" id="7_hi4bu"]
 [ext_resource type="Texture2D" uid="uid://bchoy1ifddmg0" path="res://assets/Next floor.png" id="7_hsa3k"]
 [ext_resource type="PackedScene" uid="uid://dxn7a40jr2idf" path="res://character_body_2d.tscn" id="7_iss8g"]
-[ext_resource type="Texture2D" uid="uid://cstgwgvn1p2ja" path="res://assets/Ghost.png" id="9_3025m"]
+[ext_resource type="Texture2D" uid="uid://mkcoy28k0wp8" path="res://assets/sprites and images/boss sketch room.png" id="10_7bwa3"]
+[ext_resource type="Texture2D" uid="uid://cij4gldeypg7e" path="res://assets/sprites and images/player sprite 1.png" id="10_x0n3w"]
 
 [node name="Overworld" type="Node2D"]
 script = ExtResource("1_0u7lh")
@@ -33,6 +35,16 @@ position = Vector2(338, 289)
 scale = Vector2(0.248967, 0.248967)
 texture = ExtResource("5_nynbn")
 
+[node name="BossSketchRoom" type="Sprite2D" parent="."]
+position = Vector2(894, 333)
+scale = Vector2(0.348, 0.348)
+texture = ExtResource("10_7bwa3")
+
+[node name="BossSketchRoom2" type="Sprite2D" parent="."]
+position = Vector2(894, 333)
+scale = Vector2(0.348, 0.348)
+texture = ExtResource("7_hi4bu")
+
 [node name="Button" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
 offset_left = 261.0
@@ -41,30 +53,31 @@ offset_right = 420.0
 offset_bottom = 423.0
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 1697.0
-offset_top = 127.0
-offset_right = 2002.0
-offset_bottom = 634.0
+modulate = Color(1, 1, 1, 0.443137)
+offset_left = 45.0
+offset_top = 56.0
+offset_right = 295.0
+offset_bottom = 301.0
 
 [node name="TapHere" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(980, 318)
+position = Vector2(1348, 267)
 texture = ExtResource("6_gt2k2")
 
-[node name="Timer" type="Timer" parent="TapHere"]
+[node name="Timere" type="Timer" parent="TapHere"]
 one_shot = true
 
 [node name="Timer2" type="Timer" parent="TapHere"]
 one_shot = true
-autostart = true
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("7_iss8g")]
-position = Vector2(514, 241)
+visible = false
+position = Vector2(1050, 162)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 limit_left = 0
 limit_top = 0
-limit_right = 2185
+limit_right = 1790
 limit_bottom = 650
 
 [node name="textNode" type="Button" parent="CharacterBody2D"]
@@ -117,17 +130,21 @@ offset_right = 86.0
 offset_bottom = 89.0
 
 [node name="Ghost" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(369, 246)
-scale = Vector2(0.103093, 0.103093)
-texture = ExtResource("9_3025m")
+position = Vector2(910, 159)
+scale = Vector2(0.0497296, 0.0497296)
+texture = ExtResource("10_x0n3w")
 
 [node name="Timer" type="Timer" parent="Ghost"]
+one_shot = true
+
+[node name="Timer4" type="Timer" parent="Ghost"]
 one_shot = true
 autostart = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="timeout" from="TapHere/Timere" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="TapHere/Timer2" to="." method="_on_timer_2_timeout"]
 [connection signal="pressed" from="play/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="NextFloor/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="timeout" from="Ghost/Timer4" to="." method="_on_timer_4_timeout"]

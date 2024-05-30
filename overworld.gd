@@ -2,7 +2,8 @@ extends Node2D
 
 var playBox;
 @onready var tap = $TapHere;
-@onready var timer = $TapHere/Timer;
+@onready var timer = $TapHere/Timere;
+@onready var timer4 = $Ghost/Timer4;
 var clicked = true;
 
 @onready var ghost = $Ghost;
@@ -14,10 +15,8 @@ func _ready() -> void:
 	if Game.CEODone == true:
 		get_node("Bad").visible = false
 		get_node("Button").queue_free()
-	ghost.scale.y = 1-(time2.time_left*4);
-	ghost.scale.x = 1-(time2.time_left*4);
 		
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	if (clicked == false):
 		tap.modulate.a = 1-(timer.time_left);
 	if (clicked == true):
@@ -25,9 +24,10 @@ func _process(_delta: float) -> void:
 	if (clicked == false and Input.is_action_pressed("mouse_left")):
 		clicked = true;
 		timer.start();
-	ghost.position = ghost.position.lerp(Vector2(513,237), _delta * 4)
-	ghost.scale.y = 1-(time2.time_left*4);
-	ghost.scale.x = 1-(time2.time_left*4);
+	if ($CharacterBody2D.position.x < 500):
+		$BossSketchRoom2.visible = true;
+	else:
+		$BossSketchRoom2.visible = false;
 	
 func _on_button_pressed() -> void:
 	if playBox.visible == false:
@@ -65,3 +65,17 @@ func _on_button_3_pressed() -> void:
 func _on_timer_2_timeout() -> void:
 	timer.start();
 	clicked = false;
+
+
+func _on_timer_timeout() -> void:
+	$CharacterBody2D.visible = true;
+	ghost.visible = false;
+
+
+func _on_timer_4_timeout() -> void:
+	var tween = create_tween();
+	tween.set_parallel(true);
+	tween.tween_property(ghost, "position", Vector2(1050,162), 1)
+	tween.tween_property(ghost, "scale", Vector2(0.645,0.645), 1)
+	#clicked = false;
+	$TapHere/Timer2.start();

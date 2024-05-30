@@ -21,7 +21,7 @@ func _process(_delta: float) -> void:
 			if this.get_parent().get_name() == "Plinko":
 				get_tree().change_scene_to_file("res://overworld0.tscn")
 			elif this.get_parent().get_name() == "Plinko2":
-				get_tree().change_scene_to_file("res://overworld.tscn")
+				get_tree().change_scene_to_file("res://overworld3.tscn")
 		else:
 			get_tree().reload_current_scene();
 		
